@@ -1,0 +1,13 @@
+{
+  "itemGroup.quanta": "Example Mod Tab",
+  "block.quanta.example_block": "Example Block",
+  "item.quanta.example_item": "Example Item",
+
+  "quanta.configuration.title": "Quanta Configs",
+  "quanta.configuration.section.quanta.common.toml": "Quanta Configs",
+  "quanta.configuration.section.quanta.common.toml.title": "Quanta Configs",
+  "quanta.configuration.items": "Item List",
+  "quanta.configuration.logDirtBlock": "Log Dirt Block",
+  "quanta.configuration.magicNumberIntroduction": "Magic Number Text",
+  "quanta.configuration.magicNumber": "Magic Number"
+}
