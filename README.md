@@ -1,4 +1,4 @@
-# ⚡ Quanta - Techno-Mágico Mod for Minecraft
+# ⚡ Quanta - Techno-Mágical Mod for Minecraft
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![NeoForge](https://img.shields.io/badge/NeoForge-1.21.1-red)](https://neoforged.net/)
