@@ -1,0 +1,354 @@
+📋 TODO LIST - QUANTA MOD
+🟢 FASE 0: FUNDAÇÃO (JÁ FEITA)
+Configurar ambiente NeoForge 1.21.1
+
+Criar estrutura de pacotes
+
+Registrar itens básicos (Quantum Dust, Quantum Ingot, Quantum Circuit)
+
+Implementar sistema de energia base (QuantumEnergyStorage)
+
+Criar arquivo neoforge.mods.toml
+
+🟡 FASE 1: RECURSOS VISUAIS BÁSICOS
+Texturas (16x16)
+Criar textura do Quantum Dust (pó roxo/ciano)
+
+Criar textura do Quantum Ingot (lingote metálico roxo)
+
+Criar textura do Quantum Circuit (circuito com detalhes ciano)
+
+Criar textura da Essence of Order (dourada)
+
+Criar textura da Essence of Chaos (vermelha/roxa)
+
+Criar textura do bloco Quantum Block (bloco de armazenamento)
+
+Modelos JSON
+Modelo do Quantum Dust (item/generated)
+
+Modelo do Quantum Ingot (item/generated)
+
+Modelo do Quantum Circuit (item/generated)
+
+Modelo do Quantum Block (block/cube_all)
+
+Arquivos de Idioma
+en_us.json (inglês)
+
+pt_br.json (português brasileiro)
+
+🟡 FASE 2: SISTEMA DE ENERGIA COMPLETO
+Core
+Testar QuantumEnergyStorage no jogo
+
+Criar bloco Quantum Battery (armazenamento de energia)
+
+Criar GUI do Quantum Battery
+
+Implementar transferência de energia entre blocos
+
+Conversão FE
+Criar Quantum Converter Block (FE ↔ Quanta)
+
+Definir taxas de conversão balanceadas
+
+Testar compatibilidade com outros mods (Mekanism, etc)
+
+🟠 FASE 3: CABOS MULTI-TIPO
+Cabo de Energia (Básico)
+Criar Quantum Cable Block (transmite Quanta)
+
+Implementar lógica de conexão entre cabos
+
+Adicionar modelo 3D do cabo (conexões visuais)
+
+Implementar perda de energia por distância
+
+Cabos Avançados (Multi-Tipo)
+Criar sistema de cabos que compartilham o mesmo bloco (EnderIO style)
+
+Implementar CableType enum (ENERGY, FLUID, ITEM, GAS)
+
+Criar interface para configurar cabos no mesmo bloco
+
+Adicionar cores diferentes para cada tipo de cabo
+
+🟠 FASE 4: PRIMEIRA MÁQUINA - QUANTUM INFUSER
+Bloco e Entidade
+Criar QuantumInfuserBlock
+
+Criar QuantumInfuserBlockEntity
+
+Implementar inventário (3 slots input, 3 slots output)
+
+Implementar buffer de energia interno (10.000 Q)
+
+GUI
+Criar QuantumInfuserMenu (container)
+
+Criar QuantumInfuserScreen (interface gráfica)
+
+Adicionar barra de progresso
+
+Adicionar medidor de energia
+
+Processamento
+Implementar lógica de processamento de receitas
+
+Criar sistema de receitas (JSON ou DataComponent)
+
+Adicionar consumo de energia por tick (20 Q/t)
+
+Implementar sistema de progresso (0-100 ticks)
+
+Receitas Iniciais
+Quantum Dust (Redstone + Ender Pearl + Carvão)
+
+Quantum Ingot (Quantum Dust + Ferro no Infuser)
+
+Quantum Circuit (Quantum Ingot + Redstone + Ouro)
+
+🟠 FASE 5: SISTEMA DE SUPERPOSIÇÃO QUÂNTICA
+Mecânica Base
+Adicionar botão "Modo Superposição" na GUI
+
+Implementar toggle entre modo normal e superposto
+
+Criar sistema de chance de falha (30% / 20% / 10% por tier)
+
+Implementar resultados (sucesso total, parcial, falha)
+
+Visual
+Adicionar partículas para modo superposto
+
+Efeito visual na máquina (modelo "borrado" ou duplicado)
+
+Luz pulsante na cor ciano/roxa
+
+Addons de Estabilização
+Stabilizer Coil (-5% falha, 1 slot)
+
+Quantum Lock (-10% falha, 2 slots)
+
+Observer Link (-15% falha, 3 slots)
+
+Modelos 3D para cada addon
+
+🔵 FASE 6: ENTRELAÇAMENTO QUÂNTICO
+Core
+Criar Entanglement Core (item para aplicar upgrade)
+
+Criar Quantum Linker (item para conectar máquinas)
+
+Implementar lógica de link entre duas máquinas
+
+Adicionar custo de manutenção (10/20/40 Q/t)
+
+Quantum Repeater
+Criar Quantum Repeater Block (estende distância)
+
+Implementar cascata de repetidores
+
+Adicionar custo extra por repetidor (+5 Q/t)
+
+Visual
+Linha de partículas entre máquinas entrelaçadas
+
+Anel de partículas girando em máquinas conectadas
+
+Indicador visual de distância/disponibilidade
+
+🔵 FASE 7: TUNELAMENTO QUÂNTICO
+Quantum Tuneler (Máquina)
+Criar Quantum Tuneler Block
+
+Implementar transporte de itens através de blocos
+
+Adicionar custo de energia por distância
+
+Criar GUI de configuração (filtros, direções)
+
+Aplicações
+Tunelamento de energia (cabo atravessa paredes)
+
+Tunelamento de itens (hopper quântico)
+
+Tunelamento pessoal (teletransporte do jogador)
+
+🔵 FASE 8: EQUIPAMENTOS MODULARES
+Ferramentas Base
+Quantum Pickaxe (indestrutível, consome energia)
+
+Quantum Axe
+
+Quantum Shovel
+
+Quantum Sword
+
+Sistema de energia nas ferramentas (10.000 Q buffer)
+
+Sistema de Módulos
+Criar sistema de slots de módulos (3 slots)
+
+Implementar aplicação/remoção de módulos
+
+Criar GUI para gerenciar módulos
+
+Adicionar modelos 3D que mudam com módulos
+
+Módulos (Pelo menos 6 para começar)
+Tunnel Module (mina 2x2) - modelo: ponta brilhante
+
+Vein Miner Module (mina veio inteiro) - listras douradas
+
+Chaos Strike Module (20% dano triplicado) - lâmina vermelha
+
+Magnet Module (puxa itens) - anel magnético
+
+Speed Module (aceleração de quebra) - asas laterais
+
+Quantum Shield Module (absorve dano) - escudo de energia
+
+Armadura Modular
+Quantum Helmet (4 slots)
+
+Quantum Chestplate (6 slots)
+
+Quantum Leggings (4 slots)
+
+Quantum Boots (4 slots)
+
+🟣 FASE 9: SISTEMA DE SPELLS (QUANTUM CODEX)
+Quantum Codex (Item)
+Criar item Quantum Codex (funciona no off-hand)
+
+Implementar sistema de "observação" (ganha XP perto de máquinas)
+
+Criar interface do Codex (spells desbloqueados)
+
+Barra de progresso para próximos spells
+
+Spells Base (5-6)
+Infuse (infunde item com energia Quanta)
+
+Link (conexão temporária entre pontos)
+
+Tunnel (teleporte curto através de blocos)
+
+Reveal (mostra entidades/blocos escondidos)
+
+Accelerate (acelera máquina próxima)
+
+Stabilize (reduz chance de falha de superposição)
+
+Progressão de Aprendizado
+Pontos por tick de observação (1-5 por máquina)
+
+Spells desbloqueados por máquina específica
+
+Spells raros por máquinas de tier avançado
+
+🟣 FASE 10: MELHORIAS CIBERNÉTICAS
+Slots Corporais
+Olhos (Quantum Sight - ver cabos/energia)
+
+Braços (Quantum Reach - alcance +3)
+
+Pernas (Quantum Tunneling - teletaporte curto)
+
+Torso (Quantum Buffer - armazena 10.000 Q)
+
+Cérebro (Quantum Processor - automação pessoal)
+
+Implementação
+Criar sistema de "implantes" (itens aplicados ao jogador)
+
+Adicionar custo de energia por habilidade ativa
+
+Criar GUI para gerenciar implantes
+
+Modelos 3D para cada implante (quando visível)
+
+🔴 FASE 11: MÁQUINAS AVANÇADAS (Tier 2)
+Quantum Forge
+Máquina de processamento avançado
+
+Craft de materiais vanilla (Diamante, Netherite, etc)
+
+Requer estabilização (addons obrigatórios)
+
+GUI com múltiplas etapas de processamento
+
+Quantum Observer
+Bloco que manipula superposição
+
+Modo Estabilizador (máquina não pode superpor, +10% velocidade)
+
+Modo Seletor (escolhe resultado do colapso)
+
+Modo Medidor (mostra estado quântico)
+
+Vacuum Generator
+Geração passiva de Quanta (flutuações do vácuo)
+
+5-20 Q/t (varia)
+
+Mais eficiente no End ou Deepslate
+
+🔴 FASE 12: ENDGAME (Tier 3 - Elite)
+Entanglement Reactor
+Geração massiva de Quanta (200+ Q/t)
+
+Multiblock (3x3x3)
+
+Perigoso se desestabilizar (explosão)
+
+Requer materiais raros (Nether Star, etc)
+
+Quantum Assembler
+Automação de crafts complexos
+
+Sistema de padrões (como AE2)
+
+Interface de programação
+
+Anomaly Containment (Multiblock)
+Estrutura 5x5x5
+
+Contém anomalia quântica
+
+Gera energia massiva mas requer estabilização constante
+
+Evento final do mod
+
+🔴 FASE 13: POLIMENTO E OTIMIZAÇÃO
+Performance
+Otimizar renderização de cabos
+
+Reduzir cálculos de rede de energia
+
+Cache de receitas
+
+Balanceamento
+Ajustar taxas de conversão FE/Quanta
+
+Balancear custos de receitas
+
+Ajustar chances de superposição
+
+Testar progressão do early ao endgame
+
+Compatibilidade
+Suporte JEI/REI (mostrar receitas)
+
+Suporte The One Probe / Jade (info máquinas)
+
+Compatibilidade com outros mods técnicos
+
+Documentação
+Criar guide in-game (Patchouli)
+
+Documentar todas as mecânicas
+
+Criar página no CurseForge/Modrinth

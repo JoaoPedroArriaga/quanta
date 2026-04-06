@@ -1,0 +1,26 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "quanta"
+version = "0.0.1"
+displayName = "Quanta"
+logoFile = "quanta.png"
+description = '''
+Um mod techno-mágico onde mecânica quântica e magia arcana se encontram.
+'''
+
+[[dependencies.quanta]]
+    modId = "neoforge"
+    mandatory = true
+    versionRange = "[21,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.quanta]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.21.1,1.22)"
+    ordering = "NONE"
+    side = "BOTH"

@@ -1,13 +1,15 @@
 {
-  "itemGroup.quanta": "Example Mod Tab",
-  "block.quanta.example_block": "Example Block",
-  "item.quanta.example_item": "Example Item",
-
-  "quanta.configuration.title": "Quanta Configs",
-  "quanta.configuration.section.quanta.common.toml": "Quanta Configs",
-  "quanta.configuration.section.quanta.common.toml.title": "Quanta Configs",
-  "quanta.configuration.items": "Item List",
-  "quanta.configuration.logDirtBlock": "Log Dirt Block",
-  "quanta.configuration.magicNumberIntroduction": "Magic Number Text",
-  "quanta.configuration.magicNumber": "Magic Number"
+  "item.quanta.quantum_dust": "Quantum Dust",
+  "item.quanta.quantum_ingot": "Quantum Ingot",
+  "item.quanta.quantum_circuit": "Quantum Circuit",
+  "item.quanta.quantum_coil": "Quantum Coil",
+  "item.quanta.essence_of_order": "Essence of Order",
+  "item.quanta.essence_of_chaos": "Essence of Chaos",
+  "item.quanta.quanum_crystal": "Quantum Crystal",
+  "item.quanta.entangled_core": "Entangled Core",
+  "item.quanta.quantum_processor": "Quantum Processor",
+  "item.quanta.observer_lens": "Observer Lens",
+  "item.quanta.chaos_fragment": "Chaos Fragment",
+  "item.quanta.quantum_alloy": "Quantum Alloy",
+  "item.quanta.stabilized_singularity": "Stabilized Singularity"
 }
