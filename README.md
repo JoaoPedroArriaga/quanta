@@ -80,11 +80,11 @@ cd quanta
 
 ## 🎨 Visual Identity
 Element	Color
-Basic Tier	Dark Purple (#3C096C)
-Advanced	Purple + Cyan
-Elite	Purple + Cyan + Gold
-Ultimate	Cyan + Gold + White
-Active Energy	Cyan (#00F5FF)
+- Basic Tier	Dark Purple (#3C096C)
+- Advanced	Purple + Cyan
+- Elite	Purple + Cyan + Gold
+- Ultimate	Cyan + Gold + White
+- Active Energy	Cyan (#00F5FF)
 
 ---
 
