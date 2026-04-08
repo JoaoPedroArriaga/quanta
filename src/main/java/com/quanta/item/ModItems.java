@@ -14,8 +14,8 @@ public class ModItems {
         public static final DeferredItem<Item> QUANTUM_DUST = 
                 ITEMS.registerSimpleItem("quantum_dust");
 
-        public static final DeferredItem<Item> QUANTUM_INGOT = 
-                ITEMS.registerSimpleItem("quantum_ingot");
+        public static final DeferredItem<Item> QUANTUM_STEEL = 
+                ITEMS.registerSimpleItem("quantum_steel");
     
         public static final DeferredItem<Item> QUANTUM_CIRCUIT =
                 ITEMS.registerSimpleItem("quantum_circuit");
