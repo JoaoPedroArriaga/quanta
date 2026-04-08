@@ -644,4 +644,5 @@ TIER ULTIMATE (Endgame)
 
 ---
 
-*Documento mantido como fonte única de verdade para desenvolvimento do Quanta Mod*
+*Este documento é a fonte de verdade para o desenvolvimento do Quanta Mod*
+*README.md e MATERIAIS_E_CRAFTS.md são versões derivadas para propósitos específicos*
