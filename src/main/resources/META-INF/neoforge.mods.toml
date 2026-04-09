@@ -8,7 +8,7 @@ version = "0.0.1"
 displayName = "Quanta"
 logoFile = "quanta.png"
 description = '''
-Um mod techno-mágico onde mecânica quântica e magia arcana se encontram.
+A techno-magical mod where quantum mechanics and arcane magic meet.
 '''
 
 [[dependencies.quanta]]
