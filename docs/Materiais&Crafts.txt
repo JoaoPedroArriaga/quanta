@@ -1,0 +1,89 @@
+Exemplo:
+materiais:
+maquina:
+método:
+
+MATERIAIS:
+
+Quantum Dust (QD) - Base do Mod
+materiais: Redstone ou Ender Dust
+maquina: Particule Reconstructor
+método: Colocar redstone ou ender dust no Prticule Reconstructor
+método: alternativo: Ender Dust + Redstone na Craftingtable ou Quantum Assembler
+
+Ender Dust
+materiais: Enderpearl
+maquina: Mechanical Crusher ou Particule Crusher
+método: Pulverizar enderpearl no crusher
+
+Quantum Pallet (QP) - Evolução do Dust
+materiais: Quantum Dust
+maquina: Quanta Enhancer
+método: Colocar Quantum Dust no Quanta Enhancer
+
+Quantum Steel (QS) - Metal Basico
+materiais: Quantum Dust ou Quantum Pallet + Iron Ingot
+maquina: Quanta Infuser
+método: Infundir Quanta ao Iron Ingot com Quantum Dust ou Pallet
+OBS: 1 QD + 1 Iron = 1 QS, 1 QP + 8 Iron = 8 QS
+
+Quantum Steel Sheet
+materiais: Quantum Steel
+maquina: Mechanical Press
+método: Prenssar Quantum Steel na Mechanical Press
+
+Quantum Steel Wire
+materiais: Quantum Steel Sheet
+maquina: Mechanical Wire Drawer
+método: Passar Quantum Steel Sheet no wire drawer
+método alternativo: Cortar Quantum Steel Sheet com clipper na Crafting table
+
+Quantum Circuit - Circuito Básico
+materiais: Quantum Steel + Gold + Redstone
+maquina: Quanta Press ou Mechanical Press
+método: Pressionar Gold, QI e Redstone para criar um circuito
+OBS: na Mechanical Press é menos eficiente
+
+Quantum Coil - Bobina Básica
+materiais: Quantum Steel Wire + Copper Ingot
+maquina: Craftingtable ou Quantum Assembler
+método: Enrolar Quantum Steel Wire no Copper Ingot
+
+Quantum Crystal  - Cristal Avançado
+materiais: Quantum Dust ou Quantum Pallet + Diamond
+maquina: Quanta Infuser
+método: Infundir Quanta ao Diamond com Quantum Dust ou Pallet
+OBS: 1 QD + 1 Diamond = 1 Quantum Crystal, 1 QP + 8 Diamond = 8 Quantum Crystal
+
+Quantum Processor - Processador Avançado
+materiais: Quantum Crystal + Quantum Circuit
+maquina: Craftingtable ou Quantum Assembler
+método: Adicionar Cristais ao circuito para melhora-lo
+
+Quantum Alloy (QA) - Metal Elite
+materiais: Quantum Dust ou Quantum Pallet + Netherite Ingot
+maquina: Quanta Infuser
+método: Infundir Quanta ao Netherite Ingot com Quantum Dust ou Pallet
+OBS: 1 QD + 1 Netherite = 1 QA, 1 QP + 8 Netherite = 8 QA
+
+Essence of Order
+materiais: Quantum Dust, Quantum Pallet ou Quantum Crystal
+maquina: Quanta Collector
+método: Usar o Quanta Collector no modo Decoerencia, com um Dust, Pallet ou Crystal dentro gera Essência de Ordem
+OBS: materiais melhores geram mais
+
+Essence of Chaos
+materiais: Quantum Dust, Quantum Pallet ou Quantum Crystal
+maquina: Quanta Collector
+método: Usar o Quanta Collector no modo Superposição, com um Dust, Pallet ou Crystal dentro gera Essência de Caos
+OBS: materiais melhores geram mais
+
+Entangled Core
+
+Observer Lens
+
+Chaos Fragment
+
+Stabilized Singularity
+
+ADDONS:
