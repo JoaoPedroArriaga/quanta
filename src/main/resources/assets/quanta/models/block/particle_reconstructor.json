@@ -1,0 +1,11 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "quanta:block/particle_reconstructor_bottom",
+        "up": "quanta:block/particle_reconstructor_top",
+        "north": "quanta:block/particle_reconstructor_front",
+        "east": "quanta:block/particle_reconstructor_side",
+        "south": "quanta:block/particle_reconstructor_side",
+        "west": "quanta:block/particle_reconstructor_side"
+    }
+}

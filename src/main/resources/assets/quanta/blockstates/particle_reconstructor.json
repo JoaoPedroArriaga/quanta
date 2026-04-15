@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "lit=false": { "model": "quanta:block/particle_reconstructor" },
+        "lit=true": { "model": "quanta:block/particle_reconstructor" }
+    }
+}

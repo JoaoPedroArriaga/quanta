@@ -1,648 +1,558 @@
-# QUANTA MOD - MASTERLIST OFICIAL (v5.0 - FINAL)
+# QUANTA MOD - MASTERLIST OFICIAL (v7.0)
 
 > Documento consolidado do mod Quanta para Minecraft NeoForge 1.21.1
-> **Última atualização: 2026-04-07 (VERSÃO FINAL COMPLETA)**
+> **Última atualização: 2026-04-12**
 
 ---
 
 ## 🎯 CONCEITO CENTRAL
 
-Um mod techno-mágico onde mecânica quântica e magia arcana são a mesma coisa vista de ângulos diferentes. Cientistas chamariam de "entrelaçamento", magos chamariam de "ligação etérea".
+Um mod techno-mágico onde mecânica quântica e magia arcana são a mesma coisa vista de ângulos diferentes. Quanta é uma **partícula que altera informação** - pode reescrever a realidade.
 
-**Inspirações:** Mekanism, Oritech, Create, EnderIO, Ars Nouveau.
+**Inspirações:** Mekanism, Oritech, Create, EnderIO, Ars Nouveau, AE2, Modular Powersuits, Draconic Evolution, Thaumcraft.
+
+---
+
+## 📊 PROGRESSÃO DE TIERS
+
+| Tier | Nome | Cor | Característica |
+|------|------|-----|----------------|
+| 0 | Industrial | Cinza | FE-based, pré-Quanta |
+| 1 | Decoherent | Roxo médio | Estável, previsível (Decoerência) |
+| 2 | Entangled | Roxo + Ciano | Entrelaçado, conectado |
+| 3 | Superposed | Roxo + Ciano + Dourado | Múltiplos estados simultâneos (Superposição) |
+| Ultimate | Singular | Ciano + Dourado + Branco | Ponto de equilíbrio absoluto |
 
 ---
 
 ## ⚡ 1. SISTEMA DE ENERGIA
 
 ### Unidade: Quanta (Q)
-
-| Tier | Capacidade típica | Exemplo |
-|------|-------------------|---------|
-| Basic | 10.000 Q | Primeiras máquinas Quanta, cabos |
-| Advanced | 100.000 Q | Máquinas avançadas |
-| Elite | 1.000.000 Q | Multiblocks, reator |
-| Ultimate | 10.000.000 Q | Endgame |
-
-### Relação com FE (Forge Energy)
-
 - **1 Quanta = 100 FE** (configurável)
 - Máquinas Quanta NÃO aceitam FE diretamente
-- Máquinas Mechanical (Tier 0) usam FE diretamente
+- Máquinas Industrial (Tier 0) usam FE diretamente
 
 ### Conversores FE ↔ Quanta
 
 | Máquina | Entrada | Saída | Taxa | Tier |
 |---------|---------|-------|------|------|
-| Energy Quantifier | FE | Quanta | 100 FE → 1 Q | Basic |
-| Quanta Engine | Quanta | FE | 1 Q → 100 FE | Basic |
+| Energy Quantifier | FE | Quanta | 100 FE → 1 Q | Decoherent |
+| Quanta Collapser | Quanta | FE | 1 Q → 100 FE | Decoherent |
 
 ### Geração de Quanta
 
 | Gerador | Fonte | Taxa | Tier |
 |---------|-------|------|------|
-| Thermal Engine | Combustível (carvão, lava, blaze) | Gera FE (não Quanta) | Tier 0 |
-| Quantum Engine | Queima Fluid Quanta | 50-200 Q/t | Tier 2 |
-| Quantum Gas Burner | Queima Quanta Vapor | 50-200 Q/t | Tier 2 |
-| Vacuum Generator | Flutuações do vácuo (passivo) | 500-1.000 Q/t | Tier 2.5 |
-| Entanglement Reactor | Entrelaçamento dimensional | 2.000-8.000+ Q/t | Tier 3 |
+| Combustor | Carvão, Lava, Blaze | Gera FE | Industrial |
+| Quanta Engine | Liquid Quanta/Chaos | 50-400 Q/t | Entangled |
+| Gas Burner | Quanta Gas/Chaos Gas | 50-400 Q/t | Entangled |
+| Void Generator | Flutuações do vácuo | 500-1.000 Q/t | Superposed |
+| Entanglement Reactor | Entrelaçamento dimensional | 2.000-10.000+ Q/t | Superposed |
 
-#### Vacuum Generator - Variação por local
+**Void Generator - por local:**
 
 | Local | Geração (Q/t) |
 |-------|---------------|
 | Overworld superfície | 500 |
-| Overworld Deepslate (Y<0) | 650 |
+| Bedrock (Overworld) | 650 |
 | Nether | 600 |
-| End (ilhas principais) | 800 |
-| End (vazio/void próximo) | 1.000 |
+| End (ilhas) | 800 |
+| End (void) | 1.000 |
 
 ---
 
-## 💧 2. FLUIDOS E GASES QUÂNTICOS
+## 💧 2. LÍQUIDOS E GASES QUÂNTICOS
 
-### Fluidos
+### Líquidos - Cores e Propriedades
 
-| Fluido | Obtenção | Cor |
-|--------|----------|-----|
-| Fluid Quanta | Quantum Dust + Água | 💙 Ciano claro |
-| Fluid Chaos | Quantum Dust + Lava (50% chance) | 💜 Roxo/Vermelho |
-| Fluid Order | Quantum Crystal + Água (lento) | 💙 Azul forte |
-| Stabilized Fluid | Fluid Order + Essence of Order | 💙 Azul ciano |
-| Entangled Fluid | Fluid Chaos + Essence of Chaos | 💜 Roxo escuro |
-| Singularity Fluid | Stabilized + Entangled + Nether Star | 💛 Dourado |
+| Líquido | Cor | Obtenção | Propriedade Especial |
+|---------|-----|----------|---------------------|
+| **Liquid Quanta** | 💜 Roxo claro brilhante | Quantum Dust + Água | Base, neutro |
+| **Liquid Chaos** | 💜 Roxo escuro profundo | Essence of Chaos + Lava (50%) | Balde quebra após 30s, dobra geração |
+| **Liquid Order** | 💙 Ciano brilhante | Essence of Order + Água | Refrigeração eficiente |
+| **Stabilized Liquid** | 💙 Ciano + partículas brancas | Liquid Order + Essence of Order | Refrigeração premium |
+| **Entangled Liquid** | 💜 Roxo + partículas ciano | Liquid Chaos + Essence of Chaos | Balde teleporta, cross-dimensional |
+| **Liquid Singularity** | ⚪ Branco + efeito arco-íris | Stabilized + Entangled + Nether Star | Cria singularidade temporária |
 
-### Gases
+### Estabilização do Entanglement Reactor
 
-| Gás | Obtenção | Cor |
-|-----|----------|-----|
-| Quanta Vapor | Fluid Quanta evaporado | 💙 Ciano transparente |
-| Chaos Gas | Fluid Chaos evaporado | 💜 Roxo transparente |
-| Order Gas | Fluid Order evaporado | 💙 Azul transparente |
-| Entangled Gas | Entangled Fluid evaporado | 💜 Roxo cintilante |
-| Stabilized Gas | Stabilized Fluid evaporado | 💙 Azul estável |
-| Singularity Gas | Singularity Fluid evaporado | 💛 Dourado cintilante |
+| Líquido | Efeito | Consumo | Estabilidade |
+|---------|--------|---------|--------------|
+| Água | +5% estabilidade | 10 mB/t | Baixa |
+| Liquid Quanta | +10% estabilidade, +5% geração | 5 mB/t | Média |
+| Liquid Order | +20% estabilidade | 2 mB/t | Alta |
+| Stabilized Liquid | +30% estabilidade | 1 mB/t | Muito Alta |
+| Liquid Chaos | **-30% estabilidade, DOBRA geração** | 5 mB/t | Caótica |
+
+### Gases (evaporados dos líquidos)
+
+| Gás | Cor |
+|-----|-----|
+| Quanta Gas | Roxo claro transparente |
+| Chaos Gas | Roxo escuro transparente |
+| Order Gas | Ciano transparente |
+| Entangled Gas | Roxo + partículas ciano |
+| Stabilized Gas | Ciano + partículas brancas |
+| Singularity Gas | Branco transparente cintilante |
 
 ### Tanques
 
 | Tanque | Capacidade | Tipo |
 |--------|------------|------|
-| Quantum Tank (Basic) | 16.000 mB | Fluido |
-| Quantum Tank (Advanced) | 64.000 mB | Fluido |
-| Quantum Tank (Elite) | 256.000 mB | Fluido |
-| Quantum Tank (Ultimate) | 1.024.000 mB | Fluido |
-| Quantum Gas Tank (Basic) | 16.000 mB | Gás |
-| Quantum Gas Tank (Advanced) | 64.000 mB | Gás |
-| Quantum Gas Tank (Elite) | 256.000 mB | Gás |
-| Quantum Gas Tank (Ultimate) | 1.024.000 mB | Gás |
-
-### Refrigeração do Entanglement Reactor
-
-| Fluido | Efeito | Consumo (mB/t) | Estabilidade |
-|--------|--------|----------------|--------------|
-| Água | -5% calor | 10 | Baixa |
-| Fluid Quanta | -10% calor, +5% geração | 5 | Média |
-| Fluid Order | -20% calor | 2 | Alta |
-| Stabilized Fluid | -30% calor, +10% estabilidade | 1 | Muito Alta |
-
-**Níveis de estabilidade:**
-- Baixa (0-30%): Risco de explosão +50%
-- Média (30-60%): Risco normal
-- Alta (60-90%): Risco -25%, +10% geração
-- Muito Alta (90%+): Risco -50%, +20% geração, +10% sucesso na superposição
+| Quantum Tank (Decoherent) | 16.000 mB | Líquido |
+| Quantum Tank (Entangled) | 64.000 mB | Líquido |
+| Quantum Tank (Superposed) | 256.000 mB | Líquido |
+| Quantum Tank (Singular) | 1.024.000 mB | Líquido |
+| Containment Tank | 16.000 mB | Líquidos perigosos |
+| Pressurized Tank (Decoherent) | 16.000 mB | Gás |
+| Pressurized Tank (Entangled) | 64.000 mB | Gás |
+| Pressurized Tank (Superposed) | 256.000 mB | Gás |
+| Pressurized Tank (Singular) | 1.024.000 mB | Gás |
+| Pressurized Containment Tank | 16.000 mB | Gases perigosos |
 
 ---
 
 ## 🏭 3. MÁQUINAS POR TIER
 
-### Tier 0 (Pré-Quanta - FE apenas)
+### Tier 0 - Industrial (FE)
 
-| Máquina | Função |
-|---------|--------|
-| Mechanical Crusher | Pulveriza minérios e Ender Pearl |
-| Mechanical Press | Pressiona metais em placas |
-| Mechanical Wire Drawer | Transforma placas em fios |
-| Thermal Engine | Gera FE a partir de combustível |
+| Máquina | Função | Receita |
+|---------|--------|---------|
+| Industrial Crusher | Pulveriza minérios, Ender Pearl, Blaze Rod | `[Frame] [Frame] [Frame]` / `[Piston] [StoneCuter] [Piston]` / `[Gear] [Redstone] [Gear]` |
+| Industrial Press | Pressiona metais em placas | `[Frame] [Piston] [Frame]` / `[Piston] [ ] [Piston]` / `[Gear] [Redstone] [Gear]` |
+| Industrial Wire Drawer | Transforma placas em fios | `[Frame] [Frame] [Frame]` / `[WireHook] [StoneCuter] [WireHook]` / `[Gear] [Redstone] [Gear]` |
+| Combustor | Gera FE a partir de combustível | `[Frame] [Frame] [Frame]` / `[Frame] [Blast Furnace] [Frame]` / `[Gear] [Frame] [Gear]` |
 
-### Tiers de Máquinas Quanta
+### Tier 1 - Decoherent
 
-| Tier | Processos | Slots addon | Consumo | Velocidade |
-|------|-----------|-------------|---------|------------|
-| Basic | 1 | 2 | 100% | 1x |
-| Advanced | 2 | 3 | 150% | 2x |
-| Elite | 4 | 4 | 200% | 4x |
-| Ultimate | 8 | 6 | 300% | 8x |
+| Máquina | Função | Consumo | Receita |
+|---------|--------|---------|---------|
+| Particle Reconstructor | Duplica dusts (2x-8x por tier) | 10 Q/t | `[Frame] [Processing] [Frame]` / `[Control] [] [Control]` / `[Frame] [Energy] [Frame]` |
+| Quanta Infuser | Infunde materiais (Infusion system) | 20 Q/t | `[Frame] [Fluid] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Processing] [Frame]` |
+| Quanta Collector | Gera Essences (passivo) | 0 (gera 5 Q/t) | `[Frame] [Fluid] [Frame]` / `[Control] [Dispenser] [Control]` / `[Frame] [Energy] [Frame]` |
+| Quantum Assembler | Crafting table do mod | 15 Q/t | `[Frame] [Processing] [Frame]` / `[Control] [Crafting] [Control]` / `[Frame] [Energy] [Frame]` |
+| Quantum Liquid Infuser | Produz líquidos quânticos | 20 Q/t | `[Frame] [Fluid] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Energy] [Frame]` |
+| Energy Quantifier | FE → Quanta | 0 (converte) | `[Frame] [Energy] [Frame]` / `[Coil] [Redstone] [Coil]` / `[Frame] [Energy] [Frame]` |
+| Quanta Collapser | Quanta → FE | 0 (converte) | `[Frame] [Energy] [Frame]` / `[Coil] [Redstone] [Coil]` / `[Frame] [Energy] [Frame]` |
+| Quanta Enhancer | Quantum Dust → Quantum Pallet | 25 Q/t | `[Frame] [Processing] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Energy] [Frame]` |
+| Quantum Evaporator | Líquido → Gás | 15 Q/t | `[Frame] [Fluid] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Energy] [Frame]` |
+| Quantum Condenser | Gás → Líquido | 15 Q/t | `[Frame] [Fluid] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Energy] [Frame]` |
 
-**Upgrade:** Upgrade Kit na máquina existente
+### Tier 2 - Entangled
 
-### Tier 1 (Quanta Básico)
+| Máquina | Função | Consumo | Receita |
+|---------|--------|---------|---------|
+| Quantum Press | Prensagem eficiente | 30 Q/t | `[Frame] [Processing] [Frame]` / `[Control] [Press] [Control]` / `[Frame] [Energy] [Frame]` |
+| Quantum Wire Drawer | Fios eficientes | 25 Q/t | `[Frame] [Processing] [Frame]` / `[Control] [Wire] [Control]` / `[Frame] [Energy] [Frame]` |
+| Quanta Engine | Queima Liquid Quanta/Chaos | 0 (gera) | `[Frame] [Energy] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Fluid] [Frame]` |
+| Gas Burner | Queima Quanta Gas/Chaos Gas | 0 (gera) | `[Frame] [Energy] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Fluid] [Frame]` |
+| Entangler | Entrelaça máquinas ao sistema (wireless) | 40 Q/t | `[Frame] [Network] [Frame]` / `[Control] [Core] [Control]` / `[Frame] [Energy] [Frame]` |
+| Tunnel Relay | Cabos atravessam blocos (P2P) | 0 Q/t | `[Frame] [Network] [Frame]` / `[Control] [Core] [Control]` / `[Frame] [Energy] [Frame]` |
+| Void Generator | Geração passiva por local | 0 (gera) | `[Frame] [Energy] [Frame]` / `[Control] [Void] [Control]` / `[Frame] [Energy] [Frame]` |
+| Quantum Liquid Mixer | Mistura líquidos | 30 Q/t | `[Frame] [Fluid] [Frame]` / `[Control] [Mixer] [Control]` / `[Frame] [Energy] [Frame]` |
+| Quantum Forge | Processamento avançado de ligas | 3x3x3 | 100 Q/t |
 
-| Máquina | Função | Consumo (Basic) |
-|---------|--------|-----------------|
-| Particule Reconstructor | Duplica minérios | 10 Q/t |
-| Quanta Infuser | Infunde Quanta em materiais | 20 Q/t |
-| Quanta Collector | Gera energia + Essências | 5 Q/t (gera) |
-| Quantum Assembler | Crafting table do mod | 15 Q/t |
-| Quantum Fluid Infuser | Produz fluidos quânticos | 20 Q/t |
+### Tier 3 - Superposed
 
-### Tier 1.5
+| Máquina | Função | Tamanho | Consumo |
+|---------|--------|---------|---------|
+| Quantum Gas Centrifuge | Separa gases em componentes | 1 bloco | 40 Q/t |
+| Black Hole Forge | Cria Stabilized Singularity | 7x7x7 | 1.000 Q/t |
+| Entanglement Reactor | Geração massiva de Quanta | 5x5x5 a 21x21x21 | 0 (gera 2k-10k+ Q/t) |
 
-| Máquina | Função | Consumo (Basic) |
-|---------|--------|-----------------|
-| Quanta Enhancer | Enhanced de materiais | 25 Q/t |
-| Quantum Evaporator | Fluido → Gás | 15 Q/t |
-| Quantum Condenser | Gás → Fluido | 15 Q/t |
+### Tier Ultimate - Singular
 
-### Tier 2
-
-| Máquina | Função | Consumo (Basic) |
-|---------|--------|-----------------|
-| Quanta Press | Press eficiente | 30 Q/t |
-| Quantum Wire Drawer | Wire eficiente | 25 Q/t |
-| Quantum Engine | Queima Fluid Quanta | 0 (gera) |
-| Quantum Gas Burner | Queima Quanta Vapor | 0 (gera) |
-| Entangler | Entrelaça máquinas | 40 Q/t + custo |
-| Quantum Tuneler | Atravessa blocos | 20 Q/t + (5/bloco) |
-| Quantum Observer | Manipula superposição | 15 Q/t |
-
-### Tier 2.5
-
-| Máquina | Função | Consumo (Basic) |
-|---------|--------|-----------------|
-| Vacuum Generator | Passivo (500-1.000 Q/t) | 0 (gera) |
-| Quantum Fluid Mixer | Mistura fluidos | 30 Q/t |
-
-### Tier 3 (Elite)
-
-| Máquina | Função | Consumo (Basic) |
-|---------|--------|-----------------|
-| Quantum Forge | Processamento avançado | 100 Q/t |
-| Quantum Gas Centrifuge | Separa gases | 40 Q/t |
-| Quantum Plasma Forge | Processa gases em materiais | 100 Q/t |
-| Black Hole Forge | Cria Stabilized Singularity | 1.000 Q/t |
-| Entanglement Reactor | Geração massiva | 0 (gera 2.000-8.000+) |
-
-### Rede/Computadores
-
-| Máquina | Função | Tier |
-|---------|--------|------|
-| Quantum Link | Extensor de alcance | Basic |
-| Entanglement Hub | Central de conexões | Advanced |
-| Quantum Terminal | Interface da rede | Basic |
-| Quantum Computer | Processamento central | Advanced |
-| Quantum Mainframe | Processamento avançado | Elite |
-| Quantum Supercomputer | Processamento massivo | Ultimate |
+| Máquina | Função | Tamanho | Consumo |
+|---------|--------|---------|---------|
+| Quantum Plasma Forge | Processamento de ligas Endgame | 5x5x5 | 200 Q/t |
+| Quantum Supercomputer | Rede global (256 conexões) | 1 bloco | 640 Q/t |
 
 ---
 
-## 📦 4. MATERIAIS E RECEITAS
+## 🔧 4. MÁQUINAS DE REDE (Entanglement Network)
 
-### Tier 0 - Coleta
+| Componente | Função | Tier | Conexões |
+|------------|--------|------|----------|
+| Quantum Cables | Transporte físico de energia/items/líquidos/gás | Decoherent | - |
+| Entangled Cables | Transporte de sinal de rede (interface com sistema) | Entangled | - |
+| Signal Repeater | Extensor de alcance do Entangled Cable (+16 blocos) | Entangled | - |
+| Quantum Link | Extensor de alcance wireless (+16 blocos) | Decoherent | - |
+| Entangler | Conexão wireless de máquinas ao sistema | Entangled | - |
+| Entanglement Switch | Central de conexões | Entangled | 32 |
+| Quantum Terminal | Interface da rede (consome 1 slot) | Decoherent | - |
+| Quantum Computer | Gerencia rede (consome 1 slot) | Entangled | - |
+| Quantum Mainframe | Gerencia rede grande (consome 1 slot) | Superposed | - |
+| Quantum Supercomputer | Rede global cross-dimensional (consome 1 slot) | Singular | - |
 
-| Material | Máquina | Método |
-|----------|---------|--------|
-| Ender Dust | Mechanical Crusher | Pulverizar Ender Pearl |
-
-### Tier 1 - Pó Quântico
-
-| Material | Máquina | Método |
-|----------|---------|--------|
-| Quantum Dust | Crafting Table | Ender Dust + Redstone |
-| Quantum Dust (eficiente) | Particule Reconstructor | Ender Dust + Redstone |
-
-### Tier 1.5 - Pallet
-
-| Material | Máquina | Método |
-|----------|---------|--------|
-| Quantum Pallet | Quanta Enhancer | Quantum Dust → Quantum Pallet |
-
-### Tier 2 - Metal e Componentes
-
-| Material | Máquina | Método |
-|----------|---------|--------|
-| Quantum Steel | Quanta Infuser | Quantum Dust/Pallet + Iron Ingot |
-| Quantum Steel Sheet | Mechanical Press / Quanta Press | Quantum Steel |
-| Quantum Steel Wire | Mechanical Wire Drawer / Quantum Wire Drawer | Quantum Steel Sheet |
-| Quantum Coil | Quantum Assembler | Quantum Steel Wire + Copper Ingot |
-| Quantum Circuit | Quanta Press | Quantum Steel + Gold + Redstone |
-
-### Tier 3 - Cristais e Essências
-
-| Material | Máquina | Método |
-|----------|---------|--------|
-| Quantum Crystal | Quanta Infuser | Quantum Dust/Pallet + Diamond |
-| Essence of Order | Quanta Collector | Modo Decoerência |
-| Essence of Chaos | Quanta Collector | Modo Superposição |
-
-### Tier 4 - Avançado
-
-| Material | Máquina | Método |
-|----------|---------|--------|
-| Quantum Processor | Quantum Assembler | Quantum Crystal + Quantum Circuit |
-| Entangled Core | Quantum Assembler | Quantum Crystal + Ender Pearl + Essence of Chaos |
-| Observer Lens | Quantum Assembler | Quantum Crystal + Essence of Order + Glass |
-| Chaos Fragment | Quantum Assembler | Quantum Crystal + Essence of Chaos |
-
-### Tier 5 - Elite
-
-| Material | Máquina | Método |
-|----------|---------|--------|
-| Quantum Alloy | Quanta Infuser | Quantum Dust/Pallet + Netherite Ingot |
-| Stabilized Singularity | Black Hole Forge | Nether Star + Entangled Core |
-
-### Componentes Estruturais
-
-| Material | Máquina | Método |
-|----------|---------|--------|
-| Quantum Frame | Quantum Assembler | 4 Steel + 4 Circuit + 1 Core |
-| Quantum Casing | Quantum Assembler | 8 Sheet + 1 Coil |
-| Quantum Glass | Quantum Assembler | 4 Wire + 4 Glass + 1 Dust |
-| Quantum Panel | Quantum Assembler | 4 Sheet |
-| Quantum Gear | Quantum Assembler | 4 Steel + 2 Coil |
-
-### Componentes Elétricos
-
-| Material | Máquina | Método |
-|----------|---------|--------|
-| Quantum Diode | Quantum Assembler | 2 Wire + 1 Circuit + 1 Redstone |
-| Quantum Capacitor | Quantum Assembler | 4 Coil + 1 Crystal |
-| Quantum Resistor | Quantum Assembler | 2 Wire + 1 Dust |
-| Quantum Transistor | Quantum Assembler | Diode + Circuit + Order |
-
-### Computadores
-
-| Material | Máquina | Método |
-|----------|---------|--------|
-| Quantum CPU | Quantum Assembler | Processor + Circuit + Order |
-| Quantum RAM | Quantum Assembler | Crystal + Coil + Redstone |
-| Quantum Storage | Quantum Assembler | Steel + Circuit + Pallet |
-| Quantum Motherboard | Quantum Assembler | Frame + CPU + 4 RAM |
-| Quantum Network Card | Quantum Assembler | Motherboard + Core |
-
-### Computadores (completos)
-
-| Computador | Máquina | Método |
-|------------|---------|--------|
-| Quantum Terminal | Quantum Assembler | Motherboard + 2 RAM + 1 Card + 4 Glass |
-| Quantum Computer | Quantum Assembler | Terminal + 2 CPU + 4 RAM + 1 Core |
-| Quantum Mainframe | Quantum Assembler | Computer + 4 CPU + 8 RAM + 2 Core + 4 Frame |
-| Quantum Supercomputer | Quantum Assembler | Mainframe + 8 CPU + 16 RAM + 4 Core + 8 Frame + 1 Singularity |
-| Parallel Processor | Quantum Assembler | 4 CPU + 4 RAM + 1 Core |
-
-### Ferramentas
-
-| Ferramenta | Máquina | Método |
-|------------|---------|--------|
-| Quantum Wrench | Quantum Assembler | 4 Steel + 2 Circuit |
-| Quantum Multitool | Quantum Assembler | Wrench + Processor |
-| Quantum Screwdriver | Quantum Assembler | 2 Steel + 1 Circuit |
-| Quantum Tester | Quantum Assembler | Circuit + Redstone + Glass |
-| Quantum Scanner | Quantum Assembler | Tester + Processor + Lens |
-
-### Quantum Logic Blocks
-
-| Bloco | Máquina | Método |
-|-------|---------|--------|
-| Quantum Comparator | Quantum Assembler | Circuit + Redstone + Comparator |
-| Quantum Logic Gate AND | Quantum Assembler | 2 Circuit + Redstone |
-| Quantum Logic Gate OR | Quantum Assembler | 2 Circuit + Redstone |
-| Quantum Logic Gate NOT | Quantum Assembler | Circuit + Redstone + Torch |
-| Quantum Timer | Quantum Assembler | Circuit + Clock + Redstone |
-| Quantum Redstone Relay | Quantum Assembler | Circuit + Redstone + Comparator |
-
-### Baterias
-
-| Bateria | Capacidade | Método |
-|---------|------------|--------|
-| Basic Quantum Battery | 100.000 Q | Quantum Assembler (4 Steel + 2 Crystal) |
-| Advanced Quantum Battery | 500.000 Q | Quantum Assembler (Basic + 2 Core) |
-| Elite Quantum Battery | 2.500.000 Q | Quantum Assembler (Advanced + 2 Alloy) |
-| Ultimate Quantum Battery | 10.000.000 Q | Quantum Assembler (Elite + Singularity) |
-
-### Blocos de Bateria
-
-| Bloco | Capacidade | Método |
-|-------|------------|--------|
-| Quantum Cell | 10.000.000 Q | Quantum Assembler (4 Casing + 4 Battery Basic) |
-| Entangled Cell | 100.000.000 Q | Quantum Assembler (4 Frame + 4 Battery Advanced + 2 Core) |
-| Singularity Cell | 1.000.000.000 Q | Quantum Assembler (4 Frame + 4 Battery Elite + Singularity) |
+**Regras da Rede:**
+- Múltiplos Switch adjacentes somam slots (multibloco: 5X5X5) 
+- Entangled Cables têm limite de 16 blocos sem Signal Repeater
+- Quantum Links podem ser colocados em série
+- Quantum Cable NÃO canais
 
 ---
 
-## 🔋 5. QUANTUM BATTERY (ARMAZENAMENTO)
-
-### Itens Portáteis
-
-| Bateria | Capacidade | Tier |
-|---------|------------|------|
-| Basic Quantum Battery | 100.000 Q | Basic |
-| Advanced Quantum Battery | 500.000 Q | Advanced |
-| Elite Quantum Battery | 2.500.000 Q | Elite |
-| Ultimate Quantum Battery | 10.000.000 Q | Ultimate |
-
-**Características:**
-- Funciona em slots Curios (se disponível)
-- Ferramentas consomem PRIMEIRO da bateria equipada
-
-### Blocos de Armazenamento
-
-| Bloco | Capacidade | Tier |
-|-------|------------|------|
-| Quantum Cell | 10.000.000 Q | Advanced |
-| Entangled Cell | 100.000.000 Q | Elite |
-| Singularity Cell | 1.000.000.000 Q | Ultimate |
-
----
-
-## 📡 6. ENTANGLEMENT NETWORK (WIRELESS)
-
-### Progressão
-
-| Fase | Sistema |
-|------|---------|
-| Early Game | Cabos físicos (Quantum Cable) |
-| Mid Game | Tunelamento (atravessa paredes) |
-| Late Game | Wireless local (com Quantum Links) |
-| Endgame | Full Wireless global (cross-dimensional) |
-
-### Componentes
-
-| Componente | Função | Tier |
-|------------|--------|------|
-| Quantum Link | Extensor de alcance | Basic |
-| Entanglement Hub | Central de conexões | Advanced |
-| Quantum Antenna | Longo alcance | Elite |
-
-### Computadores de Rede
-
-| Computador | Função | Slots | Consumo |
-|------------|--------|-------|---------|
-| Quantum Terminal | Interface | 4 conexões | 10 Q/t |
-| Quantum Computer | Gerencia rede | 16 conexões | 40 Q/t |
-| Quantum Mainframe | Gerencia rede grande | 64 conexões | 160 Q/t |
-| Quantum Supercomputer | Rede global | 256 conexões | 640 Q/t |
-
-### Quantum Logic Blocks (alternativa a scripts)
-
-| Bloco | Função |
-|-------|--------|
-| Quantum Comparator | Compara valores (>, <, =) |
-| Quantum Logic Gate AND | E lógico |
-| Quantum Logic Gate OR | OU lógico |
-| Quantum Logic Gate NOT | NÃO lógico |
-| Quantum Timer | Temporizador |
-| Quantum Redstone Relay | Converte Quanta ↔ Redstone |
-
----
-
-## 🔬 7. MECÂNICA QUÂNTICA
-
-### Superposição (Chaos)
-
-**Chances de sucesso:**
-
-| Tier | Sucesso Total | Sucesso Parcial | Falha |
-|------|---------------|-----------------|-------|
-| Basic | 45% | 35% | 20% |
-| Advanced | 50% | 35% | 15% |
-| Elite | 60% | 30% | 10% |
-| Ultimate | 75% | 20% | 5% |
-
-### Decoerência (Order)
-
-- Resultado previsível e garantido
-- Sem riscos, sem bônus
-
-### Entrelaçamento
-
-- Distância máxima: 16/32/64 blocos (upgradável)
-- Custo de manutenção: 10/20/40 Q/t
-
-### Tunelamento Quântico
-
-- Atravessa blocos sólidos
-- Tipos: Energia, Itens, Pessoal (teletransporte)
-
-### Observador
-
-- Modos: Estabilizador (+10% velocidade), Seletor, Medidor
-
----
-
-## 🔧 8. ADDONS
+## 🔧 5. ADDONS
 
 ### Slots por tier
 
 | Tier | Slots |
 |------|-------|
-| Basic | 2 |
-| Advanced | 3 |
-| Elite | 4 |
-| Ultimate | 6 |
+| Decoherent | 2 |
+| Entangled | 3 |
+| Superposed | 4 |
+| Singular | 6 |
 
 ### Addons disponíveis
 
-| Addon | Efeito | Valor |
-|-------|--------|-------|
-| Stabilizer Coil | Reduz falha | -5% |
-| Quantum Lock | Reduz falha | -10% |
-| Observer Link | Reduz falha | -15% (requer Lens) |
-| Order Stabilizer | Reduz falha e velocidade | -10% falha, -10% speed |
-| Chaos Overdrive | Aumenta performance | +50% speed, +25% falha |
-| Speed Coil | Aumenta velocidade | +20% |
-| Energy Coil | Reduz consumo | -20% |
-| Quanta Generation Coil | Aumenta geração | +25% |
-| Efficiency Coil | Reduz consumo combustível | -20% |
-| Fluid Addon | Processa líquidos/gases | N/A |
-| Cooling Coil | Reduz consumo refrigeração | -20% |
-| Chaos Injector | +geração, +risco | +50% geração, +25% risco |
-| Order Stabilizer (fluido) | Estabiliza | -30% risco, -10% geração |
-| Efficiency Vent | Reduz consumo gás | -20% |
-
-**Regras:**
-- Máximo 4 do mesmo tipo
-- Limite de 90% de sucesso total na superposição
+| Addon | Efeito | Material Especial |
+|-------|--------|-------------------|
+| Speed Coil | +20% speed, +25% energy cost | - |
+| Energy Coil | -20% energy cost | - |
+| Stabilizer Coil | -5% failure | - |
+| Quantum Lock | -10% failure | - |
+| Observer Link | -15% failure | Observer Lens |
+| Chaos Overdrive | +50% speed, +25% failure | Chaos Fragment |
+| Chaos Injector | +50% geração, +25% risco (reator) | Chaos Fragment |
+| Order Stabilizer | -30% risco, -10% geração (reator) | Essence of Order |
+| Yield Addon | +15% secondary output | - |
+| Fluid Addon | Processa líquidos/gases | - |
 
 ---
 
-## 🗡️ 9. EQUIPAMENTOS MODULARES
+## 🗡️ 6. EQUIPAMENTOS MODULARES
 
-### Equipamentos base
+### Tiers de Equipamentos
 
-| Equipamento | Slots | Capacidade |
-|-------------|-------|------------|
-| Quantum Pickaxe | 3 | 10.000 Q |
-| Quantum Axe | 3 | 10.000 Q |
-| Quantum Shovel | 3 | 10.000 Q |
-| Quantum Sword | 3 | 10.000 Q |
-| Quantum Helmet | 4 | 5.000 Q |
-| Quantum Chestplate | 6 | 15.000 Q |
-| Quantum Leggings | 4 | 8.000 Q |
-| Quantum Boots | 4 | 5.000 Q |
+| Tier | Nome | Material | Capacidade Ferramenta | Capacidade Armadura | Slots |
+|------|------|----------|----------------------|---------------------|-------|
+| 1 | Decoherent | Quantum Steel | 10.000 Q | 5.000-15.000 Q | 3-6 |
+| 2 | Entangled | Quantum Alloy | 25.000 Q | 10.000-30.000 Q | 4-8 |
+| 3 | Superposed | Alloy + Entangled Core | 50.000 Q | 20.000-50.000 Q | 5-10 |
+| Ultimate | Singular | Alloy + Stabilized Singularity | 100.000 Q | 25.000-75.000 Q | 6-12 |
 
-### Módulos (com tiers I/II/III)
+### Ferramentas Base
 
-| Categoria | Módulo | Efeito |
-|-----------|--------|--------|
-| Minerador | Tunnel | Mina 2x2 |
-| Minerador | Vein Miner | Mina veio inteiro |
-| Minerador | Quantum Sight | Mostra minérios |
-| Minerador | Auto-Smelt | Funde automaticamente |
-| Minerador | Silk Touch | Toque suave |
-| Combate | Chaos Strike | % dano triplicado |
-| Combate | Order Strike | Dano consistente |
-| Combate | Leech | Rouba vida |
-| Utilidade | Magnet | Puxa itens |
-| Utilidade | Speed | Aceleração |
-| Utilidade | Experience | +% XP |
-| Defesa | Quantum Shield | Absorve dano |
-| Defesa | Anti-Knockback | Sem knockback |
-| Defesa | Regeneration | Regenera vida |
+| Equipamento | Slots | Capacidade Base |
+|-------------|-------|-----------------|
+| Quantum Pickaxe | 3-6 | 10.000-100.000 Q |
+| Quantum Axe | 3-6 | 10.000-100.000 Q |
+| Quantum Drill | 3-6 | 10.000-100.000 Q |
+| Quantum Saw | 3-6 | 10.000-100.000 Q |
+| Quantum Shovel | 3-6 | 10.000-100.000 Q |
+| Quantum Sword | 3-6 | 10.000-100.000 Q |
+| Quantum Katana | 3-6 | 10.000-100.000 Q |
+| Quantum Claymore | 3-6 | 10.000-100.000 Q |
+| Quantum Cannon | 3-6 | 10.000-100.000 Q |
+| Quantum Grappler | 3-6 | 10.000-100.000 Q |
+| Quantum Shield | 3-6 | 10.000-100.000 Q |
+
+### Armadura Base
+
+| Equipamento | Slots | Capacidade Base |
+|-------------|-------|-----------------|
+| Quantum Helmet | 4-8 | 5.000-25.000 Q |
+| Quantum Chestplate | 6-12 | 15.000-75.000 Q |
+| Quantum Leggings | 4-8 | 8.000-40.000 Q |
+| Quantum Boots | 4-8 | 5.000-25.000 Q |
+
+### Quantum Upgrade Table
+
+Máquina específica para upgrade de equipamentos. Preserva módulos instalados.
+
+**Receita:**
+[Frame] [Processing] [Frame]
+[Control] [Crafting] [Control]
+[Frame] [Energy] [Frame]
+
+
+
+**Upgrade Kits:**
+
+| Kit | Receita (Quantum Assembler) | Uso |
+|-----|----------------------------|-----|
+| Decoherent Kit | `[Plate] [Core] [Plate]` / `[Circuit] [Alloy] [Circuit]` / `[Plate] [Core] [Plate]` | Base |
+| Entangled Kit | `[Decoherent Kit] [Core] [Decoherent Kit]` / `[Core] [Alloy] [Core]` / `[Decoherent Kit] [Core] [Decoherent Kit]` | Decoherent → Entangled |
+| Superposed Kit | `[Entangled Kit] [Alloy] [Entangled Kit]` / `[Alloy] [Chaos] [Alloy]` / `[Entangled Kit] [Alloy] [Entangled Kit]` | Entangled → Superposed |
+| Singular Kit | `[Superposed Kit] [Singularity] [Superposed Kit]` / `[Singularity] [Alloy] [Singularity]` / `[Superposed Kit] [Singularity] [Superposed Kit]` | Superposed → Singular |
+
+**Funcionamento do Upgrade:**
+- Coloque ferramenta/armadura no slot de input
+- Coloque o Upgrade Kit correspondente
+- Coloque os materiais necessários
+- Consome 5.000 Q
+- Preserva módulos, encantamentos e nome
 
 ---
 
-## 📖 10. SISTEMA DE SPELLS (QUANTUM CODEX)
+## 📦 7. MÓDULOS
+
+### Módulos de Mineração
+
+| Módulo | Efeito | Tier I | Tier II | Tier III |
+|--------|--------|--------|---------|----------|
+| Tunnel | Mina área | 2x2 | 3x3 | 5x5 |
+| Vein Miner | Mina veio | 16 blocos | 32 blocos | 64 blocos |
+| Quantum Sight | Revela minérios | 8 blocos | 16 blocos | 32 blocos |
+| Auto-Smelt | Funde | 1x | 2x | 3x |
+| Silk Touch | Toque suave | 1x | 1x + speed | 2x + speed |
+
+### Módulos de Combate
+
+| Módulo | Efeito | Tier I | Tier II | Tier III |
+|--------|--------|--------|---------|----------|
+| Chaos Strike | Dano triplicado (chance) | 15% | 25% | 35% |
+| Order Strike | Dano consistente | +25% | +50% | +75% |
+| Leech | Rouba vida | 10% | 20% | 30% |
+
+### Módulos de Utilidade
+
+| Módulo | Efeito | Tier I | Tier II | Tier III |
+|--------|--------|--------|---------|----------|
+| Magnet | Puxa itens | 4 blocos | 8 blocos | 16 blocos |
+| Speed | Velocidade | +20% | +35% | +50% |
+| Experience | Bônus XP | +25% | +50% | +75% |
+
+### Módulos de Defesa
+
+| Módulo | Efeito | Tier I | Tier II | Tier III |
+|--------|--------|--------|---------|----------|
+| Quantum Shield | Absorve dano | 20% | 40% | 80% |
+| Anti-Knockback | Sem knockback | 60% | 80% | 100% |
+
+### Módulos Especiais
+
+| Módulo | Efeito | Tier |
+|--------|--------|------|
+| Radar | Detecta entidades | Entangled |
+| Step Assist | Sobe blocos automaticamente | Decoherent |
+
+### Upgrade de Módulos (Quantum Upgrade Table)
+
+- 1 módulo anterior + 4 materiais do tier + Quantum Processor
+- **NÃO** precisa de 9 módulos do mesmo tipo
+
+---
+
+## 🔌 8. QUANTUM AUTOMATION BLOCKS
+
+Blocos específicos que resolvem problemas reais do Quanta.
+
+| Bloco | Função | Order/Chaos |
+|-------|--------|-------------|
+| Quantum Redstone Relay | Quanta (0-100) ↔ Redstone (0-15) | ✅ Order |
+| Quantum Energy Monitor | Monitora energia da rede, emite redstone | ✅ Order |
+| Quantum Storage Monitor | Monitora itens/líquidos no sistema | ✅ Order |
+| Quantum Mode Switcher | Alterna Chaos/Order de máquinas via redstone | ⚠️ Ambos |
+
+**Receitas:**
+
+**Quantum Redstone Relay:**
+[ ] [Wire] [ ]
+[Circuit] [Comparator] [Circuit]
+[ ] [Redstone] [ ]
+
+
+
+**Quantum Energy Monitor:**
+[ ] [Tester] [ ]
+[Circuit] [Redstone] [Circuit]
+[ ] [Redstone] [ ]
+
+
+
+**Quantum Storage Monitor:**
+[ ] [Scanner] [ ]
+[Circuit] [Redstone] [Circuit]
+[ ] [Redstone] [ ]
+
+
+
+**Quantum Mode Switcher:**
+[ ] [Wire] [ ]
+[Order] [Circuit] [Chaos]
+[ ] [Redstone] [ ]
+
+
+
+---
+
+## 🦾 9. IMPLANTES CIBERNÉTICOS
+
+Obtidos na **Quantum Cyber Chamber** (multibloco 3x3x3)
+
+**Quantum Cyber Chamber:**
+- Centro (em baixo): Cyber Chamber Controller
+- Estrutura: Quantum Casing (26 blocos), Quantum Glass Pane (8 Blocos)
+- Consome 100 Q/t quando em uso
+
+**Receita do Controller:**
+[Frame] [Processing] [Frame]
+[Control] [ ] [Control]
+[Frame] [Energy] [Frame]
+
+
+
+### Implantes por Tier
+
+| Implante | Efeito | Tier | Custo | Componentes |
+|----------|--------|------|-------|-------------|
+| Quantum Sight | Ver conexões do sistema e cabos pela parede (8-32 blocos) | Entangled | 500 Q | Neural Interface + Optical Core + Lens |
+| Quantum Reach | Alcance estendido (+3 a +8 blocos) | Entangled | 500 Q | Neural Interface + Core + Core |
+| Quantum Speed | +20% a +50% velocidade | Entangled | 500 Q | Neural Interface + Motor Implant + Speed Coil |
+| Quantum Strength | +20% a 50% força | Entangled | 500 Q | Neural Interface + Motor Implant + Chaos Fragment |
+| Quantum Resistance | +20% a 50% resistência | Entangled | 500 Q | Neural Interface + Armor Core + Alloy |
+| Quantum Lungs | Respiração infinita | Entangled | 500 Q | Neural Interface + Fluid Core + Liquid Quanta |
+| Quantum Night Vision | Visão noturna permanente (Evolução do Sight) | Entangled | 500 Q | Neural Interface + Optical Core + Essence of Order |
+| Quantum Tunneling | Atravessar paredes no shift | Superposed | 2.000 Q | Neural Interface + Tunneling Core + Chaos Fragment |
+| Quantum Flight | Voo criativo | Superposed | 2.000 Q | Neural Interface + Flight Core + Stabilized Singularity |
+| Quantum Buffer | +10.000 a +50.000 Q de reserva | Superposed | 2.000 Q | Neural Interface + Energy Core + Capacitor |
+| Quantum Cortex | Codex integrado + craft remoto + knowledge bônus | Singular | 10.000 Q | Neural Interface + Processing Core + Quantum Processor |
+
+---
+
+## 📖 10. QUANTUM CODEX & SPELLS
 
 ### Quantum Codex
 
-- Ganha XP perto de máquinas
-- Desbloqueia **Equations** (componentes de spells)
+**Receita:**
+`[ ] [ ] [ ]` / `[Quantum Dust] [Book] [ ]` / `[ ] [ ] [ ]`
 
-### Equations
 
-**Forma:** Self, Projectile, Touch, Area
-**Elemento:** Order, Chaos, Neutro
-**Efeito:** Dano, Cura, Aceleração, Teletransporte, Infusão, Revelação, Estabilização
 
-### Black Board
+**Propriedades:**
+- Buffer de 10.000 Q
+- Ganha knowledge (XP) observando máquinas
+- Equipa até 6 spells
 
-- Combina Equations para criar spells personalizados
+### Spells Base
 
-### Implante Quantum Processor (Cérebro)
+| Spell | Combinação | Custo | Cooldown | Efeito |
+|-------|------------|-------|----------|--------|
+| Infuse | Self + Neutral + Infusion | 200 Q | 5s | Infunde item com 1.000 Q |
+| Reveal | Self + Order + Revelation | 75 Q | 10s | Revela entidades escondidas |
+| Accelerate | Touch + Neutral + Acceleration | 150 Q | 20s | Acelera máquina por 30s |
+| Stabilize | Touch + Order + Stabilization | 200 Q | 30s | -10% falha por 60s |
+| Teleport | Self + Chaos + Teleport | 250 Q | 15s | Teletransporte curto |
+| Link | Self + Chaos + Link | 500 Q | 30s | Conexão temporária na rede |
 
-- Permite usar o Codex (obrigatório para spells)
-- Ganha XP em dobro
-- Conecta ao Quantum Assembler para crafts remotos
+### Equations para Black Board
 
-### Spells base
+| Tipo | Opções | Custo Base |
+|------|--------|------------|
+| Forma | Self, Projectile, Touch, Area | 50-200 Q |
+| Elemento | Neutral, Order (+25% custo, -10% falha), Chaos (-25% custo, +15% falha), Singularity (+100% custo, 0% falha, +100% poder) | 0-100% |
+| Efeito | Damage, Heal, Teleport, Acceleration, Infusion, Revelation, Stabilization | 50-250 Q |
 
-| Spell | Efeito | Custo | Cooldown |
-|-------|--------|-------|----------|
-| Infuse | Infunde item com Quanta | 100 Q | 5s |
-| Link | Conexão temporária | 500 Q | 30s |
-| Tunnel | Teleporte curto | 250 Q | 10s |
-| Reveal | Mostra escondidos | 50 Q | 1s |
-| Accelerate | Acelera máquina | 200 Q | 20s |
-| Stabilize | Reduz falha | 150 Q | 15s |
+### Singularity Spells
+
+| Forma + Efeito | Resultado |
+|----------------|-----------|
+| Self + Damage | Buff: +200% dano corpo a corpo (30s) |
+| Self + Heal | Buff: Cura 10/s (10s), imortal |
+| Self + Teleport | Teletransporte seguro (cama/spawn) |
+| Self + Acceleration | Buff: +300% speed (20s) |
+| Self + Infusion | Buff: Indestrutível, voo, suga itens (30s) |
+| Self + Revelation | Visão 100 blocos (60s) |
+| Self + Stabilization | Remove efeitos negativos, imunidade (120s) |
+| Projectile + Damage | Projétil perfurante (dano 50) + buraco negro (100 dano) |
+| Projectile + Heal | Projétil cura 50 + campo de cura (20/s por 5s) |
+| Projectile + Teleport | Projétil envia alvo ao void |
+| Projectile + Acceleration | Projétil rápido, alvo fica lento (-80% speed 10s) |
+| Projectile + Infusion | Projétil infunde item do alvo com Singularity |
+| Projectile + Revelation | Projétil revela área ao redor (20 blocos, 30s) |
+| Projectile + Stabilization | Projétil remove buracos negros no impacto |
+| Touch + Damage | Alvo sofre 150 de dano |
+| Touch + Heal | Alvo cura 100 de dano |
+| Touch + Teleport | Alvo enviado ao void |
+| Touch + Acceleration | Alvo ganha +200% speed (30s) ou fica lento |
+| Touch + Infusion | Item do alvo infundido com Singularity |
+| Touch + Revelation | Alvo fica marcado (rastreável por 60s) |
+| Touch + Stabilization | Alvo tem efeitos negativos removidos |
+| Area + Damage | Buraco negro (100 dano) em todos no raio |
+| Area + Heal | Cura 50 + campo de cura em todos no raio |
+| Area + Teleport | Rasgo dimensional: todos no raio vão ao void |
+| Area + Acceleration | Inversão gravitacional: todos flutuam 10s |
+| Area + Infusion | Todos itens no chão infundidos |
+| Area + Revelation | Revela entidades/minérios no raio 30 blocos |
+| Area + Stabilization | Remove buracos negros em 32 blocos |
 
 ---
 
-## 🦾 11. MELHORIAS CIBERNÉTICAS
+## 🔧 11. FERRAMENTAS DE CONFIGURAÇÃO
 
-| Slot | Upgrade | Efeito | Consumo |
-|------|---------|--------|---------|
-| Olhos | Quantum Sight | Ver através de blocos | 5 Q/t |
-| Braços | Quantum Reach | Alcance +3 blocos | 10 Q/t |
-| Pernas | Quantum Tunneling | Teletransporte curto | 20 Q/t |
-| Torso | Quantum Buffer | Armazena 10.000 Q | 0 Q/t |
-| Cérebro | Quantum Processor | Codex + XP + automação | 15 Q/t |
+| Ferramenta | Função | Indestrutível | Receita |
+|------------|--------|---------------|---------|
+| Quantum Wrench | Configuração de máquinas, entrelaçamento | ✅ | `[Head]` / `[Core]` / `[Handle]` (padrão ferramenta) |
+| Quantum Screwdriver | Ajustes finos (velocidade, modo Chaos/Order) | ✅ | `[ ] [Head] [ ]` / `[ ] [Core] [ ]` / `[ ] [Handle] [ ]` |
+| Quantum Multitool | Combina Wrench + Screwdriver | ✅ | `[Wrench] [Screwdriver] [ ]` / `[ ] [ ] [ ]` / `[ ] [ ] [ ]` |
+| Quantum Tester | Mede energia, falha, addons | ✅ | `[Circuit] [Redstone] [Circuit]` / `[Glass] [Redstone] [Glass]` / `[Steel] [Redstone] [Steel]` |
+| Quantum Scanner | Análise avançada de redes | ✅ | `[ ] [ ] [ ]` / `[Tester] [Lens] [ ]` / `[ ] [ ] [ ]` |
 
 ---
 
 ## 🎨 12. VISUAL
 
-### Paleta de cores
+### Paleta de cores por Tier
 
-| Elemento | Cor |
-|----------|-----|
-| Máquinas base | Roxo escuro (#3C096C) |
-| Energia ativa | Ciano (#00F5FF) |
-| Essence of Order | 💙 Ciano |
-| Essence of Chaos | 💜 Roxo |
-| Itens Basic | Roxo médio (#9D4EDD) |
-| Itens Advanced | Ciano + Roxo |
-| Itens Elite | Ciano + Dourado |
-| Itens Ultimate | Ciano + Dourado + Branco |
+| Tier | Cor | Efeito Visual |
+|------|-----|---------------|
+| Decoherent | Roxo médio (#9D4EDD) | Brilho suave |
+| Entangled | Roxo + Ciano | Brilho pulsante |
+| Superposed | Roxo + Ciano + Dourado | Luz ciano + partículas |
+| Singular | Ciano + Dourado + Branco | Efeito arco-íris suave |
 
-### Progressão visual
+### Líquidos
 
-| Tier | Estilo |
-|------|--------|
-| Basic | Roxo escuro, partículas simples |
-| Advanced | Roxo + Ciano, partículas ativas |
-| Elite | Roxo + Ciano + Dourado, luz pulsante |
-| Ultimate | Ciano + Dourado + Branco, efeitos intensos |
+| Líquido | Cor |
+|---------|-----|
+| Liquid Quanta | 💜 Roxo claro brilhante (#B464FF) |
+| Liquid Chaos | 💜 Roxo escuro profundo (#4B0082) |
+| Liquid Order | 💙 Ciano brilhante (#00FFFF) |
+| Stabilized Liquid | 💙 Ciano + partículas brancas |
+| Entangled Liquid | 💜 Roxo + partículas ciano |
+| Liquid Singularity | ⚪ Branco + transições arco-íris |
 
 ### Efeitos especiais
 
-- **Superposição:** partículas duplicadas, luz pulsante, textura borrada
-- **Decoerência:** partículas estáveis, luz constante
+- **Superposição (Chaos):** partículas duplicadas, luz pulsante, ura borrada
+- **Decoerência (Order):** partículas estáveis, luz constante
 - **Entrelaçamento:** linha de partículas, anel giratório
 - **Addons visíveis:** componentes 3D na máquina
+- **Explosão do Reator:** tela roxa, efeito de nausea, mundo mais lento
 
 ---
 
-## 📊 13. PROGRESSÃO SUGERIDA
-TIER 0 (FE)
-├── Thermal Engine, Mechanical Crusher, Press, Wire Drawer
-├── Ender Dust → Crafting → Quantum Dust
-↓
-TIER 1 (Quanta Básico)
-├── Energy Quantifier (FE→Q), Quanta Engine (Q→FE)
-├── Particule Reconstructor, Quanta Infuser, Quanta Collector
-├── Quantum Assembler, Quantum Fluid Infuser
-├── Quantum Steel → Sheet → Wire → Coil → Circuit
-↓
-TIER 1.5
-├── Quanta Enhancer (Pallet)
-├── Quantum Evaporator, Quantum Condenser
-↓
-TIER 2 (Avançado)
-├── Quanta Press, Quantum Wire Drawer
-├── Quantum Engine (Fluid Quanta), Quantum Gas Burner
-├── Entangler, Tuneler, Observer
-├── Quantum Crystal, Essências, Entangled Core, Chaos Fragment
-↓
-TIER 2.5
-├── Vacuum Generator (passivo 500-1.000 Q/t)
-├── Quantum Fluid Mixer
-↓
-TIER 3 (Elite)
-├── Upgrade Kits
-├── Quantum Forge, Gas Centrifuge, Plasma Forge
-├── Black Hole Forge, Entanglement Reactor (5x5x5)
-├── Quantum Alloy, Stabilized Singularity
-↓
-TIER ULTIMATE (Endgame)
-├── Upgrade Kits
-├── Entanglement Reactor (20x20x20, 8.000+ Q/t)
-├── Quantum Supercomputer (rede global)
-├── Singularity Cell (1B Q)
+## ✅ 13. VERIFICAÇÃO RÁPIDA DE PROGRESSÃO
+
+- [ ] Ender Pearl → Ender Dust (Industrial Crusher)
+- [ ] Quantum Dust (Ender Dust + Redstone)
+- [ ] Quantum Steel (Quanta Infuser)
+- [ ] Quantum Crystal (Quanta Infuser + Diamond)
+- [ ] Essence of Order/Chaos (Quanta Collector)
+- [ ] Entangled Core (Quantum Assembler)
+- [ ] Quantum Processor (Quantum Assembler)
+- [ ] Stabilized Singularity (Black Hole Forge)
+- [ ] Quantum Alloy (Quanta Infuser + Netherite)
+- [ ] Decoherent Tools/Armor (craft base)
+- [ ] Entangled Tools/Armor (upgrade via Entangled Kit)
+- [ ] Superposed Tools/Armor (upgrade via Superposed Kit)
+- [ ] Singular Tools/Armor (upgrade via Singular Kit)
+- [ ] Quantum Supercomputer
+- [ ] Singularity Cell
+- [ ] All Cybernetic Implants
 
 ---
 
-## 📋 14. PENDENTE / NOTAS
+## 📋 14. COMPATIBILIDADE (Planejada)
 
-### Entanglement Reactor
-- Geração: 2.000 Q/t (5x5x5) a 8.000 Q/t (20x20x20)
-- Requer 1 Stabilized Singularity (não consumida)
-- Precisa de addons estabilizadores
-- Chaos Overdrive aumenta risco
-
-### Black Hole Forge
-- Multibloco 7x7x7
-- Consome 1.000 Q/t
-
-### Por definir
-- Valores exatos de módulos (tiers I/II/III)
-- Modelos 3D específicos
-
-### Compatibilidade
 - JEI/REI, The One Probe/Jade
 - AE2, Mekanism, Create, Thermal, XNet
+- Immersive, Refined, Pipez, LaserIO
 - Curios API
+- KubeJS / CraftTweaker
+- UniDict (padronização de minérios)
 
 ---
 
 *Este documento é a fonte de verdade para o desenvolvimento do Quanta Mod*
-*README.md e MATERIAIS_E_CRAFTS.md são versões derivadas para propósitos específicos*

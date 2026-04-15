@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "Q": {
+      "item": "quanta:quantum_steel"
+    }
+  },
+  "pattern": [
+    "QCQ",
+    "CFC",
+    "QCQ"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quanta:energy_quantifier"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_quantum_steel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "quanta:quantum_steel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quanta:quantum_cable"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_quantum_steel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "quanta:quantum_cable"
+    ]
+  }
+}

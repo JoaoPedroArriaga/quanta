@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "minecraft:furnace"
+    },
+    "Q": {
+      "item": "quanta:quantum_steel"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "pattern": [
+    "QSQ",
+    "SMS",
+    "QSQ"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quanta:particle_reconstructor"
+  }
+}

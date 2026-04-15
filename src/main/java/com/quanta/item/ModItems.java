@@ -8,6 +8,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
         public static final DeferredRegister.Items ITEMS = 
                 DeferredRegister.createItems(Quanta.MOD_ID);
+
+        public static final DeferredItem<Item> ENDER_DUST = 
+                ITEMS.registerSimpleItem("ender_dust");
     
         // ========== TIER 1 - Basic ==========
 
@@ -16,6 +19,12 @@ public class ModItems {
 
         public static final DeferredItem<Item> QUANTUM_STEEL = 
                 ITEMS.registerSimpleItem("quantum_steel");
+
+        public static final DeferredItem<Item> QUANTUM_STEEL_SHEET = 
+                ITEMS.registerSimpleItem("quantum_steel_sheet");
+
+        public static final DeferredItem<Item> QUANTUM_STEEL_WIRE = 
+                ITEMS.registerSimpleItem("quantum_steel_wire");
     
         public static final DeferredItem<Item> QUANTUM_CIRCUIT =
                 ITEMS.registerSimpleItem("quantum_circuit");

@@ -1,4 +1,5 @@
 {
+  "item.quanta.ender_dust": "Pó do Fim",
   "item.quanta.quantum_dust": "Pó Quantico",
   "item.quanta.quantum_Steel": "Aço Quântico",
   "item.quanta.quantum_circuit": "Circuito Quântico",
@@ -11,5 +12,6 @@
   "item.quanta.observer_lens": "Lente do Observdor",
   "item.quanta.chaos_fragment": "Fragmento do Caos",
   "item.quanta.quantum_alloy": "Liga Quântica",
-  "item.quanta.stabilized_singularity": "Singularidade Estabilizada"
+  "item.quanta.stabilized_singularity": "Singularidade Estabilizada",
+  "block.quanta.particle_reconstructor": "Reconstruror de Particula"
 }
