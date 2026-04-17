@@ -8,16 +8,19 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
+/**
+ * OPTIMIZED: Energy storage with direct field access and packed flags.
+ */
 public abstract class QuantaEnergyBE extends QuantaBlockEntity {
+    
+    // ========== BIT PACKED FLAGS ==========
+    private byte flags = 0;
+    private static final byte FLAG_ENERGY_DIRTY = 0b00000001;
     
     protected final QuantumEnergyStorage energy;
     protected final int energyCapacity;
     protected final int energyMaxTransfer;
     protected final int inventorySlots;
-    
-    // Dirty flag packed into byte
-    private byte flags = 0;
-    private static final byte FLAG_ENERGY_DIRTY = 0b00000001;
     
     public QuantaEnergyBE(BlockEntityType<?> type, BlockPos pos, BlockState state,
                            int inventorySlots, int energyCapacity, int energyMaxTransfer) {
@@ -28,6 +31,7 @@ public abstract class QuantaEnergyBE extends QuantaBlockEntity {
         this.energy = new QuantumEnergyStorage(energyCapacity, energyMaxTransfer);
     }
     
+    // ========== FAST ACCESSORS (inline-friendly) ==========
     public IQuantumEnergyStorage getEnergyStorage() { return energy; }
     public int getEnergyStoredQuanta() { return energy.getQuantumStored(); }
     public int getEnergyCapacityQuanta() { return energyCapacity; }
@@ -36,6 +40,7 @@ public abstract class QuantaEnergyBE extends QuantaBlockEntity {
         return (float) energy.getQuantumStored() / energyCapacity;
     }
     
+    // ========== ENERGY OPERATIONS ==========
     protected boolean hasEnoughEnergy(int cost) {
         return energy.getQuantumStored() >= cost;
     }
@@ -47,6 +52,7 @@ public abstract class QuantaEnergyBE extends QuantaBlockEntity {
     
     protected abstract int getEnergyCost();
     
+    // ========== NBT ==========
     @Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);

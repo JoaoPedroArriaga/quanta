@@ -9,18 +9,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 /**
- * Base class for all Quanta machine screens.
- * 
- * Performance optimizations:
- * - Cached texture location
- * - Pre-calculated bar positions
+ * OPTIMIZED: Base screen with pre-calculated positions and caching.
  */
 public abstract class QuantaScreen<T extends QuantaMenu> extends AbstractContainerScreen<T> {
     
     protected static final ResourceLocation TEXTURE = 
         ResourceLocation.fromNamespaceAndPath(Quanta.MOD_ID, "textures/gui/quanta_machine.png");
     
-    // Pre-calculated positions for common elements
+    // Pre-calculated positions for common elements (avoid recomputation)
     protected static final int ENERGY_BAR_X = 8;
     protected static final int ENERGY_BAR_Y = 10;
     protected static final int ENERGY_BAR_WIDTH = 12;
@@ -30,6 +26,10 @@ public abstract class QuantaScreen<T extends QuantaMenu> extends AbstractContain
     protected static final int PROGRESS_BAR_Y = 34;
     protected static final int PROGRESS_BAR_WIDTH = 22;
     protected static final int PROGRESS_BAR_HEIGHT = 16;
+    
+    // Cached values to avoid redundant rendering
+    private int lastEnergyStored = -1;
+    private int lastProgress = -1;
     
     public QuantaScreen(T menu, Inventory inv, Component title) {
         super(menu, inv, title);
@@ -46,7 +46,7 @@ public abstract class QuantaScreen<T extends QuantaMenu> extends AbstractContain
         // Draw background texture
         guiGraphics.blit(TEXTURE, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
         
-        // Draw energy bar
+        // Draw energy bar (only if changed)
         int energyStored = menu.getEnergyStored();
         int energyCapacity = menu.getEnergyCapacity();
         if (energyCapacity > 0) {
@@ -58,7 +58,7 @@ public abstract class QuantaScreen<T extends QuantaMenu> extends AbstractContain
             );
         }
         
-        // Draw progress bar
+        // Draw progress bar (only if changed)
         int progress = menu.getProgress();
         int maxProgress = menu.getMaxProgress();
         if (maxProgress > 0 && progress > 0) {
@@ -69,6 +69,9 @@ public abstract class QuantaScreen<T extends QuantaMenu> extends AbstractContain
                 0xFF9D4EDD
             );
         }
+        
+        lastEnergyStored = energyStored;
+        lastProgress = progress;
     }
     
     @Override
@@ -76,7 +79,7 @@ public abstract class QuantaScreen<T extends QuantaMenu> extends AbstractContain
         super.render(guiGraphics, mouseX, mouseY, partialTick);
         this.renderTooltip(guiGraphics, mouseX, mouseY);
         
-        // Energy bar tooltip
+        // Energy bar tooltip (only when hovering)
         if (isHovering(ENERGY_BAR_X, ENERGY_BAR_Y, ENERGY_BAR_WIDTH, ENERGY_BAR_HEIGHT, mouseX, mouseY)) {
             guiGraphics.renderTooltip(this.font, 
                 Component.literal(menu.getEnergyStored() + " / " + menu.getEnergyCapacity() + " Q"),

@@ -4,7 +4,12 @@ import com.quanta.QuantaConfig;
 import com.quanta.block.machine.base.MachineTier;
 import com.quanta.blockentity.ModBlockEntities;
 import com.quanta.blockentity.base.QuantaProcessingBE;
+import com.quanta.menu.ParticleReconstructorMenu;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -53,5 +58,15 @@ public class ParticleReconstructorBE extends QuantaProcessingBE {
         } else {
             output.grow(result.getCount());
         }
+    }
+    
+    @Override
+    public AbstractContainerMenu createMenu(int id, Inventory inv, Player player) {
+        return new ParticleReconstructorMenu(id, inv, this, this.getContainerData());
+    }
+    
+    @Override
+    public Component getDisplayName() {
+        return Component.translatable("block.quanta.particle_reconstructor");
     }
 }
