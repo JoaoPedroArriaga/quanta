@@ -20,7 +20,7 @@ public class ModMenuTypes {
                 BlockPos pos = data.readBlockPos();
                 BlockEntity be = inv.player.level().getBlockEntity(pos);
                 if (be instanceof ParticleReconstructorBE reconstructor) {
-                    return new ParticleReconstructorMenu(windowId, inv, reconstructor);
+                    return new ParticleReconstructorMenu(windowId, inv, reconstructor, reconstructor.getContainerData());
                 }
                 return null;
             }));

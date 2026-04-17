@@ -21,10 +21,8 @@ public class Quanta {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public Quanta(IEventBus modEventBus, ModContainer modContainer) {
-        // 1. Configuração
         modContainer.registerConfig(Type.COMMON, QuantaConfig.COMMON_SPEC);
         
-        // 2. Registro de componentes
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModBlockItems.ITEMS.register(modEventBus);
@@ -32,9 +30,9 @@ public class Quanta {
         ModMenuTypes.MENU_TYPES.register(modEventBus);
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
         
-        // 3. Event listeners
         modEventBus.addListener(QuantaCapabilities::register);
         modEventBus.addListener(QuantaNetwork::register);
+        modEventBus.addListener(QuantaConfig::onConfigReload);
         
         LOGGER.info("⚡ Quanta mod initialized! ⚡");
     }

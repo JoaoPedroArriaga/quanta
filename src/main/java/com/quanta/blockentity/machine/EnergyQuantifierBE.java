@@ -8,6 +8,10 @@ import com.quanta.energy.QuantumEnergyStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.energy.IEnergyStorage;
 
@@ -80,5 +84,15 @@ public class EnergyQuantifierBE extends QuantaBlockEntity implements IEnergyStor
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
         storage.setEnergy(tag.getInt("quanta"));
+    }
+
+    @Override
+    public AbstractContainerMenu createMenu(int id, Inventory inv, Player player) {
+        return null;
+    }
+    
+    @Override
+    public Component getDisplayName() {
+        return Component.translatable(this.getBlockState().getBlock().getDescriptionId());
     }
 }
