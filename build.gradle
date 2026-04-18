@@ -16,11 +16,16 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 repositories {
     mavenCentral()
+    maven {
+        name = 'GeckoLib'
+        url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
 }
 
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
     implementation "it.unimi.dsi:fastutil:8.5.12"
+    implementation "software.bernie.geckolib:geckolib-neoforge-1.21.1:4.8.4"
 }
 
 neoForge {
