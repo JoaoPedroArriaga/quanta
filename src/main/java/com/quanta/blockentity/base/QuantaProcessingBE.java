@@ -1,6 +1,5 @@
 package com.quanta.blockentity.base;
 
-import com.quanta.QuantaConfig;
 import com.quanta.block.machine.base.MachineTier;
 import com.quanta.block.base.QuantaMachineBlock;
 import net.minecraft.core.BlockPos;

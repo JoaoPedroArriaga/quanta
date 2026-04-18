@@ -3,6 +3,7 @@ package com.quanta.block.machine;
 import com.mojang.serialization.MapCodec;
 import com.quanta.block.base.QuantaMachineBlock;
 import com.quanta.blockentity.machine.QuantaInfuserBE;
+import com.quanta.blockentity.machine.TunelRelayBE;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -32,7 +33,7 @@ public class TunelRelayBlock extends QuantaMachineBlock {
     
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new QuantaInfuserBE(pos, state);
+        return new TunelRelayBE(pos, state);
     }
     
     @Override

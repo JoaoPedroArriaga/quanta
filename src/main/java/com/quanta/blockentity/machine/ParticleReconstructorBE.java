@@ -67,6 +67,6 @@ public class ParticleReconstructorBE extends QuantaProcessingBE {
     
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.quanta.particle_reconstructor");
+        return Component.translatable(this.getBlockState().getBlock().getDescriptionId());
     }
 }

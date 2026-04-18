@@ -6,6 +6,8 @@ import com.quanta.blockentity.machine.EnergyQuantifierBE;
 import com.quanta.blockentity.machine.ParticleReconstructorBE;
 import com.quanta.blockentity.machine.QuantaCollapserBE;
 import com.quanta.blockentity.machine.QuantaInfuserBE;
+import com.quanta.blockentity.machine.TunelRelayBE;
+
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -34,4 +36,9 @@ public class ModBlockEntities {
         BLOCK_ENTITIES.register("quanta_infuser",
             () -> BlockEntityType.Builder.of(QuantaInfuserBE::new,
                 ModBlocks.QUANTA_INFUSER.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TunelRelayBE>> TUNEL_RELAY =
+        BLOCK_ENTITIES.register("tunel_relay",
+            () -> BlockEntityType.Builder.of(TunelRelayBE::new,
+                ModBlocks.TUNEL_RELAY.get()).build(null));
 }
