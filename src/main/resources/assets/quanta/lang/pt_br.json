@@ -1,7 +1,11 @@
 {
+  "itemGroup.quanta": "Quanta",
+  
   "item.quanta.ender_dust": "Pó do Fim",
-  "item.quanta.quantum_dust": "Pó Quantico",
-  "item.quanta.quantum_Steel": "Aço Quântico",
+  "item.quanta.quantum_dust": "Pó Quântico",
+  "item.quanta.quantum_steel": "Aço Quântico",
+  "item.quanta.quantum_steel_sheet": "Chapa de Aço Quântico",
+  "item.quanta.quantum_steel_wire": "Fio de Aço Quântico",
   "item.quanta.quantum_circuit": "Circuito Quântico",
   "item.quanta.quantum_coil": "Bobina Quântica",
   "item.quanta.essence_of_order": "Essência da Ordem",
@@ -9,9 +13,33 @@
   "item.quanta.quantum_crystal": "Cristal Quântico",
   "item.quanta.entangled_core": "Núcleo Entrelaçado",
   "item.quanta.quantum_processor": "Processador Quântico",
-  "item.quanta.observer_lens": "Lente do Observdor",
+  "item.quanta.observer_lens": "Lente do Observador",
   "item.quanta.chaos_fragment": "Fragmento do Caos",
   "item.quanta.quantum_alloy": "Liga Quântica",
   "item.quanta.stabilized_singularity": "Singularidade Estabilizada",
-  "block.quanta.particle_reconstructor": "Reconstruror de Particula"
+  
+  "item.quanta.quantum_wrench": "Chave Inglesa Quântica",
+  
+  "block.quanta.particle_reconstructor": "Reconstrutor de Partículas",
+  "block.quanta.energy_quantifier": "Quantificador de Energia",
+  "block.quanta.quanta_collapser": "Colapsador de Quanta",
+  "block.quanta.quanta_infuser": "Infusor de Quanta",
+  "block.quanta.tunel_relay": "Relé de Tunelamento",
+  "block.quanta.quantum_cable": "Cabo Quântico",
+  
+  "item.quanta.quanta_cable": "Cabo Quanta",
+  "item.quanta.quantum_item_pipe": "Tubo de Itens Quântico",
+  "item.quanta.quantum_liquid_pipe": "Tubo de Líquido Quântico",
+  "item.quanta.quantum_pressurized_pipe": "Tubo Pressurizado Quântico",
+  
+  "tooltip.quanta.cable.energy": "§5Transfere energia Quanta",
+  "tooltip.quanta.cable.energy.desc": "§7Máx Transferência: §e%1$d Q/t",
+  "tooltip.quanta.pipe.item": "§9Transporta Itens",
+  "tooltip.quanta.pipe.liquid": "§2Transporta Fluídos",
+  "tooltip.quanta.pipe.gas": "§6Transporta Gases",
+  "tooltip.quanta.bundle.primary": "§bCabo Primário: %s",
+  "tooltip.quanta.bundle.secondary": "§7+ %s",
+  "tooltip.quanta.bundle.empty": "§7Clique com botão direito em um cabo existente para adicionar mais tipos",
+  "tooltip.quanta.wrench": "§eAgachar + Botão direito: Remove o último tipo de cabo",
+  "tooltip.quanta.wrench.sneak": "§7Botão direito: Remove o tipo de cabo primário"
 }

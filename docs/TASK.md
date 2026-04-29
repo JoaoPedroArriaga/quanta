@@ -57,7 +57,7 @@
 - [ ] 🔴 Adicionar recipe
 
 ### 2.3 Cabos Quanta
-- [ ] 🔴 Criar `QuantumCableBlock.java` (com VoxelShape de conexão)
+- [ ] 🔴 Criar `QuantaCableBlock.java` (com VoxelShape de conexão)
 - [ ] 🔴 Criar `CableNetwork.java` (gerenciamento de rede)
 - [ ] 🔴 Criar `CableNetworkManager.java`
 - [ ] 🔴 Implementar conexões entre cabos (BlockState com direções)
@@ -500,7 +500,7 @@
 - `QuantumConverterBlock.java` → `EnergyQuantifierBlock.java`
 - `EntanglerBlock.java` → `QuantumEntanglerBlock.java`
 - `TunelerBlock.java` → `QuantumTunelerBlock.java`
-- `MultiCableBlock.java` → `QuantumCableBlock.java`
+- `MultiCableBlock.java` → `QuantaCableBlock.java`
 
 ---
 

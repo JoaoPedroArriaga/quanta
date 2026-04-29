@@ -7,6 +7,7 @@ import com.quanta.blockentity.machine.ParticleReconstructorBE;
 import com.quanta.blockentity.machine.QuantaCollapserBE;
 import com.quanta.blockentity.machine.QuantaInfuserBE;
 import com.quanta.blockentity.machine.TunelRelayBE;
+import com.quanta.blockentity.cable.QuantumCableBE;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -41,4 +42,9 @@ public class ModBlockEntities {
         BLOCK_ENTITIES.register("tunel_relay",
             () -> BlockEntityType.Builder.of(TunelRelayBE::new,
                 ModBlocks.TUNEL_RELAY.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<QuantumCableBE>> QUANTUM_CABLE =
+        BLOCK_ENTITIES.register("quantum_cable",
+            () -> BlockEntityType.Builder.of(QuantumCableBE::new,
+                ModBlocks.QUANTUM_CABLE.get()).build(null));
 }

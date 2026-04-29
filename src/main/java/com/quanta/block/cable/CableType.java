@@ -3,53 +3,58 @@ package com.quanta.block.cable;
 import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;
 
-/**
- * ULTRA OPTIMIZED: Uses int IDs instead of enum for switch performance.
- * Precomputed arrays for O(1) lookups.
- */
 public enum CableType implements StringRepresentable {
-    ENERGY(0),
-    FLUID(1),
-    ITEM(2),
-    GAS(3);
+    ENERGY(0, 0xFF9D4EDD, "energy", "quanta_cable", 10000, 1000, "quanta"),
+    ITEM(1, 0xFF3B82F6, "item", "quantum_item_pipe", 0, 0, "items"),
+    LIQUID(2, 0xFF10B981, "liquid", "quantum_liquid_pipe", 0, 0, "fluids"),
+    GAS(3, 0xFFF59E0B, "gas", "quantum_pressurized_pipe", 0, 0, "gases");
     
     public final int id;
+    public final int color;
+    public final String name;
+    public final String textureName;
+    public final int maxTransfer;
+    public final int maxReceive;
+    public final String transferType;
+    public final String translationKey;
+    private final int bitMask;
+    
     private static final CableType[] BY_ID = new CableType[4];
-    private static final int[] COMPATIBILITY_MATRIX;
     
     static {
         for (CableType type : values()) {
             BY_ID[type.id] = type;
         }
-        
-        // Precompute compatibility matrix (bitmask)
-        // Each type can share space with different types
-        COMPATIBILITY_MATRIX = new int[4];
-        COMPATIBILITY_MATRIX[ENERGY.id] = (1 << FLUID.id) | (1 << ITEM.id); // Energy shares with Fluid and Item
-        COMPATIBILITY_MATRIX[FLUID.id] = (1 << ENERGY.id);                  // Fluid shares with Energy
-        COMPATIBILITY_MATRIX[ITEM.id] = (1 << ENERGY.id);                   // Item shares with Energy
-        COMPATIBILITY_MATRIX[GAS.id] = 0;                                   // Gas shares with nothing
     }
     
-    CableType(int id) {
+    CableType(int id, int color, String name, String textureName, int maxTransfer, int maxReceive, String transferType) {
         this.id = id;
+        this.color = color;
+        this.name = name;
+        this.textureName = textureName;
+        this.maxTransfer = maxTransfer;
+        this.maxReceive = maxReceive;
+        this.transferType = transferType;
+        this.translationKey = "item.quanta." + textureName;
+        this.bitMask = 1 << id;
     }
+    
+    public int getBitMask() { return bitMask; }
     
     public static CableType fromId(int id) {
         return id >= 0 && id < BY_ID.length ? BY_ID[id] : ENERGY;
     }
     
-    /**
-     * Ultra-fast compatibility check using bitmask.
-     * Single bitwise operation instead of enum comparison.
-     */
-    public boolean canShareSpaceWith(CableType other) {
-        return (COMPATIBILITY_MATRIX[this.id] & (1 << other.id)) != 0;
+    public static CableType fromName(String name) {
+        for (CableType type : values()) {
+            if (type.name.equals(name)) return type;
+        }
+        return ENERGY;
     }
     
     @Override
     @NotNull
     public String getSerializedName() {
-        return name().toLowerCase();
+        return name;
     }
 }

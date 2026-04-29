@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.11",
+    "credit": "Made with Blockbench",
+    "parent": "block/block",
+    "textures": {
+        "particle": "quanta:block/quanta_particle",
+        "cable": "#cable"
+    },
+    "elements": [
+        {
+            "from": [7, 7, 7],
+            "to": [8, 8, 8],
+            "faces": {
+                "north": {"uv": [2, 2, 4, 4], "texture": "#cable"},
+                "east": {"uv": [6, 2, 8, 4], "texture": "#cable"},
+                "south": {"uv": [4, 2, 6, 4], "texture": "#cable"},
+                "west": {"uv": [0, 2, 2, 4], "texture": "#cable"},
+                "up": {"uv": [2, 0, 4, 2], "texture": "#cable"},
+                "down": {"uv": [4, 0, 6, 2], "texture": "#cable"}
+            }
+        }
+    ]
+}

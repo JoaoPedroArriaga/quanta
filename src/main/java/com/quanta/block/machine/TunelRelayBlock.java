@@ -2,9 +2,7 @@ package com.quanta.block.machine;
 
 import com.mojang.serialization.MapCodec;
 import com.quanta.block.base.QuantaMachineBlock;
-import com.quanta.blockentity.machine.QuantaInfuserBE;
 import com.quanta.blockentity.machine.TunelRelayBE;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -38,13 +36,6 @@ public class TunelRelayBlock extends QuantaMachineBlock {
     
     @Override
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (!level.isClientSide) {
-            return (lvl, pos, st, be) -> {
-                if (be instanceof QuantaInfuserBE infuser) {
-                    infuser.tickServer();
-                }
-            };
-        }
-        return null;
+        return null; // Sem ticker por enquanto
     }
 }

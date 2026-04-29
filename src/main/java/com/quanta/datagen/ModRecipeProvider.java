@@ -1,6 +1,7 @@
 package com.quanta.datagen;
 
 import com.quanta.Quanta;
+import com.quanta.block.ModBlockItems;
 import com.quanta.block.ModBlocks;
 import com.quanta.item.ModItems;
 import net.minecraft.core.HolderLookup;
@@ -73,14 +74,14 @@ public class ModRecipeProvider extends RecipeProvider {
             .unlockedBy("has_quantum_steel", has(ModItems.QUANTUM_STEEL.get()))
             .save(output);
         
-        // Quantum Cable
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.QUANTUM_CABLE.get(), 8)
+        // Quanta Cable
+        /*ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlockItems.QUANTA_CABLE.get(), 8)
             .pattern("QQQ")
             .pattern("QRQ")
             .pattern("QQQ")
             .define('Q', ModItems.QUANTUM_STEEL.get())
             .define('R', Items.REDSTONE)
             .unlockedBy("has_quantum_steel", has(ModItems.QUANTUM_STEEL.get()))
-            .save(output);
+            .save(output);*/
     }
 }

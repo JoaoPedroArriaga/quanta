@@ -1,7 +1,11 @@
 {
+  "itemGroup.quanta": "Quanta",
+  
   "item.quanta.ender_dust": "Ender Dust",
   "item.quanta.quantum_dust": "Quantum Dust",
   "item.quanta.quantum_steel": "Quantum Steel",
+  "item.quanta.quantum_steel_sheet": "Quantum Steel Sheet",
+  "item.quanta.quantum_steel_wire": "Quantum Steel Wire",
   "item.quanta.quantum_circuit": "Quantum Circuit",
   "item.quanta.quantum_coil": "Quantum Coil",
   "item.quanta.essence_of_order": "Essence of Order",
@@ -13,5 +17,29 @@
   "item.quanta.chaos_fragment": "Chaos Fragment",
   "item.quanta.quantum_alloy": "Quantum Alloy",
   "item.quanta.stabilized_singularity": "Stabilized Singularity",
-  "block.quanta.particle_reconstructor": "Particle Reconstructor"
+  
+  "item.quanta.quantum_wrench": "Quantum Wrench",
+  
+  "block.quanta.particle_reconstructor": "Particle Reconstructor",
+  "block.quanta.energy_quantifier": "Energy Quantifier",
+  "block.quanta.quanta_collapser": "Quanta Collapser",
+  "block.quanta.quanta_infuser": "Quanta Infuser",
+  "block.quanta.tunel_relay": "Tunnel Relay",
+  "block.quanta.quantum_cable": "Quantum Cable",
+  
+  "item.quanta.quanta_cable": "Quanta Cable",
+  "item.quanta.quantum_item_pipe": "Quantum Item Pipe",
+  "item.quanta.quantum_liquid_pipe": "Quantum Liquid Pipe",
+  "item.quanta.quantum_pressurized_pipe": "Quantum Pressurized Pipe",
+  
+  "tooltip.quanta.cable.energy": "§5Transfers Quanta energy",
+  "tooltip.quanta.cable.energy.desc": "§7Max Transfer: §e%1$d Q/t",
+  "tooltip.quanta.pipe.item": "§9Transfers Items",
+  "tooltip.quanta.pipe.liquid": "§2Transfers Fluids",
+  "tooltip.quanta.pipe.gas": "§6Transfers Gases",
+  "tooltip.quanta.bundle.primary": "§bPrimary Cable: %s",
+  "tooltip.quanta.bundle.secondary": "§7+ %s",
+  "tooltip.quanta.bundle.empty": "§7Right-click on existing cable to add more types",
+  "tooltip.quanta.wrench": "§eSneak + Right-click: Remove last cable type",
+  "tooltip.quanta.wrench.sneak": "§7Right-click: Remove primary cable type"
 }

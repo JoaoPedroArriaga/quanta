@@ -4,7 +4,7 @@ license = "MIT"
 
 [[mods]]
 modId = "quanta"
-version = "0.0.1"
+version = "1.0.0"
 displayName = "Quanta"
 logoFile = "quanta.png"
 description = '''
@@ -21,6 +21,6 @@ A techno-magical mod where quantum mechanics and arcane magic meet.
 [[dependencies.quanta]]
     modId = "minecraft"
     mandatory = true
-    versionRange = "[1.21.1,1.22)"
+    versionRange = "[1.21.1,1.26)"
     ordering = "NONE"
     side = "BOTH"

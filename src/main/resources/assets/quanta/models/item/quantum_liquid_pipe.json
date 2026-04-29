@@ -1,0 +1,6 @@
+{
+    "parent": "quanta:block/cable_core",
+    "textures": {
+        "cable": "quanta:block/quantum_liquid_pipe"
+    }
+}

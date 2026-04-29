@@ -1,202 +1,133 @@
 package com.quanta.block.cable;
 
-import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
-import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
-import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
-import it.unimi.dsi.fastutil.longs.LongSet;
-import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
-import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
+import com.quanta.Quanta;
+import com.quanta.blockentity.cable.QuantumCableBE;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import java.util.*;
 
-/**
- * ULTRA OPTIMIZED - Network manager for quantum cables.
- * 
- * Performance features:
- * - Long packing for BlockPos (no object allocation)
- * - FastUtil collections for O(1) lookups
- * - BFS with primitive arrays (no object allocation in hot path)
- * - Batched network rebuilding
- */
 public class CableNetworkManager {
     
-    // Level → packed position → network
-    private static final Object2ObjectMap<Level, Long2ObjectMap<CableNetwork>> POS_TO_NETWORK = 
-        new Object2ObjectOpenHashMap<>();
-    
-    // Dirty positions queue (primitive set)
-    private static final LongSet DIRTY_POSITIONS = new LongOpenHashSet();
-    
-    // BFS queue reused (primitive array, no allocation)
-    private static final LongArrayQueue BFS_QUEUE = new LongArrayQueue();
-    private static final LongSet VISITED = new LongOpenHashSet();
-    
-    private static final int MAX_DIRTY_PER_TICK = 64;
-    private static final int MAX_BFS_DEPTH = 1024;
-    
-    // ========== PUBLIC API ==========
+    private static final Map<Level, Map<BlockPos, UUID>> LEVEL_NETWORKS = new HashMap<>();
+    private static final Map<UUID, CableNetwork> NETWORKS = new HashMap<>();
     
     public static void markDirty(Level level, BlockPos pos) {
         if (level.isClientSide) return;
-        DIRTY_POSITIONS.add(packPos(pos));
+        rebuildNetwork(level, pos);
     }
     
     public static CableNetwork getNetwork(Level level, BlockPos pos) {
-        Long2ObjectMap<CableNetwork> levelMap = POS_TO_NETWORK.get(level);
+        Map<BlockPos, UUID> levelMap = LEVEL_NETWORKS.get(level);
         if (levelMap == null) return null;
-        return levelMap.get(packPos(pos));
+        UUID networkId = levelMap.get(pos);
+        if (networkId == null) return null;
+        return NETWORKS.get(networkId);
     }
     
-    public static void registerCable(Level level, BlockPos pos, CableNetwork network) {
-        Long2ObjectMap<CableNetwork> levelMap = POS_TO_NETWORK.computeIfAbsent(
-            level, k -> new Long2ObjectOpenHashMap<>());
-        levelMap.put(packPos(pos), network);
-    }
-    
-    public static void removeCable(Level level, BlockPos pos) {
-        Long2ObjectMap<CableNetwork> levelMap = POS_TO_NETWORK.get(level);
-        if (levelMap != null) {
-            levelMap.remove(packPos(pos));
-        }
-    }
-    
-    public static void tick(Level level) {
-        if (DIRTY_POSITIONS.isEmpty()) return;
+    public static void rebuildNetwork(Level level, BlockPos startPos) {
+        if (level.isClientSide) return;
         
-        // Process in batches to avoid lag spikes
-        int processed = 0;
-        LongSet toProcess = new LongOpenHashSet();
+        Map<BlockPos, UUID> levelMap = LEVEL_NETWORKS.computeIfAbsent(level, k -> new HashMap<>());
         
-        for (long pos : DIRTY_POSITIONS) {
-            toProcess.add(pos);
-            if (++processed >= MAX_DIRTY_PER_TICK) break;
-        }
-        
-        for (long pos : toProcess) {
-            DIRTY_POSITIONS.remove(pos);
-            rebuildAt(level, pos);
-        }
-    }
-    
-    // ========== NETWORK REBUILDING ==========
-    
-    private static void rebuildAt(Level level, long startPos) {
-        Long2ObjectMap<CableNetwork> levelMap = POS_TO_NETWORK.get(level);
-        if (levelMap == null) return;
-        
-        // BFS to find all connected cables
-        BFS_QUEUE.clear();
-        VISITED.clear();
-        
-        BFS_QUEUE.enqueue(startPos);
-        VISITED.add(startPos);
-        
-        LongSet connectedCables = new LongOpenHashSet();
-        
-        while (!BFS_QUEUE.isEmpty() && connectedCables.size() < MAX_BFS_DEPTH) {
-            long current = BFS_QUEUE.dequeue();
-            connectedCables.add(current);
-            
-            // Check 6 neighbors
-            long[] neighbors = getNeighbors(current);
-            for (long neighbor : neighbors) {
-                if (isCableAt(level, neighbor) && !VISITED.contains(neighbor)) {
-                    VISITED.add(neighbor);
-                    BFS_QUEUE.enqueue(neighbor);
+        UUID oldId = levelMap.get(startPos);
+        if (oldId != null) {
+            CableNetwork oldNet = NETWORKS.get(oldId);
+            if (oldNet != null) {
+                oldNet.removeCable(startPos);
+                if (oldNet.getCableCount() == 0) {
+                    NETWORKS.remove(oldId);
                 }
             }
         }
         
-        // Create or update network for this component
-        if (!connectedCables.isEmpty()) {
-            CableNetwork network = findOrCreateNetwork(level, connectedCables);
-            for (long cable : connectedCables) {
-                levelMap.put(cable, network);
+        Set<BlockPos> connected = new HashSet<>();
+        Queue<BlockPos> queue = new ArrayDeque<>();
+        queue.add(startPos);
+        connected.add(startPos);
+        
+        while (!queue.isEmpty()) {
+            BlockPos current = queue.poll();
+            BlockEntity be = level.getBlockEntity(current);
+            if (!(be instanceof QuantumCableBE cableBE)) continue;
+            
+            int presentMask = cableBE.getPresentCablesMask();
+            
+            for (Direction dir : Direction.values()) {
+                BlockPos neighbor = current.relative(dir);
+                if (connected.contains(neighbor)) continue;
+                
+                BlockEntity neighborBE = level.getBlockEntity(neighbor);
+                if (neighborBE instanceof QuantumCableBE neighborCable) {
+                    int neighborMask = neighborCable.getPresentCablesMask();
+                    if ((presentMask & neighborMask) != 0) {
+                        connected.add(neighbor);
+                        queue.add(neighbor);
+                    }
+                }
             }
+        }
+        
+        UUID networkId = null;
+        for (BlockPos pos : connected) {
+            UUID existingId = levelMap.get(pos);
+            if (existingId != null && NETWORKS.containsKey(existingId)) {
+                networkId = existingId;
+                break;
+            }
+        }
+        
+        if (networkId == null) {
+            networkId = UUID.randomUUID();
+            NETWORKS.put(networkId, new CableNetwork(networkId));
+        }
+        
+        CableNetwork network = NETWORKS.get(networkId);
+        
+        for (BlockPos pos : connected) {
+            levelMap.put(pos, networkId);
+            network.addCable(pos);
         }
     }
     
-    private static CableNetwork findOrCreateNetwork(Level level, LongSet cables) {
-        // Try to find existing network from any cable
-        Long2ObjectMap<CableNetwork> levelMap = POS_TO_NETWORK.get(level);
+    public static void registerCable(Level level, BlockPos pos) {
+        if (level.isClientSide) return;
+        rebuildNetwork(level, pos);
+    }
+    
+    public static void removeCable(Level level, BlockPos pos) {
+        if (level.isClientSide) return;
+        
+        Map<BlockPos, UUID> levelMap = LEVEL_NETWORKS.get(level);
         if (levelMap != null) {
-            for (long cable : cables) {
-                CableNetwork existing = levelMap.get(cable);
-                if (existing != null) return existing;
+            UUID oldId = levelMap.remove(pos);
+            if (oldId != null) {
+                CableNetwork oldNet = NETWORKS.get(oldId);
+                if (oldNet != null) {
+                    oldNet.removeCable(pos);
+                    if (oldNet.getCableCount() == 0) {
+                        NETWORKS.remove(oldId);
+                    }
+                }
             }
         }
         
-        // Create new network
-        return new CableNetwork(CableType.ENERGY);
-    }
-    
-    // ========== UTILITY ==========
-    
-    private static long packPos(BlockPos pos) {
-        return ((long)pos.getX() & 0x3FFFFFF) << 38 |
-               ((long)pos.getZ() & 0x3FFFFFF) << 12 |
-               (pos.getY() & 0xFFF);
-    }
-    
-    private static long[] getNeighbors(long packed) {
-        int x = (int)(packed >> 38);
-        int z = (int)((packed >> 12) & 0x3FFFFFF);
-        int y = (int)(packed & 0xFFF);
-        
-        // Sign extension
-        if (x >= 0x2000000) x -= 0x4000000;
-        if (z >= 0x2000000) z -= 0x4000000;
-        if (y >= 0x800) y -= 0x1000;
-        
-        return new long[] {
-            packPos(new BlockPos(x + 1, y, z)),
-            packPos(new BlockPos(x - 1, y, z)),
-            packPos(new BlockPos(x, y + 1, z)),
-            packPos(new BlockPos(x, y - 1, z)),
-            packPos(new BlockPos(x, y, z + 1)),
-            packPos(new BlockPos(x, y, z - 1))
-        };
-    }
-    
-    private static boolean isCableAt(Level level, long packed) {
-        // TODO: Implement actual block check
-        // This should check if block at position is QuantumCableBlock
-        return false;
-    }
-    
-    // ========== PRIMITIVE QUEUE (no object allocation) ==========
-    
-    private static class LongArrayQueue {
-        private long[] elements = new long[64];
-        private int head = 0;
-        private int tail = 0;
-        private int size = 0;
-        
-        void enqueue(long value) {
-            if (size == elements.length) grow();
-            elements[tail] = value;
-            tail = (tail + 1) & (elements.length - 1);
-            size++;
+        for (Direction dir : Direction.values()) {
+            BlockPos neighborPos = pos.relative(dir);
+            rebuildNetwork(level, neighborPos);
         }
-        
-        long dequeue() {
-            long value = elements[head];
-            head = (head + 1) & (elements.length - 1);
-            size--;
-            return value;
+    }
+    
+    public static void tick(Level level) {
+        if (level.isClientSide) return;
+        for (CableNetwork network : NETWORKS.values()) {
+            network.tick();
         }
-        
-        boolean isEmpty() { return size == 0; }
-        void clear() { head = tail = size = 0; }
-        
-        private void grow() {
-            long[] newElements = new long[elements.length * 2];
-            for (int i = 0; i < size; i++) {
-                newElements[i] = elements[(head + i) & (elements.length - 1)];
-            }
-            elements = newElements;
-            head = 0;
-            tail = size;
-        }
+    }
+    
+    public static void clear() {
+        LEVEL_NETWORKS.clear();
+        NETWORKS.clear();
     }
 }

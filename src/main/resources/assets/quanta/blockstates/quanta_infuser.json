@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "lit=false": { "model": "quanta:block/quanta_infuser" },
+        "lit=true": { "model": "quanta:block/quanta_infuser" }
+    }
+}

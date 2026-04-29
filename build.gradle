@@ -18,7 +18,10 @@ repositories {
     mavenCentral()
     maven {
         name = 'GeckoLib'
-        url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
     }
 }
 
@@ -40,17 +43,28 @@ neoForge {
         client {
             client()
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            jvmArgument '-Xmx4G'
+            jvmArgument '-Xms2G'
+            jvmArgument '-XX:+UseG1GC'
+            jvmArgument '-XX:+ParallelRefProcEnabled'
+            jvmArgument '-XX:MaxGCPauseMillis=50'
+            jvmArgument '-XX:+UnlockExperimentalVMOptions'
+            jvmArgument '-XX:+DisableExplicitGC'
         }
 
         server {
             server()
             programArgument '--nogui'
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            jvmArgument '-Xmx4G'
+            jvmArgument '-Xms2G'
         }
 
         data {
             data()
             programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            jvmArgument '-Xmx4G'
+            jvmArgument '-Xms2G'
         }
 
         configureEach {

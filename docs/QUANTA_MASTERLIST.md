@@ -173,7 +173,7 @@ Um mod techno-mágico onde mecânica quântica e magia arcana são a mesma coisa
 
 | Componente | Função | Tier | Conexões |
 |------------|--------|------|----------|
-| Quantum Cables | Transporte físico de energia/items/líquidos/gás | Decoherent | - |
+| Quanta Cables | Transporte físico de energia/items/líquidos/gás | Decoherent | - |
 | Entangled Cables | Transporte de sinal de rede (interface com sistema) | Entangled | - |
 | Signal Repeater | Extensor de alcance do Entangled Cable (+16 blocos) | Entangled | - |
 | Quantum Link | Extensor de alcance wireless (+16 blocos) | Decoherent | - |
@@ -188,7 +188,7 @@ Um mod techno-mágico onde mecânica quântica e magia arcana são a mesma coisa
 - Múltiplos Switch adjacentes somam slots (multibloco: 5X5X5) 
 - Entangled Cables têm limite de 16 blocos sem Signal Repeater
 - Quantum Links podem ser colocados em série
-- Quantum Cable NÃO canais
+- Quanta Cable NÃO canais
 
 ---
 

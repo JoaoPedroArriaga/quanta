@@ -16,15 +16,11 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
         DeferredRegister.createBlocks(Quanta.MOD_ID);
     
-    // Usando Supplier com lambda - sem ambiguidade
     public static final DeferredBlock<Block> ENERGY_QUANTIFIER = BLOCKS.register(
         "energy_quantifier", () -> new EnergyQuantifierBlock());
     
     public static final DeferredBlock<Block> PARTICLE_RECONSTRUCTOR = BLOCKS.register(
         "particle_reconstructor", () -> new ParticleReconstructorBlock());
-    
-    public static final DeferredBlock<Block> QUANTUM_CABLE = BLOCKS.register(
-        "quantum_cable", () -> new QuantumCableBlock());
     
     public static final DeferredBlock<Block> QUANTA_COLLAPSER = BLOCKS.register(
         "quanta_collapser", () -> new QuantaCollapserBlock());
@@ -34,4 +30,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> TUNEL_RELAY = BLOCKS.register(
         "tunel_relay", () -> new TunelRelayBlock());
+
+    public static final DeferredBlock<Block> QUANTUM_CABLE = BLOCKS.register(
+        "quantum_cable", () -> new QuantumCableBlock(Block.Properties.of().strength(1.5f).noOcclusion()));
 }
