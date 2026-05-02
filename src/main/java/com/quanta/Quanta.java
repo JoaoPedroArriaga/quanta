@@ -1,13 +1,14 @@
 package com.quanta;
 
-import com.quanta.block.ModBlocks;
-import com.quanta.block.ModBlockItems;
-import com.quanta.blockentity.ModBlockEntities;
 import com.quanta.capability.QuantaCapabilities;
-import com.quanta.item.ModItems;
-import com.quanta.menu.ModMenuTypes;
+import com.quanta.capability.QuantaCapabilityHandler;
+import com.quanta.content.block.ModBlockItems;
+import com.quanta.content.block.ModBlocks;
+import com.quanta.content.blockentity.ModBlockEntities;
+import com.quanta.content.component.ModDataComponents;
+import com.quanta.content.item.ModItems;
+import com.quanta.content.menu.ModMenuTypes;
 import com.quanta.network.QuantaNetwork;
-import com.quanta.component.ModDataComponents;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -32,7 +33,7 @@ public class Quanta {
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
         ModCreativeTabs.CREATIVE_TABS.register(modEventBus);
         
-        modEventBus.addListener(QuantaCapabilities::register);
+        modEventBus.addListener(QuantaCapabilityHandler::registerCapabilities);
         modEventBus.addListener(QuantaNetwork::register);
         modEventBus.addListener(QuantaConfig::onConfigReload);
         

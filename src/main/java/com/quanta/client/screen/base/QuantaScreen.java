@@ -1,7 +1,8 @@
 package com.quanta.client.screen.base;
 
 import com.quanta.Quanta;
-import com.quanta.menu.base.QuantaMenu;
+import com.quanta.content.menu.base.QuantaMenu;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;

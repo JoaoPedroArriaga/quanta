@@ -1,7 +1,8 @@
 package com.quanta.core;
 
 import com.quanta.Quanta;
-import com.quanta.blockentity.base.QuantaProcessingBE;
+import com.quanta.content.blockentity.base.QuantaProcessingBE;
+
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
