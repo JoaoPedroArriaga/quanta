@@ -31,15 +31,14 @@ import org.jetbrains.annotations.Nullable;
 
 public class CableBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
 
-    public static final BooleanProperty DOWN  = BooleanProperty.create("down");
-    public static final BooleanProperty UP    = BooleanProperty.create("up");
+    public static final BooleanProperty DOWN = BooleanProperty.create("down");
+    public static final BooleanProperty UP = BooleanProperty.create("up");
     public static final BooleanProperty NORTH = BooleanProperty.create("north");
     public static final BooleanProperty SOUTH = BooleanProperty.create("south");
-    public static final BooleanProperty WEST  = BooleanProperty.create("west");
-    public static final BooleanProperty EAST  = BooleanProperty.create("east");
+    public static final BooleanProperty WEST = BooleanProperty.create("west");
+    public static final BooleanProperty EAST = BooleanProperty.create("east");
     public static final BooleanProperty WATERLOGGED = BooleanProperty.create("waterlogged");
 
-    // Direction.ordinal(): DOWN=0, UP=1, NORTH=2, SOUTH=3, WEST=4, EAST=5
     public static final BooleanProperty[] DIR_PROPS = {DOWN, UP, NORTH, SOUTH, WEST, EAST};
     public static final Direction[] DIRECTIONS = Direction.values();
 
@@ -48,17 +47,19 @@ public class CableBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
 
     static {
         VoxelShape[] connectors = {
-            box(7, 0, 7, 9, 8, 9),     // 0: DOWN
-            box(7, 8, 7, 9, 16, 9),    // 1: UP
-            box(7, 7, 0, 9, 9, 8),     // 2: NORTH
-            box(7, 7, 8, 9, 9, 16),    // 3: SOUTH
-            box(0, 7, 7, 8, 9, 9),     // 4: WEST
-            box(8, 7, 7, 16, 9, 9)     // 5: EAST
+            box(7, 0, 7, 9, 8, 9),
+            box(7, 8, 7, 9, 16, 9),
+            box(7, 7, 0, 9, 9, 8),
+            box(7, 7, 8, 9, 9, 16),
+            box(0, 7, 7, 8, 9, 9),
+            box(8, 7, 7, 16, 9, 9)
         };
         for (int i = 0; i < 64; i++) {
             VoxelShape shape = CORE;
             for (int j = 0; j < 6; j++) {
-                if ((i & (1 << j)) != 0) shape = Shapes.or(shape, connectors[j]);
+                if ((i & (1 << j)) != 0) {
+                    shape = Shapes.or(shape, connectors[j]);
+                }
             }
             SHAPES[i] = shape.optimize();
         }
@@ -67,20 +68,28 @@ public class CableBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
     public CableBlock(Properties properties) {
         super(properties);
         BlockState state = defaultBlockState();
-        for (BooleanProperty prop : DIR_PROPS) state = state.setValue(prop, false);
+        for (BooleanProperty prop : DIR_PROPS) {
+            state = state.setValue(prop, false);
+        }
         registerDefaultState(state.setValue(WATERLOGGED, false));
     }
 
-    public static BooleanProperty getProperty(Direction dir) { return DIR_PROPS[dir.ordinal()]; }
+    public static BooleanProperty getProperty(Direction dir) {
+        return DIR_PROPS[dir.ordinal()];
+    }
 
-    @Override protected MapCodec<? extends BaseEntityBlock> codec() { return simpleCodec(CableBlock::new); }
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return simpleCodec(CableBlock::new);
+    }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(DOWN, UP, NORTH, SOUTH, WEST, EAST, WATERLOGGED);
     }
 
-    @Nullable @Override
+    @Nullable
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         FluidState fluid = ctx.getLevel().getFluidState(ctx.getClickedPos());
         return defaultBlockState().setValue(WATERLOGGED, fluid.getType() == Fluids.WATER);
@@ -89,11 +98,14 @@ public class CableBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
     @Override
     protected BlockState updateShape(BlockState state, Direction dir, BlockState neighborState,
                                       LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
-        if (state.getValue(WATERLOGGED)) level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        if (state.getValue(WATERLOGGED)) {
+            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        }
         return state;
     }
 
-    @Override protected FluidState getFluidState(BlockState state) {
+    @Override
+    protected FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
@@ -104,7 +116,7 @@ public class CableBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
             if (state.getValue(DIR_PROPS[i])) {
                 if (level.getBlockEntity(pos) instanceof CableBlockEntity be) {
                     Direction dir = DIRECTIONS[i];
-                    if (be.getConfig(dir).getMode() != ConnectionConfig.Mode.DISABLED) {
+                    if (be.getConnectionManager().getConfig(dir).getMode() != ConnectionConfig.Mode.DISABLED) {
                         key |= (1 << i);
                     }
                 } else {
@@ -115,47 +127,72 @@ public class CableBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
         return SHAPES[key];
     }
 
-    @Override public RenderShape getRenderShape(BlockState state) { return RenderShape.MODEL; }
+    @Override
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.MODEL;
+    }
 
     @Override
     protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock,
                                     BlockPos neighborPos, boolean movedByPiston) {
-        if (!level.isClientSide) level.scheduleTick(pos, this, 2);
+        if (!level.isClientSide) {
+            level.scheduleTick(pos, this, 2);
+        }
     }
 
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!level.isClientSide) {
-            level.getBlockEntity(pos, ModBlockEntities.CABLE.get()).ifPresent(CableBlockEntity::updateConnections);
+            level.getBlockEntity(pos, ModBlockEntities.CABLE.get()).ifPresent(be -> {
+                be.updateConnections();
+            });
             for (Direction dir : DIRECTIONS) {
                 BlockPos np = pos.relative(dir);
-                level.getBlockEntity(np, ModBlockEntities.CABLE.get()).ifPresent(CableBlockEntity::scheduleConnectionUpdate);
+                level.getBlockEntity(np, ModBlockEntities.CABLE.get()).ifPresent(be -> {
+                    be.scheduleConnectionUpdate();
+                });
             }
         }
     }
 
-    @Override public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean moving) {
+    @Override
+    public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean moving) {
         super.onPlace(state, level, pos, oldState, moving);
-        if (!level.isClientSide) level.scheduleTick(pos, this, 2);
+        if (!level.isClientSide) {
+            level.scheduleTick(pos, this, 2);
+        }
     }
 
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moving) {
         if (!level.isClientSide && !state.is(newState.getBlock())) {
-            level.getBlockEntity(pos, ModBlockEntities.CABLE.get()).ifPresent(be -> be.onRemoved());
+            level.getBlockEntity(pos, ModBlockEntities.CABLE.get()).ifPresent(be -> {
+                be.onRemoved();
+            });
             for (Direction dir : DIRECTIONS) {
                 BlockPos np = pos.relative(dir);
-                level.getBlockEntity(np, ModBlockEntities.CABLE.get()).ifPresent(CableBlockEntity::scheduleConnectionUpdate);
+                level.getBlockEntity(np, ModBlockEntities.CABLE.get()).ifPresent(be -> {
+                    be.scheduleConnectionUpdate();
+                });
             }
         }
         super.onRemove(state, level, pos, newState, moving);
     }
 
-    @Nullable @Override public BlockEntity newBlockEntity(BlockPos pos, BlockState state) { return new CableBlockEntity(pos, state); }
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new CableBlockEntity(pos, state);
+    }
 
-    @Nullable @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide) return null;
-        return createTickerHelper(type, ModBlockEntities.CABLE.get(), (l, p, s, be) -> be.tick());
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state,
+                                                                    BlockEntityType<T> type) {
+        if (level.isClientSide) {
+            return null;
+        }
+        return createTickerHelper(type, ModBlockEntities.CABLE.get(),
+            (l, p, s, be) -> be.tick());
     }
 }

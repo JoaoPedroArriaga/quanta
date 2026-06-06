@@ -4,69 +4,79 @@
 [![NeoForge](https://img.shields.io/badge/NeoForge-1.21.1-red)](https://neoforged.net/)
 [![Version](https://img.shields.io/badge/version-0.1.0--alpha-green)](https://github.com/seu-usuario/quanta)
 
-> *"A realidade é uma equação. Aprenda a lê-la. Aprenda a escrevê-la."*
+> *"Between Order and Chaos, there is Quanta."*
 
 ## ✨ Overview
 
-**Quanta** é um mod techno-mágico para Minecraft onde mecânica quântica e magia arcana são a mesma coisa vista de ângulos diferentes. Cientistas chamariam de "entrelaçamento", magos chamariam de "ligação etérea".
+**Quanta** is a techno-magical mod for Minecraft where quantum mechanics and arcane magic are the same thing seen from different angles. Scientists would call it "entanglement", mages would call it "ethereal bond".
 
-Inspirado por Mekanism, Oritech, Create, EnderIO, Ars Nouveau, Modular Powersuits e Draconic Evolution.
+Inspired by Mekanism, Oritech, Create, EnderIO, Ars Nouveau, Modular Powersuits, and Draconic Evolution.
+
+**Core mechanic:** Chaos / Order - machines can switch modes. Order is stable and safe; Chaos is powerful but risky.
 
 ## 🎯 Core Features
 
 ### ⚡ Quantum Energy System
-- Unidade: **Quanta (Q)** - 1 Q = 100 FE (configurável)
-- Geração passiva com Vacuum Generator (500-1.000 Q/t)
-- Reator de Entrelaçamento para endgame (2.000-8.000+ Q/t)
+- Unit: **Quanta (Q)** - 1 Q = 100 FE (configurable)
+- Passive generation with Void Generator (500-1,000 Q/t)
+- Entanglement Reactor for endgame (2,000-10,000+ Q/t)
 
-### 🔧 Tiers de Progressão
-| Tier | Nome | Cor | Característica |
-|------|------|-----|----------------|
-| 0 | Mechanical | Cinza | FE-based |
-| 1 | Decoherent | Roxo médio | Estável, previsível |
-| 2 | Entangled | Roxo + Ciano | Entrelaçado, conectado |
-| 3 | Superposed | Roxo + Ciano + Dourado | Múltiplos estados |
-| Ultimate | Singular | Ciano + Dourado + Branco | Ponto de equilíbrio absoluto |
+### 🔧 Tiers of Progression
 
-### 🏭 Máquinas Principais
-| Tier | Máquinas |
+| Tier | Name | Color | Characteristic |
+|------|------|-------|----------------|
+| 0 | Industrial | Gray | FE-based |
+| 1 | Decoherent | Purple | Stable, predictable |
+| 2 | Entangled | Purple + Cyan | Entangled, connected |
+| 3 | Superposed | Purple + Cyan + Gold | Multiple states |
+| Ultimate | Singular | Cyan + Gold + White | Absolute balance |
+
+**Parallel progression** - players can skip tiers creatively.
+
+### 🏭 Main Machines
+
+| Tier | Machines |
 |------|----------|
-| Tier 0 | Mechanical Crusher, Thermal Engine |
-| Tier 1 | Particle Reconstructor, Quanta Infuser, Quanta Collector, Quantum Assembler |
-| Tier 2 | Entangler, Quantum Tuneler, Quantum Observer, Quantum Gas Centrifuge |
-| Tier 3 | Quantum Forge (3x3x3), Entanglement Reactor, Black Hole Forge |
-| Ultimate | Quantum Plasma Forge (5x5x5), Quantum Supercomputer, Singularity Cell |
+| Tier 0 | Industrial Crusher, Combustor |
+| Tier 1 | Quanta Infuser, Essence Collector, Quantum Assembler, Matter Rewriter |
+| Tier 2 | Entangler, Void Generator, Quantum Liquid Mixer, Particle Collider |
+| Tier 3 | Quantum Forge (3x3x3), Entanglement Reactor, Wave Function Collapser |
+| Ultimate | Black Hole Forge (5x5x5), Graviton Stabilizer (7x7x7), Quantum Supercomputer |
 
-### 📖 Quantum Codex (Spell System)
-- Aprenda **Equations** observando máquinas
-- Combine Forma + Elemento + Efeito no **Black Board**
-- Lance spells que consomem Quanta
+### 📖 Quantum Codex & Equations
+- Gain **Knowledge** by observing machines (1 per tick)
+- Discover **Calculations** through experiments
+- Combine Form + Element + Effect on the **Black Board** (84 possible equations)
+- Cast spells that consume Quanta
 
 ### 🦾 Cybernetic Implants (Quantum Cyber Chamber)
-- Reescreva permanentemente seu corpo
-- Implantes: Quantum Sight, Reach, Speed, Flight, Tunneling, Processor
-- **Não consomem energia** - você *é* a melhoria
+- Permanently rewrite your body
+- Implants: Quantum Sight, Reach, Speed, Flight, Tunneling, Cortex, and more
+- **No limit** on how many you can have - become a god
+- Passive and free after installation
 
 ### 🗡️ Modular Equipment
-- Ferramentas e armadura com tiers: Decoherent → Entangled → Superposed → Singular
-- Consomem Quanta (prioridade: bateria → armadura → ferramenta)
-- Módulos: Tunnel, Vein Miner, Chaos Strike, Magnet, Speed, etc.
-- Upgrades via **Quantum Upgrade Table** (preserva módulos)
+- Tools and armor with tiers: Decoherent → Entangled → Superposed → Singular
+- Consume Quanta actively
+- Modules: Tunnel, Vein Miner, Chaos Strike, Magnet, Speed, etc.
+- Upgrades via **Quantum Upgrade Table** (preserves modules)
 
 ### 🔗 Entanglement Network
-- Wireless energy, items, and data transfer (inspirado AE2)
-- Progressão: Cabos → Tunelamento → Wireless local → Cross-dimensional
-- Componentes: Quantum Link, Entangler, Entanglement Hub, Entanglement Bridge
+- Wireless energy, items, fluid, gas, and data transfer
+- No physical cables - place Entanglers next to machines and link to a Switch
+- Components: Entangler, Entanglement Switch, Quantum Terminal, Quantum Computer/Mainframe/Supercomputer
+- Required for advanced automation (can be replaced by AE2/RS)
 
-### 💧 Fluidos Quânticos
-| Fluido | Cor | Característica |
-|--------|-----|----------------|
-| Fluid Quanta | 💜 Roxo claro | Base, neutro |
-| Fluid Chaos | 💜 Roxo escuro | Instável, dobra geração, esquenta reator |
-| Fluid Order | 💙 Ciano | Estável, refrigerante eficiente |
-| Stabilized Fluid | 💙 Ciano + branco | Refrigeração premium |
-| Entangled Fluid | 💜 Roxo + ciano | Teleporta baldes, cross-dimensional |
-| Singularity Fluid | ⚪ Branco + arco-íris | Endgame, cria singularidade temporária |
+### 💧 Quantum Fluids
+
+| Fluid | Color | Special Property |
+|-------|-------|------------------|
+| Liquid Quanta | Light Purple | Base, neutral |
+| Liquid Chaos | Dark Purple | Unstable, doubles generation, overheats |
+| Liquid Order | Cyan | Stable, efficient cooling |
+| Stabilized Liquid | Cyan + white | Premium cooling |
+| Entangled Liquid | Purple + cyan | Teleports buckets, cross-dimensional |
+| Liquid Singularity | White + rainbow | Endgame, creates temporary singularity |
 
 ## 📦 Requirements
 
@@ -84,23 +94,27 @@ Inspirado por Mekanism, Oritech, Create, EnderIO, Ars Nouveau, Modular Powersuit
 ## 🔧 Building from Source
 
 ```bash
-git clone https://github.com/seu-usuario/quanta.git
+git clone https://github.com/your-username/quanta.git
 cd quanta
 ./gradlew build
+
 ```
 
 ## 📚 Documentation
-- MATERIAIS_E_CRAFTS.md - Complete materials and recipes
-
 - QUANTA_MASTERLIST.md - Full mod specification
 
+- MATERIALS_AND_CRAFTS.md - Complete materials and recipes
+
+- LORE.md - Lore and concepts
+
 ## 🎨 Visual Identity
-Elemento	Cor
-- Decoherent (Tier 1)	Roxo médio (#9D4EDD)
-- Entangled (Tier 2)	Roxo + Ciano
-- Superposed (Tier 3)	Roxo + Ciano + Dourado
-- Singular (Ultimate)	Ciano + Dourado + Branco
-- Active Energy	Ciano (#00F5FF)
+| Element | Color |
+|---------|-------|
+| Decoherent (Tier 1) | Purple (#9D4EDD)     |
+| Entangled (Tier 2)  | Purple + Cyan        |
+| Superposed (Tier 3) | Purple + Cyan + Gold |
+| Singular (Ultimate) | Cyan + Gold + White  |
+| Active Energy	      | Cyan (#00F5FF)       |
 
 ## 🔌 Compatibility (Planned)
 - JEI/REI, The One Probe/Jade
@@ -114,4 +128,4 @@ Elemento	Cor
 ## 📄 License
 MIT
 
-## "Entre a Ordem e o Caos, existe a Quanta."
+"Between Order and Chaos, there is Quanta."

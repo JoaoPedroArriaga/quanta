@@ -2,6 +2,7 @@ package com.quanta.client;
 
 import com.quanta.Quanta;
 import com.quanta.client.screen.machine.ParticleReconstructorScreen;
+import com.quanta.client.screen.cable.CableConfigScreen;
 import com.quanta.content.menu.ModMenuTypes;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -14,5 +15,6 @@ public class ClientHandler {
     @SubscribeEvent
     public static void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenuTypes.PARTICLE_RECONSTRUCTOR.get(), ParticleReconstructorScreen::new);
+        event.register(ModMenuTypes.CABLE_CONFIG.get(), CableConfigScreen::new);
     }
 }

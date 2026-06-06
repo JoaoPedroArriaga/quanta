@@ -31,9 +31,7 @@ public enum TransferType implements StringRepresentable {
 
     public static int maskOf(TransferType... types) {
         int mask = 0;
-        for (TransferType type : types) {
-            mask |= type.bitMask;
-        }
+        for (TransferType type : types) mask |= type.bitMask;
         return mask;
     }
 }

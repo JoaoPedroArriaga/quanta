@@ -28,11 +28,6 @@ public class QuantumAssemblerBE extends QuantaProcessingBE {
     protected boolean canProcess(ItemStack input) { return !input.isEmpty(); }
 
     @Override
-    protected void doProcess() {
-        // Placeholder for recipe-based crafting
-    }
-
-    @Override
     public AbstractContainerMenu createMenu(int id, Inventory inv, Player player) { return null; }
 
     @Override

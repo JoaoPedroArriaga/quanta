@@ -59,9 +59,6 @@ public class QuantaCollapserBE extends QuantaEnergyBE {
     protected int getBaseEnergyCost() { return 0; }
     
     @Override
-    protected int getEnergyCost() { return 0; }
-    
-    @Override
     public AbstractContainerMenu createMenu(int id, Inventory inv, Player player) {
         return null;
     }

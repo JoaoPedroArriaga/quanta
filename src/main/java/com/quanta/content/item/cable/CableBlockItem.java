@@ -28,14 +28,17 @@ public class CableBlockItem extends BlockItem {
     }
 
     @Override
-    public void initializeClient(Consumer<IClientItemExtensions> consumer) {}
+    public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+    }
 
     @Override
     public Component getName(ItemStack stack) {
         return Component.translatable("item.quanta.cable." + type.getSerializedName());
     }
 
-    public TransferType getType() { return type; }
+    public TransferType getType() {
+        return type;
+    }
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
@@ -45,7 +48,7 @@ public class CableBlockItem extends BlockItem {
         Direction face = context.getClickedFace();
 
         if (level.getBlockEntity(clickedPos) instanceof CableBlockEntity cable) {
-            if (!cable.hasType(type)) {
+            if (!cable.getTypeManager().hasType(type)) {
                 if (!level.isClientSide) {
                     cable.addType(type);
                     cable.scheduleConnectionUpdate();
@@ -53,6 +56,7 @@ public class CableBlockItem extends BlockItem {
                 }
                 return InteractionResult.SUCCESS;
             }
+
             BlockPos placePos = clickedPos.relative(face);
             if (level.isEmptyBlock(placePos) && !level.isClientSide) {
                 level.setBlock(placePos, getBlock().defaultBlockState(), 3);

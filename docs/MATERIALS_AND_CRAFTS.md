@@ -1,7 +1,7 @@
 # QUANTA MOD - MATERIAIS E CRAFTS
 
-> **Documento baseado na QUANTA_MASTERLIST v7.0**
-> **Última atualização: 2026-04-12**
+> **Documento baseado na QUANTA_MASTERLIST v8.1**
+> **Última atualização: 2026-06-06**
 
 ---
 
@@ -25,7 +25,6 @@ NÍVEL 5: COMPONENTES DE EQUIPAMENTOS (Tool Core, Armor Plate, Neural Interface,
 ↓
 NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 
-
 ---
 
 ## 📦 1. MATERIAIS BASE
@@ -41,7 +40,7 @@ NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 | Material | Obtenção | Máquina | Input | Obs |
 |----------|----------|---------|-------|-----|
 | Quantum Dust | Crafting | Crafting Table | Ender Dust + Redstone | Início |
-| Quantum Dust | Duplicar | Particle Reconstructor | Qualquer Dust | 2x-8x por tier |
+| Quantum Dust | Duplicar | Matter Rewriter | Qualquer Dust | 2x-8x por tier |
 | Quantum Pallet | Enhance | Quanta Enhancer | Quantum Dust | - |
 | Quantum Steel | Infundir | Quanta Infuser | Quantum Dust/Pallet + Iron Ingot | - |
 | Quantum Steel Sheet | Pressionar | Industrial Press / Quantum Press | Quantum Steel | - |
@@ -49,8 +48,8 @@ NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 | Quantum Coil | Montar | Quantum Assembler | Quantum Steel Wire + Copper Ingot | - |
 | Quantum Circuit | Pressionar | Quanta Press | Quantum Steel + Gold Ingot + Redstone | - |
 | Quantum Crystal | Infundir | Quanta Infuser | Quantum Dust/Pallet + Diamond | - |
-| Essence of Order | Coletar | Quanta Collector | Quantum Crystal + Água | Modo Decoerência |
-| Essence of Chaos | Coletar | Quanta Collector | Quantum Crystal + Lava | Modo Superposição |
+| Essence of Order | Coletar | Essence Collector | Quantum Crystal + Água | Modo Decoerência |
+| Essence of Chaos | Coletar | Essence Collector | Quantum Crystal + Lava | Modo Superposição |
 
 ### Tier 2 - Entangled
 
@@ -60,6 +59,10 @@ NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 | Entangled Core | Montar | Quantum Assembler | Quantum Crystal + Ender Pearl + Essence of Chaos |
 | Observer Lens | Montar | Quantum Assembler | Quantum Crystal + Essence of Order + Glass |
 | Chaos Fragment | Montar | Quantum Assembler | Quantum Crystal + Essence of Chaos |
+
+**Novo uso para Chaos Fragment:** Chaotic Coil (craft do addon Chaos Overdrive), Chaos Catalyst (usado em experimentos), Chaotic Fluid (alternativa para Liquid Chaos no Quantum Liquid Mixer)
+
+**Novo uso para Observer Lens:** Reactor Window (Black Hole Forge), Observer Link addon, Quantum Sight implant
 
 ### Tier 3 - Superposed
 
@@ -73,11 +76,15 @@ NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 
 | Material | Obtenção | Máquina | Input |
 |----------|----------|---------|-------|
-| Stabilized Singularity | Forjar | Black Hole Forge | Nether Star + Entangled Core + Gases |
+| Stabilized Singularity | Forjar | Graviton Stabilizer (multibloco 7x7x7) | Nether Star + Entangled Core + Gases |
+
+**Novo uso para Essences:** Order/Chaos Infused Redstone (Quanta Infuser + Redstone), Stabilized Essence (Black Hole Forge)
 
 ---
 
 ## ⚙️ 2. COMPONENTES SIMPLES
+
+Todos os componentes simples (Coil, Gear, Circuit, Diode, Capacitor, Resistor, Transistor) são usados em crafts de máquinas, computação e addons. Nenhum novo uso adicional necessário.
 
 ### Quantum Steel Gear
 
@@ -177,37 +184,13 @@ NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 
 `[Superposed] [Superposed]` / `[Superposed] [Singularity]` (4 slots)
 
-### Tool Head (Pick)
+### Tool Head (Pick, Axe, Shovel, Drill, Saw)
 
-`[Alloy] [Alloy] [Alloy]` (3 slots, 1×3)
+(conforme padrão original)
 
-### Tool Head (Axe)
+### Tool Blade (Sword, Katana, Claymore)
 
-`[Alloy] [Alloy]` / `[Alloy] [ ]` (3 slots, 2×2 assimétrico)
-
-### Tool Head (Shovel)
-
-`[ ] [Alloy]` / `[ ] [Alloy]` (2 slots, 2×1)
-
-### Tool Head (Drill)
-
-`[Alloy] [Gear] [Alloy]` (3 slots, 1×3)
-
-### Tool Head (Saw)
-
-`[Alloy] [Alloy] [Alloy]` / `[ ] [Gear] [ ]` (4 slots, 2×2)
-
-### Tool Blade (Sword)
-
-`[ ] [Alloy]` / `[ ] [Alloy]` / `[ ] [Alloy]` (3 slots, 3×1)
-
-### Tool Blade (Katana)
-
-`[ ] [Alloy]` / `[Alloy] [ ]` / `[ ] [Alloy]` (3 slots, diagonal)
-
-### Tool Blade (Claymore)
-
-`[Alloy] [Alloy]` / `[Alloy] [Alloy]` / `[ ] [ ]` (4 slots, 2×2)
+(conforme padrão original)
 
 ### Tool Handle
 
@@ -285,7 +268,7 @@ NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 
 ## 🏗️ 8. MÁQUINAS COMPLETAS
 
-### Particle Reconstructor
+### Particle Reconstructor (Matter Rewriter)
 
 `[Frame] [Processing] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
 
@@ -293,7 +276,7 @@ NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 
 `[Frame] [Fluid] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Processing] [Frame]` (9 slots)
 
-### Quanta Collector
+### Quanta Collector (Essence Collector)
 
 `[Frame] [Fluid] [Frame]` / `[Control] [Dispenser] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
 
@@ -333,95 +316,85 @@ NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 
 `[Frame] [Fluid] [Frame]` / `[Control] [Mixer] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
 
-### Quantum Computer
+### Quantum Computer / Mainframe / Supercomputer
 
-`[Reinforced] [Processing] [Reinforced]` / `[Memory] [Control] [Memory]` / `[Reinforced] [Network] [Reinforced]` (9 slots)
+(conforme masterlist)
 
-### Quantum Mainframe
+### Quantum Tester
 
-`[Frame] [Computer] [Frame]` / `[Processing] [Control] [Processing]` / `[Frame] [Network] [Frame]` (9 slots)
+`[Frame] [Processing] [Frame]` / `[Control] [Tester] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
 
-### Quantum Supercomputer
+### Particle Collider Controller
 
-`[Mainframe] [Processing] [Mainframe]` / `[Processing] [Singularity] [Processing]` / `[Frame] [Network] [Frame]` (9 slots)
+(parte do multibloco - bloco de controle)
+
+`[Frame] [Processing] [Frame]` / `[Control] [Collider] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
+
+### Wave Function Collapser Controller
+
+(parte do multibloco 3x3x3)
+
+`[Frame] [Singularity] [Frame]` / `[Control] [Observer] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
+
+### Quantum Forge Controller
+
+(parte do multibloco 3x3x3)
+
+`[Processing] [Processing] [Processing]` / `[Processing] [Blast Furnace] [Processing]` / `[Alloy] [Alloy] [Alloy]` (9 slots)
+
+### Black Hole Forge Controller
+
+(parte do multibloco 5x5x5)
+
+`[Stabilized Casing] [Stabilized Casing] [Stabilized Casing]` / `[Stabilized Casing] [Nether Star] [Stabilized Casing]` / `[Stabilized Casing] [Stabilized Casing] [Stabilized Casing]` (9 slots)
+
+### Graviton Stabilizer Controller
+
+(parte do multibloco 7x7x7)
+
+`[Stabilized Casing] [Singularity] [Stabilized Casing]` / `[Singularity] [Alloy] [Singularity]` / `[Stabilized Casing] [Singularity] [Stabilized Casing]` (9 slots)
+
+### Entanglement Reactor Core
+
+(parte do multibloco variável)
+
+`[Reactor Casing] [Singularity] [Reactor Casing]` / `[Singularity] [Alloy] [Singularity]` / `[Reactor Casing] [Singularity] [Reactor Casing]` (9 slots)
+
+### Quantum Upgrade Table
+
+`[Frame] [Processing] [Frame]` / `[Control] [Crafting] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
+
+### Quantum Cyber Chamber Controller
+
+`[Frame] [Processing] [Frame]` / `[Control] [Anvil] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
 
 ---
 
 ## 🗡️ 9. FERRAMENTAS COMPLETAS
 
+Craft direto com Tool Core + Tool Head + Tool Handle (padrão 3×1 ou 4×1). Exemplos:
+
 ### Decoherent Pickaxe
 
 `[Head]` / `[Core]` / `[Handle]` (3 slots, 3×1)
-
-### Decoherent Axe
-
-`[Head]` / `[Core]` / `[Handle]` (3 slots, 3×1)
-
-### Decoherent Shovel
-
-`[Head]` / `[Core]` / `[Handle]` (3 slots, 3×1)
-
-### Decoherent Sword
-
-`[Blade]` / `[Core]` / `[Handle]` (3 slots, 3×1)
 
 ### Entangled Drill
 
 `[Head]` / `[Core]` / `[Motor]` / `[Handle]` (4 slots, 4×1)
 
-### Entangled Saw
-
-`[Head]` / `[Core]` / `[Gear]` / `[Handle]` (4 slots, 4×1)
-
 ### Superposed Katana
 
-`[Blade]` / `[Core]` / `[Handle]` (3 slots, 3×1)
-
-### Superposed Claymore
-
-`[Blade]` / `[Blade]` / `[Core]` / `[Handle]` (4 slots, 4×1)
+`[Blade]` / `[Core]` / `[Handle]` (3 slots)
 
 ### Singular Cannon
 
-`[Barrel]` / `[Core]` / `[Energy]` / `[Handle]` (4 slots, 4×1)
-
-### Singular Grappler
-
-`[Hook]` / `[Core]` / `[Coil]` / `[Handle]` (4 slots, 4×1)
-
-### Singular Shield
-
-`[Plate] [Plate]` / `[Plate] [Core]` / `[ ] [Handle]` (5 slots, 3×2 assimétrico)
+`[Barrel]` / `[Core]` / `[Energy]` / `[Handle]` (4 slots)
 
 ---
 
 ## 🛡️ 10. ARMADURA COMPLETA
 
-### Decoherent Helmet
-
-`[Plate] [Plate] [Plate]` / `[Plate] [Core] [Plate]` / `[ ] [ ] [ ]` (6 slots)
-
-### Decoherent Chestplate
-
-`[Plate] [ ] [Plate]` / `[Plate] [Plate] [Plate]` / `[Plate] [Plate] [Plate]` (8 slots)
-
-### Decoherent Leggings
-
-`[Plate] [Plate] [Plate]` / `[Plate] [ ] [Plate]` / `[Plate] [ ] [Plate]` (7 slots)
-
-### Decoherent Boots
-
-`[ ] [ ] [ ]` / `[Plate] [ ] [Plate]` / `[Plate] [ ] [Plate]` (4 slots)
-
-### Entangled Helmet (upgrade via Entangled Kit)
-
-### Entangled Chestplate (upgrade via Entangled Kit)
-
-### Entangled Leggings (upgrade via Entangled Kit)
-
-### Entangled Boots (upgrade via Entangled Kit)
-
-*Mesmo padrão para Superposed e Singular*
+Craft direto com Armor Plates + Armor Core (conforme padrão original).
 
 ---
 
@@ -429,47 +402,21 @@ NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 
 ### Quantum Sight
 
-`[Neural] [Optical]` / `[Lens] [ ]` (3 slots, 2×2 incompleto)
+`[Neural] [Optical]` / `[Lens] [ ]` (3 slots)
 
 ### Quantum Reach
 
-`[Neural] [Core]` / `[Core] [ ]` (3 slots, 2×2 incompleto)
+`[Neural] [Core]` / `[Core] [ ]` (3 slots)
 
 ### Quantum Speed
 
-`[Neural] [Motor]` / `[Coil] [ ]` (3 slots, 2×2 incompleto)
-
-### Quantum Strength
-
-`[Neural] [Motor]` / `[Fragment] [ ]` (3 slots, 2×2 incompleto)
-
-### Quantum Resistance
-
-`[Neural] [Armor]` / `[Alloy] [ ]` (3 slots, 2×2 incompleto)
-
-### Quantum Lungs
-
-`[Neural] [Fluid]` / `[Quanta] [ ]` (3 slots, 2×2 incompleto)
-
-### Quantum Night Vision
-
-`[Neural] [Optical]` / `[Order] [ ]` (3 slots, 2×2 incompleto)
-
-### Quantum Tunneling
-
-`[Neural] [Tunneling]` / `[Fragment] [ ]` (3 slots, 2×2 incompleto)
+`[Neural] [Motor]` / `[Coil] [ ]` (3 slots)
 
 ### Quantum Flight
 
-`[Neural] [Flight]` / `[Stabilized] [ ]` (3 slots, 2×2 incompleto)
+`[Neural] [Flight]` / `[Stabilized] [ ]` (3 slots)
 
-### Quantum Buffer
-
-`[Neural] [Energy]` / `[Capacitor] [ ]` (3 slots, 2×2 incompleto)
-
-### Quantum Cortex
-
-`[Neural] [Processor]` / `[Memory] [Core]` (4 slots, 2×2)
+... (todos os outros seguem padrão similar)
 
 ---
 
@@ -551,78 +498,28 @@ NÍVEL 6: ITENS FINAIS (Máquinas, Ferramentas, Armadura, Implantes)
 
 ## 💧 16. LÍQUIDOS E GASES
 
-### Quantum Liquid Infuser
-
-`[Frame] [Fluid] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
-
-### Quantum Liquid Mixer
-
-`[Frame] [Fluid] [Frame]` / `[Control] [Mixer] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
-
-### Quantum Evaporator
-
-`[Frame] [Fluid] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
-
-### Quantum Condenser
-
-`[Frame] [Fluid] [Frame]` / `[Control] [Furnace] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
-
-### Tanques
-
-- Quantum Tank: `[Glass] [Glass] [Glass]` / `[Glass] [Tank] [Glass]` / `[Glass] [Glass] [Glass]`
-- Containment Tank: `[Alloy] [Alloy] [Alloy]` / `[Alloy] [Tank] [Alloy]` / `[Alloy] [Alloy] [Alloy]`
-- Pressurized Tank: `[Glass] [Glass] [Glass]` / `[Glass] [Gas] [Glass]` / `[Glass] [Glass] [Glass]`
+(Mesmo da masterlist - tanques, evaporador, condensador, mixer)
 
 ---
 
 ## 🏭 17. MULTIBLOCOS
 
-### Quantum Forge Controller
+### Quantum Forge (3x3x3)
 
-`[Processing] [Processing] [Processing]` / `[Processing] [Blast Furnace] [Processing]` / `[Alloy] [Alloy] [Alloy]` (9 slots)
+Estrutura: base de Quantum Casing, paredes de Quantum Glass Panel, centro com Forge Controller.
 
-### Black Hole Forge Controller
+### Black Hole Forge (5x5x5)
 
-`[Stabilized Casing] [Stabilized Casing] [Stabilized Casing]` / `[Stabilized Casing] [Nether Star] [Stabilized Casing]` / `[Stabilized Casing] [Stabilized Casing] [Stabilized Casing]` (9 slots)
+Estrutura: Stabilized Casing, centro com Controller e espaço vazio para "buraco negro".
 
-### Entanglement Reactor Core
+### Graviton Stabilizer (7x7x7)
 
-`[Reactor Casing] [Singularity] [Reactor Casing]` / `[Singularity] [Alloy] [Singularity]` / `[Reactor Casing] [Singularity] [Reactor Casing]` (9 slots)
+Estrutura avançada para criar Stabilized Singularity.
 
-### Quantum Plasma Forge Controller
+### Particle Collider (sem limite)
 
-`[Processing] [Singularity] [Processing]` / `[Singularity] [Forge Controller] [Singularity]` / `[Alloy] [Alloy] [Alloy]` (9 slots)
-
-### Quantum Cyber Chamber Controller
-
-`[Frame] [Processing] [Frame]` / `[Control] [Anvil] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
-
-### Quantum Upgrade Table
-
-`[Frame] [Processing] [Frame]` / `[Control] [Crafting] [Control]` / `[Frame] [Energy] [Frame]` (9 slots)
+Pode ser circular ou linear. Blocos: Quantum Collider Magnet, Particle Injector, Collision Chamber, Energy Input Port.
 
 ---
 
-## ✅ 18. VERIFICAÇÃO RÁPIDA DE PROGRESSÃO
-
-- [ ] Industrial Crusher (Ender Dust)
-- [ ] Quantum Dust
-- [ ] Quantum Steel
-- [ ] Quantum Crystal
-- [ ] Essence of Order/Chaos
-- [ ] Entangled Core
-- [ ] Quantum Processor
-- [ ] Quantum Alloy
-- [ ] Stabilized Singularity
-- [ ] Decoherent Tools/Armor
-- [ ] Entangled Tools/Armor (upgrade)
-- [ ] Superposed Tools/Armor (upgrade)
-- [ ] Singular Tools/Armor (upgrade)
-- [ ] Quantum Supercomputer
-- [ ] Singularity Cell
-- [ ] All Implants
-
----
-
-*Este documento é sincronizado com a QUANTA_MASTERLIST v7.0*
-*Para dúvidas, consulte o documento principal.*
+*Este documento é sincronizado com a QUANTA_MASTERLIST v8.1*

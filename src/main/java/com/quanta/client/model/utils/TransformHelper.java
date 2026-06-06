@@ -6,7 +6,6 @@ import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
 public class TransformHelper {
-
     private static final Vector3f CENTER = new Vector3f(0.5f, 0.5f, 0.5f);
 
     public static Transformation getRotationForDirection(Direction direction) {

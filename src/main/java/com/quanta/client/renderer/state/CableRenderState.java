@@ -6,6 +6,7 @@ import com.quanta.core.transfer.Priority;
 import com.quanta.core.transfer.TransferType;
 import net.minecraft.core.Direction;
 import net.neoforged.neoforge.client.model.data.ModelProperty;
+
 import java.util.*;
 
 public final class CableRenderState {
@@ -44,17 +45,22 @@ public final class CableRenderState {
 
         List<Direction> connectedDirs = new ArrayList<>();
         for (Direction dir : Direction.values()) {
-            if (connectionMasks[dir.ordinal()] != 0) connectedDirs.add(dir);
+            ConnectionConfig config = connectionConfigs.get(dir);
+            if (connectionMasks[dir.ordinal()] != 0 && config != null && config.getMode().isEnabled()) {
+                connectedDirs.add(dir);
+            }
         }
         this.isStraightLine = connectedDirs.size() == 2 && connectedDirs.get(0).getOpposite() == connectedDirs.get(1);
         cachedHash = Objects.hash(presentCables, Arrays.hashCode(connectionMasks));
     }
 
-    public void updateAngles() {}
+    public void updateAngles() {
+    }
 
     private void updateParticleState() {
         particleState.clear();
 
+        // Partículas orbitais (2+ tipos)
         for (int i = 0; i < particles.size(); i++) {
             TransferType type = particles.get(i);
             var config = getParticleConfig(type);
@@ -64,14 +70,24 @@ public final class CableRenderState {
 
         for (Direction dir : Direction.values()) {
             ConnectionConfig config = connectionConfigs.get(dir);
-            if (config == null) continue;
-            if (connectionMasks[dir.ordinal()] == 0) continue;
-            if (config.getMode() == ConnectionConfig.Mode.DISABLED) continue;
-            if ((activeTransferMask & (1 << dir.ordinal())) == 0) continue;
+            if (config == null) {
+                continue;
+            }
+            if (connectionMasks[dir.ordinal()] == 0) {
+                continue;
+            }
+            if (config.getMode() == ConnectionConfig.Mode.DISABLED) {
+                continue;
+            }
+            if ((activeTransferMask & (1 << dir.ordinal())) == 0) {
+                continue;
+            }
 
-            float x = 0.5f + dir.getStepX() * 0.65f;
-            float y = 0.5f + dir.getStepY() * 0.65f;
-            float z = 0.5f + dir.getStepZ() * 0.65f;
+            // Ajuste: usar 0.35 para ficar próximo ao centro do cabo (core)
+            float offset = 0.35f;
+            float x = 0.5f + dir.getStepX() * offset;
+            float y = 0.5f + dir.getStepY() * offset;
+            float z = 0.5f + dir.getStepZ() * offset;
 
             for (TransferType type : presentCables) {
                 if ((connectionMasks[dir.ordinal()] & type.bitMask) != 0) {
@@ -85,26 +101,61 @@ public final class CableRenderState {
         }
     }
 
-    public ParticleState getParticleState() { return particleState; }
-    public boolean isConnectionEnabled(Direction dir) { return connectionEnabled[dir.ordinal()]; }
+    public ParticleState getParticleState() {
+        return particleState;
+    }
+
+    public boolean isConnectionEnabled(Direction dir) {
+        return connectionEnabled[dir.ordinal()];
+    }
+
     public ConnectionConfig.Mode getDirectionMode(Direction dir) {
         ConnectionConfig config = connectionConfigs.get(dir);
         return config != null ? config.getMode() : ConnectionConfig.Mode.INSERT;
     }
 
-    public List<TransferType> getPresentCables() { return presentCables; }
-    public TransferType getBaseType() { return baseType; }
-    public List<TransferType> getParticles() { return particles; }
-    public boolean hasParticles() { return !particles.isEmpty(); }
-    public boolean shouldShowCore() { return !isStraightLine; }
-    public boolean hasConnection(Direction dir) { return connectionMasks[dir.ordinal()] != 0; }
-    public int getConnectionMask(Direction dir) { return connectionMasks[dir.ordinal()]; }
+    public List<TransferType> getPresentCables() {
+        return presentCables;
+    }
 
-    public float getOrbitAngle() { return ClientAnimationHandler.getOrbitAngle(); }
-    public float getFloatOffset() { return ClientAnimationHandler.getFloatOffset(); }
-    public int getCacheHash() { return cachedHash; }
+    public TransferType getBaseType() {
+        return baseType;
+    }
 
-    private record ParticleConfig(float speed, float radius, float heightAmp, float verticalFreq, int startAngle, float direction) {}
+    public List<TransferType> getParticles() {
+        return particles;
+    }
+
+    public boolean hasParticles() {
+        return !particles.isEmpty() || particleState.hasTypeIndicatorParticles() || particleState.hasPriorityParticles();
+    }
+
+    public boolean shouldShowCore() {
+        return !isStraightLine;
+    }
+
+    public boolean hasConnection(Direction dir) {
+        return connectionMasks[dir.ordinal()] != 0;
+    }
+
+    public int getConnectionMask(Direction dir) {
+        return connectionMasks[dir.ordinal()];
+    }
+
+    public float getOrbitAngle() {
+        return ClientAnimationHandler.getOrbitAngle();
+    }
+
+    public float getFloatOffset() {
+        return ClientAnimationHandler.getFloatOffset();
+    }
+
+    public int getCacheHash() {
+        return cachedHash;
+    }
+
+    private record ParticleConfig(float speed, float radius, float heightAmp, float verticalFreq, int startAngle, float direction) {
+    }
 
     private ParticleConfig getParticleConfig(TransferType type) {
         return switch (type) {

@@ -78,5 +78,53 @@
   "tooltip.quanta.cable.fluid": "§2Transporta Fluidos",
   "tooltip.quanta.cable.gas": "§6Transporta Gases",
   "tooltip.quanta.bundle.click_to_add": "§7Clique em um cabo existente para adicionar este tipo",
-  "tooltip.quanta.bundle.click_to_place": "§7Clique na face de um bloco para colocar novo cabo"
+  "tooltip.quanta.bundle.click_to_place": "§7Clique na face de um bloco para colocar novo cabo",
+
+  "gui.quanta.energy": "Energia",
+  "gui.quanta.progress": "Progresso",
+  "gui.quanta.mode": "Modo: %s",
+  "gui.quanta.mode.decoherent": "Decoerente",
+  "gui.quanta.mode.superposed": "Superposto",
+
+  "gui.quanta.cable.config.title": "CONFIG: Face %s",
+  "gui.quanta.cable.config.mode": "Modo:",
+  "gui.quanta.cable.config.priority": "Prioridade:",
+  "gui.quanta.cable.config.filter_enabled": "Habilitar Filtro",
+  "gui.quanta.cable.config.add_filter": "+ Adicionar Filtro",
+  "gui.quanta.cable.config.save": "SALVAR",
+  "gui.quanta.cable.config.cancel": "CANCELAR",
+  
+  "gui.quanta.cable.filter.title": "ADICIONAR FILTRO",
+  "gui.quanta.cable.filter.type": "Tipo:",
+  "gui.quanta.cable.filter.tag": "Tag:",
+  "gui.quanta.cable.filter.nbt_options": "-- Opções NBT --",
+  "gui.quanta.cable.filter.filter_nbt": "Filtrar por NBT",
+  "gui.quanta.cable.filter.ignore_damage": "Ignorar dano",
+  "gui.quanta.cable.filter.ignore_enchants": "Ignorar encantamentos",
+  "gui.quanta.cable.filter.ignore_count": "Ignorar contagem",
+  
+  "gui.quanta.cable.mode.insert": "INSERIR",
+  "gui.quanta.cable.mode.extract": "EXTRAIR",
+  "gui.quanta.cable.mode.disabled": "DESATIVADO",
+  
+  "gui.quanta.cable.priority.lowest": "BAIXÍSSIMA",
+  "gui.quanta.cable.priority.low": "BAIXA",
+  "gui.quanta.cable.priority.normal": "NORMAL",
+  "gui.quanta.cable.priority.high": "ALTA",
+  "gui.quanta.cable.priority.highest": "ALTÍSSIMA",
+  "gui.quanta.cable.priority.critical": "CRÍTICA",
+  
+  "gui.quanta.cable.filter.type.item": "ITEM",
+  "gui.quanta.cable.filter.type.tag": "TAG",
+  "gui.quanta.cable.filter.type.nbt": "NBT",
+  "gui.quanta.cable.filter.type.regex": "REGEX",
+  
+  "gui.quanta.cable.whitelist": "Lista Branca",
+  "gui.quanta.cable.blacklist": "Lista Negra",
+  "gui.quanta.cable.enable_filter": "Habilitar Filtro",
+  
+  "screen.quanta.cable_config": "Configuração do Cabo",
+  "screen.quanta.cable_config.face": "Face: %s",
+  "screen.quanta.cable_config.filter_hint": "Clique nos slots para adicionar itens ao filtro",
+  "screen.quanta.add_filter": "Adicionar Filtro"
 }

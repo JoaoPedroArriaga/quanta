@@ -15,98 +15,68 @@ public class QuantaCapabilityHandler {
 
     @SubscribeEvent
     public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-
-        // ===== CABLE - Quanta Energy =====
+        // CABLE – Quanta Energy
         event.registerBlockEntity(
             QuantaCapabilities.QUANTA_ENERGY,
             ModBlockEntities.CABLE.get(),
             (be, side) -> be.getQuantaStorage()
         );
-
-        // ===== CABLE - Gas =====
+        // CABLE – Gas
         event.registerBlockEntity(
             QuantaCapabilities.QUANTA_GAS,
             ModBlockEntities.CABLE.get(),
             (be, side) -> be.getGasHandler()
         );
-
-        // ===== CABLE - Item (NeoForge standard) =====
+        // CABLE – Item
         event.registerBlockEntity(
             Capabilities.ItemHandler.BLOCK,
             ModBlockEntities.CABLE.get(),
             (be, side) -> be.getItemHandler()
         );
-
-        // ===== CABLE - Fluid (NeoForge standard) =====
+        // CABLE – Fluid
         event.registerBlockEntity(
             Capabilities.FluidHandler.BLOCK,
             ModBlockEntities.CABLE.get(),
             (be, side) -> be.getFluidHandler()
         );
 
-        // ===== ENERGY QUANTIFIER - FE Input =====
+        // ENERGY QUANTIFIER – Quanta Energy (for cabos)
+        event.registerBlockEntity(
+            QuantaCapabilities.QUANTA_ENERGY,
+            ModBlockEntities.ENERGY_QUANTIFIER.get(),
+            (be, side) -> ((EnergyQuantifierBE) be).getEnergyStorage()
+        );
+        // ENERGY QUANTIFIER – FE input (for other mods)
         event.registerBlockEntity(
             Capabilities.EnergyStorage.BLOCK,
             ModBlockEntities.ENERGY_QUANTIFIER.get(),
             (be, side) -> new IEnergyStorage() {
-                @Override
-                public int receiveEnergy(int maxReceive, boolean simulate) {
-                    return ((EnergyQuantifierBE) be).receiveEnergy(maxReceive, simulate);
-                }
-
-                @Override
-                public int extractEnergy(int maxExtract, boolean simulate) {
-                    return 0;
-                }
-
-                @Override
-                public int getEnergyStored() {
-                    return ((EnergyQuantifierBE) be).getEnergyStored();
-                }
-
-                @Override
-                public int getMaxEnergyStored() {
-                    return ((EnergyQuantifierBE) be).getMaxEnergyStored();
-                }
-
-                @Override
-                public boolean canExtract() { return false; }
-
-                @Override
-                public boolean canReceive() { return true; }
+                @Override public int receiveEnergy(int maxReceive, boolean simulate) { return ((EnergyQuantifierBE) be).receiveEnergy(maxReceive, simulate); }
+                @Override public int extractEnergy(int maxExtract, boolean simulate) { return 0; }
+                @Override public int getEnergyStored() { return ((EnergyQuantifierBE) be).getEnergyStored(); }
+                @Override public int getMaxEnergyStored() { return ((EnergyQuantifierBE) be).getMaxEnergyStored(); }
+                @Override public boolean canExtract() { return false; }
+                @Override public boolean canReceive() { return true; }
             }
         );
 
-        // ===== QUANTA COLLAPSER - FE Output =====
+        // QUANTA COLLAPSER – Quanta Energy (for cabos)
+        event.registerBlockEntity(
+            QuantaCapabilities.QUANTA_ENERGY,
+            ModBlockEntities.QUANTA_COLLAPSER.get(),
+            (be, side) -> ((QuantaCollapserBE) be).getEnergyStorage()
+        );
+        // QUANTA COLLAPSER – FE output
         event.registerBlockEntity(
             Capabilities.EnergyStorage.BLOCK,
             ModBlockEntities.QUANTA_COLLAPSER.get(),
             (be, side) -> new IEnergyStorage() {
-                @Override
-                public int receiveEnergy(int maxReceive, boolean simulate) {
-                    return 0;
-                }
-
-                @Override
-                public int extractEnergy(int maxExtract, boolean simulate) {
-                    return ((QuantaCollapserBE) be).extractEnergy(maxExtract, simulate);
-                }
-
-                @Override
-                public int getEnergyStored() {
-                    return ((QuantaCollapserBE) be).getEnergyStored();
-                }
-
-                @Override
-                public int getMaxEnergyStored() {
-                    return ((QuantaCollapserBE) be).getMaxEnergyStored();
-                }
-
-                @Override
-                public boolean canExtract() { return true; }
-
-                @Override
-                public boolean canReceive() { return false; }
+                @Override public int receiveEnergy(int maxReceive, boolean simulate) { return 0; }
+                @Override public int extractEnergy(int maxExtract, boolean simulate) { return ((QuantaCollapserBE) be).extractEnergy(maxExtract, simulate); }
+                @Override public int getEnergyStored() { return ((QuantaCollapserBE) be).getEnergyStored(); }
+                @Override public int getMaxEnergyStored() { return ((QuantaCollapserBE) be).getMaxEnergyStored(); }
+                @Override public boolean canExtract() { return true; }
+                @Override public boolean canReceive() { return false; }
             }
         );
     }

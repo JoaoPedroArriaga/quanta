@@ -24,7 +24,6 @@ public class EnergyQuantifierBE extends QuantaEnergyBE {
     public int receiveEnergy(int maxReceive, boolean simulate) {
         int quantaToAdd = maxReceive / fePerQuanta;
         if (quantaToAdd <= 0) return 0;
-        
         int added = energy.addQuanta(quantaToAdd);
         return added * fePerQuanta;
     }
@@ -32,7 +31,6 @@ public class EnergyQuantifierBE extends QuantaEnergyBE {
     public int extractEnergy(int maxExtract, boolean simulate) {
         int quantaToExtract = maxExtract / fePerQuanta;
         if (quantaToExtract <= 0) return 0;
-        
         int extracted = energy.extractQuanta(quantaToExtract, false, simulate);
         return extracted * fePerQuanta;
     }
@@ -44,9 +42,6 @@ public class EnergyQuantifierBE extends QuantaEnergyBE {
     
     @Override
     protected int getBaseEnergyCost() { return 0; }
-    
-    @Override
-    protected int getEnergyCost() { return 0; }
     
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inv, Player player) {

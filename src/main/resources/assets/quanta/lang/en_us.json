@@ -78,5 +78,53 @@
   "tooltip.quanta.cable.fluid": "§2Transfers Fluids",
   "tooltip.quanta.cable.gas": "§6Transfers Gases",
   "tooltip.quanta.bundle.click_to_add": "§7Click on existing cable to add this type",
-  "tooltip.quanta.bundle.click_to_place": "§7Click on block face to place new cable"
+  "tooltip.quanta.bundle.click_to_place": "§7Click on block face to place new cable",
+  
+  "gui.quanta.energy": "Energy",
+  "gui.quanta.progress": "Progress",
+  "gui.quanta.mode": "Mode: %s",
+  "gui.quanta.mode.decoherent": "Decoherent",
+  "gui.quanta.mode.superposed": "Superposed",
+  
+  "gui.quanta.cable.config.title": "CONFIG: %s Face",
+  "gui.quanta.cable.config.mode": "Mode:",
+  "gui.quanta.cable.config.priority": "Priority:",
+  "gui.quanta.cable.config.filter_enabled": "Enable Filter",
+  "gui.quanta.cable.config.add_filter": "+ Add Filter",
+  "gui.quanta.cable.config.save": "SAVE",
+  "gui.quanta.cable.config.cancel": "CANCEL",
+  
+  "gui.quanta.cable.filter.title": "ADD FILTER",
+  "gui.quanta.cable.filter.type": "Type:",
+  "gui.quanta.cable.filter.tag": "Tag:",
+  "gui.quanta.cable.filter.nbt_options": "-- NBT Options --",
+  "gui.quanta.cable.filter.filter_nbt": "Filter by NBT",
+  "gui.quanta.cable.filter.ignore_damage": "Ignore damage",
+  "gui.quanta.cable.filter.ignore_enchants": "Ignore enchantments",
+  "gui.quanta.cable.filter.ignore_count": "Ignore count",
+  
+  "gui.quanta.cable.mode.insert": "INSERT",
+  "gui.quanta.cable.mode.extract": "EXTRACT",
+  "gui.quanta.cable.mode.disabled": "DISABLED",
+  
+  "gui.quanta.cable.priority.lowest": "LOWEST",
+  "gui.quanta.cable.priority.low": "LOW",
+  "gui.quanta.cable.priority.normal": "NORMAL",
+  "gui.quanta.cable.priority.high": "HIGH",
+  "gui.quanta.cable.priority.highest": "HIGHEST",
+  "gui.quanta.cable.priority.critical": "CRITICAL",
+  
+  "gui.quanta.cable.filter.type.item": "ITEM",
+  "gui.quanta.cable.filter.type.tag": "TAG",
+  "gui.quanta.cable.filter.type.nbt": "NBT",
+  "gui.quanta.cable.filter.type.regex": "REGEX",
+  
+  "gui.quanta.cable.whitelist": "Whitelist",
+  "gui.quanta.cable.blacklist": "Blacklist",
+  "gui.quanta.cable.enable_filter": "Enable Filter",
+  
+  "screen.quanta.cable_config": "Cable Configuration",
+  "screen.quanta.cable_config.face": "Face: %s",
+  "screen.quanta.cable_config.filter_hint": "Click slots to add filter items",
+  "screen.quanta.add_filter": "Add Filter"
 }

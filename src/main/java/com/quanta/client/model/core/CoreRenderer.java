@@ -12,7 +12,6 @@ import net.neoforged.neoforge.client.model.data.ModelData;
 import java.util.List;
 
 public class CoreRenderer implements ICableRenderer {
-
     private final BakedModel coreModel;
 
     public CoreRenderer(BakedModel coreModel) {

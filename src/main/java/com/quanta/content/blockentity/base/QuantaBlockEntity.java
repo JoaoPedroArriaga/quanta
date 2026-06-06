@@ -66,9 +66,4 @@ public abstract class QuantaBlockEntity extends BlockEntity implements MenuProvi
 
     @Override
     public abstract AbstractContainerMenu createMenu(int id, Inventory inv, Player player);
-
-    protected int getEnergyCost() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEnergyCost'");
-    }
 }

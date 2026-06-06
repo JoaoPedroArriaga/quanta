@@ -54,7 +54,7 @@ public class ModItems {
 
     // Cables
     public static final DeferredItem<Item> QUANTA_CABLE = ITEMS.register("quanta_cable",
-    () -> CableBlockItem.create(TransferType.QUANTA, new Item.Properties()));
+        () -> CableBlockItem.create(TransferType.QUANTA, new Item.Properties()));
     public static final DeferredItem<Item> QUANTUM_ITEM_PIPE = ITEMS.register("quantum_item_pipe",
         () -> CableBlockItem.create(TransferType.ITEM, new Item.Properties()));
     public static final DeferredItem<Item> QUANTUM_LIQUID_PIPE = ITEMS.register("quantum_liquid_pipe",

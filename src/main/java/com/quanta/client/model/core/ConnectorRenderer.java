@@ -19,7 +19,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class ConnectorRenderer implements ICableRenderer {
-
     private final BakedModel connectionModel;
 
     public ConnectorRenderer(BakedModel connectionModel) {

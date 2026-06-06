@@ -2,9 +2,13 @@ package com.quanta.client;
 
 import com.quanta.client.model.core.ConnectorRenderer;
 import com.quanta.client.model.core.CoreRenderer;
-import com.quanta.client.model.particle.*;
+import com.quanta.client.model.particle.IndicatorParticleRenderer;
+import com.quanta.client.model.particle.OrbitalParticleRenderer;
+import com.quanta.client.model.particle.ParticleManager;
+import com.quanta.client.model.particle.PriorityParticleRenderer;
 import com.quanta.client.model.utils.TextureHelper;
 import com.quanta.client.renderer.state.CableRenderState;
+import com.quanta.client.renderer.state.ParticleState;
 import com.quanta.core.transfer.TransferType;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.block.model.BakedQuad;
@@ -18,6 +22,7 @@ import net.neoforged.neoforge.client.ChunkRenderTypeSet;
 import net.neoforged.neoforge.client.model.IDynamicBakedModel;
 import net.neoforged.neoforge.client.model.data.ModelData;
 import org.jetbrains.annotations.Nullable;
+
 import java.util.*;
 
 public class CableBundleModel implements IDynamicBakedModel {
@@ -40,16 +45,18 @@ public class CableBundleModel implements IDynamicBakedModel {
     public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side,
                                     RandomSource rand, ModelData extraData, @Nullable RenderType renderType) {
         CableRenderState renderState = extraData.get(CableRenderState.PROPERTY);
-        if (renderState == null || renderState.getPresentCables().isEmpty()) return Collections.emptyList();
+        if (renderState == null || renderState.getPresentCables().isEmpty()) {
+            return Collections.emptyList();
+        }
 
         renderState.updateAngles();
         List<BakedQuad> allQuads = new ArrayList<>();
         coreRenderer.render(renderState, allQuads, rand);
         connectorRenderer.render(renderState, allQuads, rand);
-        if (renderState.hasParticles()) {
-            particleManager.renderAll(renderState.getParticleState(),
-                renderState.getOrbitAngle(), renderState.getFloatOffset(), allQuads, rand);
-        }
+
+        ParticleState ps = renderState.getParticleState();
+        particleManager.renderAll(ps, renderState.getOrbitAngle(), renderState.getFloatOffset(), allQuads, rand);
+
         return allQuads;
     }
 

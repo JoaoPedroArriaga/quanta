@@ -29,12 +29,12 @@ public class QuantumWireDrawerBE extends QuantaProcessingBE {
 
     @Override
     protected void doProcess() {
-        ItemStack input = inventory.getStackInSlot(SLOT_INPUT);
-        ItemStack output = inventory.getStackInSlot(SLOT_OUTPUT);
+        ItemStack input = inventory.getItem(SLOT_INPUT);
+        ItemStack output = inventory.getItem(SLOT_OUTPUT);
         ItemStack result = input.copy();
         result.setCount(1);
         input.shrink(1);
-        if (output.isEmpty()) inventory.setStackInSlot(SLOT_OUTPUT, result);
+        if (output.isEmpty()) inventory.setItem(SLOT_OUTPUT, result);
         else output.grow(result.getCount());
     }
 

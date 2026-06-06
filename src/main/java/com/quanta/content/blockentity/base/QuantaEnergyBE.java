@@ -30,6 +30,7 @@ public abstract class QuantaEnergyBE extends QuantaBlockEntity {
     public IQuantaStorage getEnergyStorage() { return energy; }
     public int getEnergyStoredQuanta() { return energy.getQuantaStored(); }
     public int getEnergyCapacityQuanta() { return energy.getQuantaCapacity(); }
+    public QuantumTier getTier() { return tier; }
 
     protected boolean hasEnoughEnergy(int cost) { return energy.getQuantaStored() >= cost; }
 
