@@ -1,3 +1,11 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[VISUALS]]"
+toc-order: 1
+STRUCTURE:
+  - "[[VISUALS]]"
+---
 # QUANTA MOD - DECORATIONS
 
 > **Document based on QUANTA_MASTERLIST v10.6**

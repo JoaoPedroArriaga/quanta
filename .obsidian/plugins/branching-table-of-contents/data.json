@@ -1,0 +1,18 @@
+{
+  "parentProperties": "parent, parents",
+  "childProperties": "child, children",
+  "orderProperty": "toc-order",
+  "levelsUp": 2,
+  "levelsDown": 2,
+  "defaultMode": "tree",
+  "defaultScope": "focus",
+  "orientation": "top-down",
+  "treeStyle": "boxes",
+  "followActiveNote": true,
+  "showBreadcrumbs": true,
+  "showMissing": true,
+  "excludeFolders": "",
+  "newNoteLink": "new",
+  "tocNoteSuffix": " - Table of Contents",
+  "tocMaxDepth": 12
+}

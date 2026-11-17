@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 5
+---
 # QUANTA MOD - TIER 4 (SINGULAR) — FINAL SCOPE
 
 > **Document based on QUANTA_MASTERLIST v10.6**
@@ -21,8 +27,16 @@ Tier 4 (Singular) is the **singularity layer** (endgame):
 
 ---
 
+<!-- AUTO-GENERATED: recipe-index-t4 START -->
 ## 🏭 1. MACHINES (4)
 
+| # | Machine recipe |
+| --- | --- |
+| 1 | Graviton Stabilizer (7×7×7) |
+| 2 | Superposed Reactor |
+| 3 | Cyber Chamber (3×3×3) |
+| 4 | Nexus Supercomputer |
+<!-- AUTO-GENERATED: recipe-index-t4 END -->
 ### 1.1 Graviton Stabilizer (7×7×7)
 
 **Function:** Creates Stabilized Singularity.
@@ -170,7 +184,6 @@ Tier 4 (Singular) is the **singularity layer** (endgame):
 | **Essence of Singularity** | Essence of Void + Stabilized Singularity + Adamas Resonans    | 1      |
 
 ---
-
 ## 📊 7. TIER 4 PROGRESSION
 
 Complete Tier 3 (superposition, auto-crafting, Quanta Weaver)

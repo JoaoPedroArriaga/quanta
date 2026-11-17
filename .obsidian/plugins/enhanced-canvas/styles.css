@@ -1,0 +1,260 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+.metadata-property[data-property-key="canvas"] .metadata-property-icon svg {
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-layout-dashboard'%3E%3Crect width='7' height='9' x='3' y='3' rx='1'/%3E%3Crect width='7' height='5' x='14' y='3' rx='1'/%3E%3Crect width='7' height='9' x='14' y='12' rx='1'/%3E%3Crect width='7' height='5' x='3' y='16' rx='1'/%3E%3C/svg%3E") no-repeat center;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-layout-dashboard'%3E%3Crect width='7' height='9' x='3' y='3' rx='1'/%3E%3Crect width='7' height='5' x='14' y='3' rx='1'/%3E%3Crect width='7' height='9' x='14' y='12' rx='1'/%3E%3Crect width='7' height='5' x='3' y='16' rx='1'/%3E%3C/svg%3E") no-repeat center;
+
+    color: var(--icon-color);
+    background-color: var(--icon-color);
+}
+
+/* Hide metadata container in embeds (reading view) */
+/* body. prefix out-ranks core .metadata-container rules without !important */
+body.enhanced-canvas-enabled .markdown-embed .metadata-container,
+body.enhanced-canvas-enabled .markdown-embed-content .metadata-container { 
+    display: none; 
+}
+
+body.enhanced-canvas-enabled .mod-inside-iframe.is-live-preview .metadata-container {
+    display: none;
+}
+
+.release-notes-button-container {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.advanced-tag-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.advanced-tag-input-container .setting-item {
+    border-top: none;
+    padding: 0;
+}
+
+.advanced-tag-input-container .setting-item-control {
+    width: 100%;
+}
+
+.advanced-tag-input-container input {
+    width: 100%;
+}
+
+body {
+    --ec-find-color: rgb(255, 193, 7); /* golden yellow; override in a snippet */
+}
+
+/* Find in canvas: dim non-matches, outline matches. Class-only, so node colors are untouched. */
+.ec-find-active .canvas-node:not(.ec-find-hit),
+.ec-find-active .canvas-edges,
+.ec-find-active .canvas-path-label-wrapper {
+    opacity: 0.25;
+    transition: opacity 0.15s ease;
+}
+
+.ec-find-active .canvas-node.ec-find-hit .canvas-node-container {
+    outline: 3px solid var(--ec-find-color);
+    outline-offset: 2px;
+}
+
+/* Find in canvas: VS Code-style marks on the matched text (CSS Custom Highlight API). */
+::highlight(ec-find) {
+    background-color: rgba(255, 193, 7, 0.55);
+    color: var(--text-normal);
+}
+
+/* Callout image resize corner (src/CalloutImageResize.ts); core positions it against .image-wrapper */
+.cm-callout .enhanced-canvas-callout-image {
+    position: relative;
+    display: inline-block;
+}
+
+/* Search text in images (src/ImageTextSearch.ts): boxes over OCR matches, in the modal and on canvas image cards */
+.ec-ocr-box {
+    position: absolute;
+    background-color: rgba(255, 193, 7, 0.4);
+    outline: 2px solid var(--ec-find-color);
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+/* All / Images / PDFs filter in the search modal: plain text tabs, the active one underlined in the accent color. */
+.ec-ocr-filter {
+    display: flex;
+    align-items: center;
+    gap: var(--size-4-2);
+    padding: var(--size-4-1) var(--size-4-3) 0;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.ec-ocr-segment {
+    display: inline-flex;
+    gap: var(--size-4-4);
+}
+
+.ec-ocr-segment .ec-ocr-filter-button {
+    height: auto;
+    padding: var(--size-4-1) 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--text-muted);
+    font-size: var(--font-ui-small);
+    font-variant-numeric: tabular-nums;
+    cursor: var(--cursor);
+}
+
+.ec-ocr-segment .ec-ocr-filter-button:hover {
+    background-color: transparent;
+    color: var(--text-normal);
+}
+
+.ec-ocr-segment .ec-ocr-filter-button.is-active {
+    border-bottom-color: var(--interactive-accent);
+    color: var(--text-normal);
+    font-weight: var(--font-semibold);
+}
+
+.ec-ocr-filter-count {
+    margin-left: var(--size-4-1);
+    color: var(--text-faint);
+}
+
+.ec-ocr-filter-count:empty {
+    display: none;
+}
+
+.ec-ocr-compact-toggle {
+    margin-left: auto;
+}
+
+/* Compact view (toggle on the filter row): no thumbnail, a file-type icon, one match line, no backlinks. */
+.ec-ocr-kind-icon {
+    display: none;
+}
+
+.ec-ocr-compact .ec-ocr-thumb,
+.ec-ocr-compact .ec-ocr-notes,
+.ec-ocr-compact .ec-ocr-line ~ .ec-ocr-line {
+    display: none;
+}
+
+.ec-ocr-compact .ec-ocr-meta {
+    flex: 1;
+    min-width: 0; /* lets the match line shrink to its ellipsis */
+}
+
+.ec-ocr-compact .ec-ocr-kind-icon {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: var(--size-4-1);
+    color: var(--text-muted);
+}
+
+.ec-ocr-compact .ec-ocr-kind-icon .svg-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.ec-ocr-compact .ec-ocr-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ec-ocr-count {
+    padding: var(--size-4-1) var(--size-4-3);
+    color: var(--text-muted);
+    font-size: var(--font-ui-small);
+}
+
+.ec-ocr-count:empty {
+    display: none;
+}
+
+.ec-ocr-result {
+    display: flex;
+    gap: var(--size-4-3);
+    align-items: flex-start;
+}
+
+.ec-ocr-thumb {
+    position: relative;
+    flex: none;
+    width: 220px;
+}
+
+.ec-ocr-thumb img {
+    display: block;
+    width: 100%;
+    border-radius: var(--radius-s);
+}
+
+/* PDF results: a file icon instead of a thumbnail. */
+.ec-ocr-thumb > .svg-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: var(--size-4-2) auto;
+    color: var(--text-faint);
+}
+
+.ec-ocr-page {
+    color: var(--text-faint);
+}
+
+.ec-search-thumb {
+    display: block;
+    max-width: calc(100% - 24px);
+    max-height: 120px;
+    margin: 2px 0 4px 24px;
+    border-radius: var(--radius-s);
+}
+
+.search-result.is-collapsed .ec-search-thumb {
+    display: none;
+}
+
+.ec-ocr-meta {
+    min-width: 0;
+    font-size: var(--font-ui-small);
+}
+
+.ec-ocr-name {
+    font-weight: var(--font-semibold);
+    word-break: break-all;
+}
+
+.ec-ocr-line {
+    margin-top: var(--size-2-1);
+    color: var(--text-muted);
+}
+
+.ec-ocr-line mark {
+    background-color: rgba(255, 193, 7, 0.55);
+    color: inherit;
+}
+
+.ec-ocr-notes {
+    margin-top: var(--size-4-1);
+    color: var(--text-faint);
+}
+
+/* "Show more" row at the end of a cut result list. */
+.suggestion-item.ec-ocr-more {
+    color: var(--text-accent);
+    font-size: var(--font-ui-small);
+    text-align: center;
+}

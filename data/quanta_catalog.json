@@ -1,0 +1,627 @@
+{
+  "machines": [
+    {
+      "tier": "T0",
+      "name": "Combustor",
+      "recipe_name": "Combustor",
+      "part": "Burner Nozzle",
+      "material": "Vanilla"
+    },
+    {
+      "tier": "T0",
+      "name": "Industrial Crusher",
+      "recipe_name": "Industrial Crusher",
+      "part": "Crusher Head",
+      "material": "Vanilla"
+    },
+    {
+      "tier": "T0",
+      "name": "Industrial Furnace",
+      "recipe_name": "Industrial Furnace",
+      "part": "Heat Chamber",
+      "material": "Vanilla"
+    },
+    {
+      "tier": "T0",
+      "name": "Industrial Press",
+      "recipe_name": "Industrial Press",
+      "part": "Press Plate",
+      "material": "Vanilla"
+    },
+    {
+      "tier": "T0",
+      "name": "Industrial Wire Drawer",
+      "recipe_name": "Industrial Wire Drawer",
+      "part": "Drawer Die",
+      "material": "Vanilla"
+    },
+    {
+      "tier": "T0",
+      "name": "Industrial Saw",
+      "recipe_name": "Industrial Saw",
+      "part": "Saw Blade",
+      "material": "Vanilla"
+    },
+    {
+      "tier": "T0",
+      "name": "Industrial Harvester",
+      "recipe_name": "Industrial Harvester",
+      "part": "Harvest Blade",
+      "material": "Vanilla"
+    },
+    {
+      "tier": "T0",
+      "name": "Industrial Mixer",
+      "recipe_name": "Industrial Mixer",
+      "part": "Whisker",
+      "material": "Vanilla"
+    },
+    {
+      "tier": "T1",
+      "name": "Quanta Infuser",
+      "recipe_name": "Quanta Infuser",
+      "part": "Infusion Chamber",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T1",
+      "name": "Thermal Infuser",
+      "recipe_name": "Thermal Infuser",
+      "part": "Heat Coil",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T1",
+      "name": "Quanta Densifier",
+      "recipe_name": "Quanta Densifier",
+      "part": "Compression Chamber",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T1",
+      "name": "Quanta Collapser",
+      "recipe_name": "Quanta Collapser",
+      "part": "Collapse Chamber",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T1",
+      "name": "Energy Quantifier",
+      "recipe_name": "Energy Quantifier",
+      "part": "Quantum Converter",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T1",
+      "name": "Quanta Separator",
+      "recipe_name": "Quanta Separator",
+      "part": "Sieve",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T1",
+      "name": "Quanta Crusher",
+      "recipe_name": "Quanta Crusher",
+      "part": "Crusher Head",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T1",
+      "name": "Quanta Press",
+      "recipe_name": "Quanta Press",
+      "part": "Press Plate",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T1",
+      "name": "Quanta Wire Drawer",
+      "recipe_name": "Quanta Wire Drawer",
+      "part": "Drawer Die",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T1",
+      "name": "Quanta Mixer",
+      "recipe_name": "Quanta Mixer",
+      "part": "Whisker",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T2",
+      "name": "Fluid Infuser",
+      "recipe_name": "Fluid Infuser",
+      "part": "Fluid Chamber",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T2",
+      "name": "Phase Evaporator",
+      "recipe_name": "Phase Evaporator",
+      "part": "Evaporation Coil",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T2",
+      "name": "Phase Condenser",
+      "recipe_name": "Phase Condenser",
+      "part": "Condensation Plate",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T2",
+      "name": "Fluid Mixer",
+      "recipe_name": "Fluid Mixer",
+      "part": "Fluid Whisker",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T2",
+      "name": "Gas Centrifuge",
+      "recipe_name": "Gas Centrifuge",
+      "part": "Centrifuge Drum",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T2",
+      "name": "Essence Collector",
+      "recipe_name": "Essence Collector",
+      "part": "Essence Lens",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T2",
+      "name": "Quanta Purifier",
+      "recipe_name": "Quanta Purifier",
+      "part": "Filter Mesh",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T3",
+      "name": "Matter Rewriter",
+      "recipe_name": "Matter Rewriter",
+      "part": "Rewriter Chamber",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T3",
+      "name": "Nexus Assembler",
+      "recipe_name": "Nexus Assembler",
+      "part": "Assembly Arm",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T3",
+      "name": "Pattern Encoder",
+      "recipe_name": "Pattern Encoder",
+      "part": "Pattern Lens",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T3",
+      "name": "Void Generator",
+      "recipe_name": "Void Generator",
+      "part": "Void Chamber",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T3",
+      "name": "Quanta Engine",
+      "recipe_name": "Quanta Engine",
+      "part": "Combustion Chamber",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T3",
+      "name": "Gas Burner",
+      "recipe_name": "Gas Burner",
+      "part": "Gas Nozzle",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T3",
+      "name": "Particle Collider",
+      "recipe_name": "Particle Collider",
+      "part": "Collider Ring",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T3",
+      "name": "Tunneling Teleporter",
+      "recipe_name": "Tunneling Teleporter",
+      "part": "Teleport Chamber",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T3",
+      "name": "Observator Scanner",
+      "recipe_name": "Observator Scanner",
+      "part": "Scanner Lens",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T3",
+      "name": "Quanta Weaver",
+      "recipe_name": "Quanta Weaver",
+      "part": "Weaving Loom",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T4",
+      "name": "Graviton Stabilizer",
+      "recipe_name": "Graviton Stabilizer (7×7×7)",
+      "part": "Gravity Anchor",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T4",
+      "name": "Superposed Reactor",
+      "recipe_name": "Superposed Reactor",
+      "part": "Reactor Chamber",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T4",
+      "name": "Cyber Chamber",
+      "recipe_name": "Cyber Chamber (3×3×3)",
+      "part": "Neural Link",
+      "material": "Quanta"
+    },
+    {
+      "tier": "T4",
+      "name": "Nexus Supercomputer",
+      "recipe_name": "Nexus Supercomputer",
+      "part": "Quantum Computing Unit",
+      "material": "Quanta"
+    },
+    {
+      "tier": "Multi-tier",
+      "name": "Seam Anchor",
+      "recipe_name": "",
+      "function": "Item interface (cable → chest)",
+      "q_per_tick": "0",
+      "buffer": "",
+      "part": "",
+      "material": ""
+    },
+    {
+      "tier": "Multi-tier",
+      "name": "Flow Anchor",
+      "recipe_name": "",
+      "function": "Fluid interface (pipe → tank)",
+      "q_per_tick": "0",
+      "buffer": "",
+      "part": "",
+      "material": ""
+    },
+    {
+      "tier": "Multi-tier",
+      "name": "Tunnel Relay",
+      "recipe_name": "",
+      "function": "Cable passes through walls (P2P)",
+      "q_per_tick": "0",
+      "buffer": "",
+      "part": "",
+      "material": ""
+    },
+    {
+      "tier": "Multi-tier",
+      "name": "Quanta Tester",
+      "recipe_name": "",
+      "function": "Tests infusion/collision",
+      "q_per_tick": "10",
+      "buffer": "",
+      "part": "",
+      "material": ""
+    },
+    {
+      "tier": "Multi-tier",
+      "name": "Quanta Analyzer",
+      "recipe_name": "",
+      "function": "Analyzes items",
+      "q_per_tick": "5",
+      "buffer": "",
+      "part": "",
+      "material": ""
+    }
+  ],
+  "tools": [
+    {
+      "category": "Crafting Tools",
+      "name": "Iron Hammer",
+      "function": "Ingot → Sheet",
+      "durability": "100",
+      "tier": "T0"
+    },
+    {
+      "category": "Crafting Tools",
+      "name": "Iron File",
+      "function": "Ingot → Dust",
+      "durability": "100",
+      "tier": "T0"
+    },
+    {
+      "category": "Crafting Tools",
+      "name": "Steel Hammer",
+      "function": "Ingot → Sheet",
+      "durability": "500",
+      "tier": "T0"
+    },
+    {
+      "category": "Crafting Tools",
+      "name": "Steel File",
+      "function": "Ingot → Dust",
+      "durability": "500",
+      "tier": "T0"
+    },
+    {
+      "category": "Configuration Tools",
+      "name": "Quantum Wrench",
+      "function": "Machine configuration",
+      "durability": "Indestructible",
+      "tier": "T1+"
+    },
+    {
+      "category": "Configuration Tools",
+      "name": "Quantum Screwdriver",
+      "function": "Component configuration",
+      "durability": "Indestructible",
+      "tier": "T1+"
+    },
+    {
+      "category": "Configuration Tools",
+      "name": "Quantum Multitool",
+      "function": "Combines Wrench + Screwdriver + Tester",
+      "durability": "Indestructible",
+      "tier": "T2+"
+    },
+    {
+      "category": "Configuration Tools",
+      "name": "Quantum Tester",
+      "function": "Tests machines",
+      "durability": "Indestructible",
+      "tier": "T1+"
+    },
+    {
+      "category": "Configuration Tools",
+      "name": "Quantum Scanner",
+      "function": "Scans machines",
+      "durability": "Indestructible",
+      "tier": "T2+"
+    },
+    {
+      "category": "Tool Components",
+      "name": "Tool Core (Decoherent)",
+      "function": "Tool core",
+      "durability": "",
+      "tier": "T1"
+    },
+    {
+      "category": "Tool Components",
+      "name": "Tool Core (Entangled)",
+      "function": "Tool core",
+      "durability": "",
+      "tier": "T2"
+    },
+    {
+      "category": "Tool Components",
+      "name": "Tool Core (Superposed)",
+      "function": "Tool core",
+      "durability": "",
+      "tier": "T3"
+    },
+    {
+      "category": "Tool Components",
+      "name": "Tool Core (Singular)",
+      "function": "Tool core",
+      "durability": "",
+      "tier": "T4"
+    },
+    {
+      "category": "Tool Components",
+      "name": "Tool Head",
+      "function": "Tool head",
+      "durability": "",
+      "tier": "T1+"
+    },
+    {
+      "category": "Tool Components",
+      "name": "Tool Blade",
+      "function": "Weapon blade",
+      "durability": "",
+      "tier": "T1+"
+    },
+    {
+      "category": "Tool Components",
+      "name": "Tool Handle",
+      "function": "Tool handle",
+      "durability": "",
+      "tier": "T1+"
+    }
+  ],
+  "alloys": [
+    {
+      "name": "Ferrum Conducens",
+      "composition": "Iron + Quanta",
+      "tier": "T1",
+      "conductivity": "3",
+      "resistance": "3",
+      "resonance": "3",
+      "stability": "3",
+      "where": "Infuser",
+      "input1": "Iron Ingot",
+      "input2": "Quanta"
+    },
+    {
+      "name": "Adamas Resonans",
+      "composition": "Diamond + Quanta",
+      "tier": "T1",
+      "conductivity": "4",
+      "resistance": "4",
+      "resonance": "4",
+      "stability": "4",
+      "where": "Infuser",
+      "input1": "Diamond",
+      "input2": "Quanta"
+    },
+    {
+      "name": "Cuprum Transmissor",
+      "composition": "Copper + Quanta",
+      "tier": "T1",
+      "conductivity": "5",
+      "resistance": "2",
+      "resonance": "4",
+      "stability": "3",
+      "where": "Infuser",
+      "input1": "Copper Ingot",
+      "input2": "Quanta"
+    },
+    {
+      "name": "Aurum Nobilis",
+      "composition": "Gold + Quanta",
+      "tier": "T1",
+      "conductivity": "4",
+      "resistance": "3",
+      "resonance": "5",
+      "stability": "1",
+      "where": "Infuser",
+      "input1": "Gold Ingot",
+      "input2": "Quanta"
+    },
+    {
+      "name": "Aeternum",
+      "composition": "Netherite + Quanta",
+      "tier": "T2",
+      "conductivity": "4",
+      "resistance": "4",
+      "resonance": "4",
+      "stability": "4",
+      "where": "Infuser",
+      "input1": "Netherite Ingot",
+      "input2": "Quanta"
+    },
+    {
+      "name": "Superpositum",
+      "composition": "Aeternum + Chaotic Steel (Black Hole Forge)",
+      "tier": "T3",
+      "conductivity": "5",
+      "resistance": "4",
+      "resonance": "5",
+      "stability": "4",
+      "where": "Black Hole",
+      "input1": "Aeternum",
+      "input2": "Chaotic Steel"
+    },
+    {
+      "name": "Dechoerentium",
+      "composition": "Aeternum + Order Steel (Black Hole Forge)",
+      "tier": "T3",
+      "conductivity": "4",
+      "resistance": "5",
+      "resonance": "3",
+      "stability": "6",
+      "where": "Black Hole",
+      "input1": "Aeternum",
+      "input2": "Order Steel"
+    },
+    {
+      "name": "Singular Alloy",
+      "composition": "Superpositum + Dechoerentium (Black Hole Forge)",
+      "tier": "T4",
+      "conductivity": "6",
+      "resistance": "6",
+      "resonance": "6",
+      "stability": "6",
+      "where": "Black Hole",
+      "input1": "Superpositum",
+      "input2": "Dechoerentium"
+    }
+  ],
+  "addons": [
+    {
+      "name": "Speed Coil",
+      "effect": "+20% speed",
+      "tier": "T1",
+      "craft": "Quantum Coil + Redstone"
+    },
+    {
+      "name": "Energy Coil",
+      "effect": "-20% energy",
+      "tier": "T1",
+      "craft": "Quantum Capacitor + Redstone"
+    },
+    {
+      "name": "Stabilizer Coil",
+      "effect": "-5% failure chance",
+      "tier": "T1",
+      "craft": "Quantum Coil + Adamas Resonans"
+    },
+    {
+      "name": "Quantum Lock",
+      "effect": "-10% failure chance",
+      "tier": "T2",
+      "craft": "Quantum Circuit + Observer Lens"
+    },
+    {
+      "name": "Observer Link",
+      "effect": "-15% failure chance",
+      "tier": "T2",
+      "craft": "Observer Lens + Adamas Resonans"
+    },
+    {
+      "name": "Chaos Overdrive",
+      "effect": "+50% speed, +25% failure",
+      "tier": "T2",
+      "craft": "Chaos Fragment + Quantum Coil"
+    },
+    {
+      "name": "Chaos Injector",
+      "effect": "+50% generation, +25% risk",
+      "tier": "T2",
+      "craft": "Chaos Fragment + Adamas Resonans"
+    },
+    {
+      "name": "Order Stabilizer",
+      "effect": "-30% risk, -10% generation",
+      "tier": "T2",
+      "craft": "Order Fragment + Adamas Resonans"
+    },
+    {
+      "name": "Yield Addon",
+      "effect": "+15% output",
+      "tier": "T2",
+      "craft": "Quantum Processor + Adamas Resonans"
+    },
+    {
+      "name": "Fluid Addon",
+      "effect": "Liquid catalyst",
+      "tier": "T2",
+      "craft": "Quantum Glass + Fluid Core"
+    }
+  ],
+  "upgrade_kits": [
+    {
+      "name": "Decoherent Kit",
+      "tier": "T1",
+      "obtained": "Craft (T0)",
+      "craft": "Ferrum + Processing Core + Quantum Circuit + Aeternum"
+    },
+    {
+      "name": "Entangled Kit",
+      "tier": "T2",
+      "obtained": "Craft (T1)",
+      "craft": "Decoherent Kit + Computation Core + Entangled Essence + Aeternum"
+    },
+    {
+      "name": "Superposed Kit",
+      "tier": "T3",
+      "obtained": "Craft (T2)",
+      "craft": "Entangled Kit + Superposed Core + Superpositum"
+    },
+    {
+      "name": "Singular Kit",
+      "tier": "T4",
+      "obtained": "Craft (T3)",
+      "craft": "Superposed Kit + Singular Core + Singular Alloy"
+    }
+  ]
+}

@@ -1,3 +1,11 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[QUANTA_MASTERLIST]]"
+toc-order: 8
+STRUCTURE:
+  - "[[SYSTEM_INTERACTIONS]]"
+---
 # QUANTA MOD - COMPATIBILITY
 
 > **Document based on QUANTA_MASTERLIST v10.3**
@@ -15,6 +23,8 @@ This document specifies **how Quanta Mod interacts with other mods**:
 - Compatibility roadmap
 
 **Philosophy:** **optional** compatibility (the mod works on its own) + **integrated** compatibility (when another mod is present).
+
+**Related systems:** [[SYSTEM_INTERACTIONS]] · [[MACHINES]] · [[CABLES]] · [[NETWORK]]
 
 ## 📋 1. SUPPORTED MODS (priority)
 
@@ -76,6 +86,7 @@ This document specifies **how Quanta Mod interacts with other mods**:
 - Seam Anchor translates abstract item ↔ physical item (for the ME Interface)
 - Flow Anchor translates abstract fluid ↔ physical fluid
 - **There is no network integration** (they are parallel systems)
+- **Related:** [[CABLES]] · [[NETWORK]] · [[MACHINES]]
 
 ### 2.2 Mekanism
 
@@ -88,6 +99,7 @@ This document specifies **how Quanta Mod interacts with other mods**:
 - Energy Quantifier converts FE → Q
 - Flow Anchor translates abstract gas ↔ physical gas
 - **Q can be converted back** via Quanta Collapser
+- **Related:** [[MACHINES]] · [[CABLES]]
 
 ### 2.3 Create
 
@@ -99,6 +111,7 @@ This document specifies **how Quanta Mod interacts with other mods**:
 
 - Seam Anchor translates physical item ↔ abstract item
 - **There is no rotational integration** (Create is mechanical, Quanta is quantum)
+- **Related:** [[CABLES]] · [[MACHINES]]
 
 ### 2.4 Thermal
 
@@ -108,6 +121,7 @@ This document specifies **how Quanta Mod interacts with other mods**:
 
 - Energy Quantifier accepts RF (100 RF = 1 Q)
 - Flow Anchor translates abstract fluid ↔ physical fluid
+- **Related:** [[MACHINES]] · [[CABLES]]
 
 ### 2.5 XNet
 
@@ -118,6 +132,7 @@ This document specifies **how Quanta Mod interacts with other mods**:
 
 - Seam Anchor translates physical item ↔ abstract item
 - **There is no channel integration** (XNet uses channels; Quanta uses a qubit pool)
+- **Related:** [[CABLES]] · [[NETWORK]]
 
 ### 2.6 Ars Nouveau
 
@@ -128,6 +143,7 @@ This document specifies **how Quanta Mod interacts with other mods**:
 - Ars Nouveau: mana, glifos, rituais
 - Quanta: Q, Equations, assemblies
 - **They can coexist** but do not integrate
+- **Related:** [[EQUATIONS]] · [[ASSEMBLIES]]
 
 ### 2.7 Curios API
 
@@ -138,6 +154,7 @@ This document specifies **how Quanta Mod interacts with other mods**:
 - Implants are **passive** (they do not occupy a slot)
 - Action wheel (`V`) to toggle
 - There is no dedicated slot (unlike Oritech)
+- **Related:** [[IMPLANTS]]
 
 ## 📊 3. EXPOSED CAPABILITIES
 

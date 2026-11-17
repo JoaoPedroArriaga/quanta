@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[QUANTA_MASTERLIST]]"
+toc-order: 2
+---
 # QUANTA MOD - NAMING RULES
 
 > **Document based on QUANTA_MASTERLIST v10.5**

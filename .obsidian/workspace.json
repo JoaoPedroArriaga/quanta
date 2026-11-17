@@ -4,21 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "e884814852313cc0",
+        "id": "49f25bde802a79f3",
         "type": "tabs",
         "children": [
           {
-            "id": "586581f5a13987f2",
+            "id": "25f90e59caf5ab75",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "docs/LORE.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "LORE"
             }
           }
         ]
@@ -46,7 +56,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de arquivos"
+              "title": "Files"
             }
           },
           {
@@ -99,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/ADDONS.md",
+                "file": "docs/QUANTA_MASTERLIST.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos"
+              "title": "Backlinks"
             }
           },
           {
@@ -118,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/ADDONS.md",
+                "file": "docs/QUANTA_MASTERLIST.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída"
+              "title": "Outgoing links"
             }
           },
           {
@@ -169,38 +179,85 @@
               "icon": "lucide-list",
               "title": "Sumário"
             }
+          },
+          {
+            "id": "8f4c10cee417f92e",
+            "type": "leaf",
+            "state": {
+              "type": "branching-toc-tree",
+              "state": {
+                "mode": "outline",
+                "scope": "all",
+                "up": 1,
+                "down": 2,
+                "pinned": false,
+                "focus": "docs/LORE.md"
+              },
+              "icon": "git-fork",
+              "title": "Branching table of contents"
+            }
+          },
+          {
+            "id": "826468abf3d1ce80",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "docs/LORE.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 424.70001220703125
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir a troca rápida": false,
-      "graph:Abrir visualização em gráfico": false,
-      "canvas:Criar novo canvas": false,
-      "daily-notes:Abrir a nota de hoje": false,
-      "templates:Inserir modelo": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "bases:Criar nova base": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "advanced-find-and-replace:Advanced find and replace": false,
+      "branching-table-of-contents:Open branching table of contents": false,
+      "enhanced-canvas:Search text in images and PDFs": false
     }
   },
-  "active": "586581f5a13987f2",
+  "active": "25f90e59caf5ab75",
   "lastOpenFiles": [
+    "STRUCTURE.canvas",
+    "docs/QUANTA_MASTERLIST.md",
     "docs/LORE.md",
-    "README.md",
     "docs/ADDONS.md",
-    "docs/VISUALS.md",
     "docs/NOMENCLATURE.md",
-    "docs/SOUNDS.md",
+    "docs/MACHINES.md",
     "docs/CONFIG.md",
+    "README.md",
     "docs/MULTIBLOCKS.md",
-    "file:C:/Users/Joaop/Downloads/Revisão Final para N2 — Engenharia de Usabilidade.pdf",
+    "docs/VISUALS.md",
+    "docs/UPGRADE_KITS.md",
+    "docs/TOOLS.md",
+    "docs/SYSTEM_INTERACTIONS.md",
+    "docs/STATIONS.md",
+    "docs/SOUNDS.md",
+    "docs/RECIPES_TIER4.md",
+    "docs/RECIPES_TIER3.md",
+    "docs/RECIPES_TIER2.md",
+    "docs/RECIPES_TIER1.md",
+    "docs/RECIPES_TIER0.md",
+    "docs/NETWORK.md",
+    "docs/METALLURGY.md",
+    "docs/MACHINE_PARTS.md",
+    "docs/IMPLANTS.md",
+    "docs/EQUATIONS.md",
     "docs/DECORATION.md",
-    "docs/ASSEMBLIES.md",
-    "docs/ARMOR.md"
+    "file:C:/Users/Joaop/Downloads/Revisão Final para N2 — Engenharia de Usabilidade.pdf"
   ]
 }

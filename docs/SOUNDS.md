@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[VISUALS]]"
+toc-order: 2
+---
 # QUANTA MOD - SOUNDS
 
 > **Document based on QUANTA_MASTERLIST v10.6**

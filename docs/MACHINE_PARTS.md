@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 6
+---
 MACHINE_PARTS.md — CORRECTED VERSION (v10.6)
 markdown
 
@@ -470,49 +476,51 @@ markdown
 
 ## 📊 6. MACHINE PARTS SUMMARY
 
-| Tier | Machine                | Part                   | Material |
-| ---- | ---------------------- | ---------------------- | -------- |
-| T0   | Combustor              | Burner Nozzle          | Vanilla  |
-| T0   | Industrial Crusher     | Crusher Head           | Vanilla  |
-| T0   | Industrial Furnace     | Heat Chamber           | Vanilla  |
-| T0   | Industrial Press       | Press Plate            | Vanilla  |
-| T0   | Industrial Wire Drawer | Drawer Die             | Vanilla  |
-| T0   | Industrial Saw         | Saw Blade              | Vanilla  |
-| T0   | Industrial Harvester   | Harvest Blade          | Vanilla  |
-| T0   | Industrial Mixer       | Whisker                | Vanilla  |
-| T1   | Quanta Infuser         | Infusion Chamber       | Quanta   |
-| T1   | Thermal Infuser        | Heat Coil              | Quanta   |
-| T1   | Quanta Densifier       | Compression Chamber    | Quanta   |
-| T1   | Quanta Collapser       | Collapse Chamber       | Quanta   |
-| T1   | Energy Quantifier      | Quantum Converter      | Quanta   |
-| T1   | Quanta Separator       | Sieve                  | Quanta   |
-| T1   | Quanta Crusher         | Crusher Head           | Quanta   |
-| T1   | Quanta Press           | Press Plate            | Quanta   |
-| T1   | Quanta Wire Drawer     | Drawer Die             | Quanta   |
-| T1   | Quanta Mixer           | Whisker                | Quanta   |
-| T2   | Fluid Infuser          | Fluid Chamber          | Quanta   |
-| T2   | Phase Evaporator       | Evaporation Coil       | Quanta   |
-| T2   | Phase Condenser        | Condensation Plate     | Quanta   |
-| T2   | Fluid Mixer            | Fluid Whisker          | Quanta   |
-| T2   | Gas Centrifuge         | Centrifuge Drum        | Quanta   |
-| T2   | Essence Collector      | Essence Lens           | Quanta   |
-| T2   | Quanta Purifier        | Filter Mesh            | Quanta   |
-| T3   | Matter Rewriter        | Rewriter Chamber       | Quanta   |
-| T3   | Nexus Assembler        | Assembly Arm           | Quanta   |
-| T3   | Pattern Encoder        | Pattern Lens           | Quanta   |
-| T3   | Void Generator         | Void Chamber           | Quanta   |
-| T3   | Quanta Engine          | Combustion Chamber     | Quanta   |
-| T3   | Gas Burner             | Gas Nozzle             | Quanta   |
-| T3   | Particle Collider      | Collider Ring          | Quanta   |
-| T3   | Tunneling Teleporter   | Teleport Chamber       | Quanta   |
-| T3   | Observator Scanner     | Scanner Lens           | Quanta   |
-| T3   | Quanta Weaver          | Weaving Loom           | Quanta   |
-| T4   | Graviton Stabilizer    | Gravity Anchor         | Quanta   |
-| T4   | Superposed Reactor     | Reactor Chamber        | Quanta   |
-| T4   | Cyber Chamber          | Neural Link            | Quanta   |
-| T4   | Nexus Supercomputer    | Quantum Computing Unit | Quanta   |
+<!-- AUTO-GENERATED: machine-parts-summary START -->
+| Tier | Machine | Part | Material |
+| --- | --- | --- | --- |
+| T0 | Combustor | Burner Nozzle | Vanilla |
+| T0 | Industrial Crusher | Crusher Head | Vanilla |
+| T0 | Industrial Furnace | Heat Chamber | Vanilla |
+| T0 | Industrial Press | Press Plate | Vanilla |
+| T0 | Industrial Wire Drawer | Drawer Die | Vanilla |
+| T0 | Industrial Saw | Saw Blade | Vanilla |
+| T0 | Industrial Harvester | Harvest Blade | Vanilla |
+| T0 | Industrial Mixer | Whisker | Vanilla |
+| T1 | Quanta Infuser | Infusion Chamber | Quanta |
+| T1 | Thermal Infuser | Heat Coil | Quanta |
+| T1 | Quanta Densifier | Compression Chamber | Quanta |
+| T1 | Quanta Collapser | Collapse Chamber | Quanta |
+| T1 | Energy Quantifier | Quantum Converter | Quanta |
+| T1 | Quanta Separator | Sieve | Quanta |
+| T1 | Quanta Crusher | Crusher Head | Quanta |
+| T1 | Quanta Press | Press Plate | Quanta |
+| T1 | Quanta Wire Drawer | Drawer Die | Quanta |
+| T1 | Quanta Mixer | Whisker | Quanta |
+| T2 | Fluid Infuser | Fluid Chamber | Quanta |
+| T2 | Phase Evaporator | Evaporation Coil | Quanta |
+| T2 | Phase Condenser | Condensation Plate | Quanta |
+| T2 | Fluid Mixer | Fluid Whisker | Quanta |
+| T2 | Gas Centrifuge | Centrifuge Drum | Quanta |
+| T2 | Essence Collector | Essence Lens | Quanta |
+| T2 | Quanta Purifier | Filter Mesh | Quanta |
+| T3 | Matter Rewriter | Rewriter Chamber | Quanta |
+| T3 | Nexus Assembler | Assembly Arm | Quanta |
+| T3 | Pattern Encoder | Pattern Lens | Quanta |
+| T3 | Void Generator | Void Chamber | Quanta |
+| T3 | Quanta Engine | Combustion Chamber | Quanta |
+| T3 | Gas Burner | Gas Nozzle | Quanta |
+| T3 | Particle Collider | Collider Ring | Quanta |
+| T3 | Tunneling Teleporter | Teleport Chamber | Quanta |
+| T3 | Observator Scanner | Scanner Lens | Quanta |
+| T3 | Quanta Weaver | Weaving Loom | Quanta |
+| T4 | Graviton Stabilizer | Gravity Anchor | Quanta |
+| T4 | Superposed Reactor | Reactor Chamber | Quanta |
+| T4 | Cyber Chamber | Neural Link | Quanta |
+| T4 | Nexus Supercomputer | Quantum Computing Unit | Quanta |
 
 **Total:** 39 Machine Parts.
+<!-- AUTO-GENERATED: machine-parts-summary END -->
 
 ---
 

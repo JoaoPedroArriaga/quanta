@@ -1,3 +1,11 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 7
+STRUCTURE:
+  - "[[MACHINES]]"
+---
 # QUANTA MOD - ADDONS
 
 > **Document based on QUANTA_MASTERLIST v10.6**
@@ -16,12 +24,12 @@ Addons are **temporary upgrades** that can be installed in machines to improve t
 
 ### 1.1 Number of slots per tier
 
-| Tier            | Addon Slots    |
-| --------------- | -------------- |
-| Decoherent (T1) | 2              |
-| Entangled (T2)  | 3              |
-| Superposed (T3) | 4              |
-| Singular (T4)   | 6              |
+| Tier            | Addon Slots |
+| --------------- | ----------- |
+| Decoherent (T1) | 2           |
+| Entangled (T2)  | 3           |
+| Superposed (T3) | 4           |
+| Singular (T4)   | 6           |
 
 **Rule:** a maximum of **4 addons of the same type** per slot.
 
@@ -163,31 +171,33 @@ Addon slots are on the **side of the GUI** (they do not compete with input/outpu
 
 **Effects by fluid:**
 
-| Fluid              | Effect                                |
-| ------------------ | ------------------------------------- |
-| Liquid Quanta      | +50% speed                            |
-| Liquid Order       | +25% speed + 0% failure chance        |
-| Liquid Chaos       | +75% speed + 15% failure chance       |
-| Stabilized Liquid  | +50% speed + 0% failure chance        |
-| Entangled Liquid   | +75% speed + output teleportation    |
-| Liquid Singularity | +100% speed + 10% destruction         |
+| Fluid              | Effect                            |
+| ------------------ | --------------------------------- |
+| Liquid Quanta      | +50% speed                        |
+| Liquid Order       | +25% speed + 0% failure chance    |
+| Liquid Chaos       | +75% speed + 15% failure chance   |
+| Stabilized Liquid  | +50% speed + 0% failure chance    |
+| Entangled Liquid   | +75% speed + output teleportation |
+| Liquid Singularity | +100% speed + 10% destruction     |
 
 ---
 
 ## 📊 3. ADDON SUMMARY
 
-| Addon            | Effect                      | Tier | Craft                               |
-| ---------------- | --------------------------- | ---- | ----------------------------------- |
-| Speed Coil       | +20% speed                  | T1   | Quantum Coil + Redstone             |
-| Energy Coil      | -20% energy                 | T1   | Quantum Capacitor + Redstone        |
-| Stabilizer Coil  | -5% failure chance          | T1   | Quantum Coil + Adamas Resonans      |
-| Quantum Lock     | -10% failure chance         | T2   | Quantum Circuit + Observer Lens     |
-| Observer Link    | -15% failure chance         | T2   | Observer Lens + Adamas Resonans     |
-| Chaos Overdrive  | +50% speed, +25% failure    | T2   | Chaos Fragment + Quantum Coil       |
-| Chaos Injector   | +50% generation, +25% risk  | T2   | Chaos Fragment + Adamas Resonans    |
-| Order Stabilizer | -30% risk, -10% generation  | T2   | Order Fragment + Adamas Resonans    |
-| Yield Addon      | +15% output                 | T2   | Quantum Processor + Adamas Resonans |
-| Fluid Addon      | Liquid catalyst             | T2   | Quantum Glass + Fluid Core          |
+<!-- AUTO-GENERATED: addon-summary START -->
+| Addon | Effect | Tier | Craft |
+| --- | --- | --- | --- |
+| Speed Coil | +20% speed | T1 | Quantum Coil + Redstone |
+| Energy Coil | -20% energy | T1 | Quantum Capacitor + Redstone |
+| Stabilizer Coil | -5% failure chance | T1 | Quantum Coil + Adamas Resonans |
+| Quantum Lock | -10% failure chance | T2 | Quantum Circuit + Observer Lens |
+| Observer Link | -15% failure chance | T2 | Observer Lens + Adamas Resonans |
+| Chaos Overdrive | +50% speed, +25% failure | T2 | Chaos Fragment + Quantum Coil |
+| Chaos Injector | +50% generation, +25% risk | T2 | Chaos Fragment + Adamas Resonans |
+| Order Stabilizer | -30% risk, -10% generation | T2 | Order Fragment + Adamas Resonans |
+| Yield Addon | +15% output | T2 | Quantum Processor + Adamas Resonans |
+| Fluid Addon | Liquid catalyst | T2 | Quantum Glass + Fluid Core |
+<!-- AUTO-GENERATED: addon-summary END -->
 
 ---
 

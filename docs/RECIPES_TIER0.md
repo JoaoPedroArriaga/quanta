@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 1
+---
 # QUANTA MOD - TIER 0 (INDUSTRIAL) — FINAL SCOPE
 
 > **Document based on QUANTA_MASTERLIST v10.6**
@@ -21,8 +27,20 @@ Tier 0 (Industrial) is the Quanta Mod's **entry point**:
 
 ---
 
+<!-- AUTO-GENERATED: recipe-index-t0 START -->
 ## 🏭 1. MACHINES (8)
 
+| # | Machine recipe |
+| --- | --- |
+| 1 | Combustor |
+| 2 | Industrial Crusher |
+| 3 | Industrial Furnace |
+| 4 | Industrial Press |
+| 5 | Industrial Wire Drawer |
+| 6 | Industrial Saw |
+| 7 | Industrial Harvester |
+| 8 | Industrial Mixer |
+<!-- AUTO-GENERATED: recipe-index-t0 END -->
 ### 1.1 Combustor
 
 **Function:** Burns vanilla fuel → FE.
@@ -429,7 +447,6 @@ Tier 0 (Industrial) is the Quanta Mod's **entry point**:
 **Output:** 1 Steel File
 
 ---
-
 ## 📊 6. TIER 0 → TIER 1 PROGRESSION
 
 ### 6.1 Step 1 — Basic Survival

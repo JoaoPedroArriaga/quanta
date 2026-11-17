@@ -1,3 +1,13 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[QUANTA_MASTERLIST]]"
+child:
+  - "[[CABLES]]"
+  - "[[NETWORK]]"
+  - "[[CONFIG]]"
+toc-order: 4
+---
 # QUANTA MOD - SYSTEM INTERACTIONS
 
 > **Document based on QUANTA_MASTERLIST v10.6**

@@ -1,3 +1,12 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[QUANTA_MASTERLIST]]"
+child:
+  - "[[DECORATION]]"
+  - "[[SOUNDS]]"
+toc-order: 9
+---
 # QUANTA MOD - VISUALS
 
 > **Document based on QUANTA_MASTERLIST v10.6**

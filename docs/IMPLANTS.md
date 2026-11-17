@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[QUANTA_MASTERLIST]]"
+toc-order: 5
+---
 # QUANTA MOD - IMPLANTS
 
 > **Document based on QUANTA_MASTERLIST v10.6**

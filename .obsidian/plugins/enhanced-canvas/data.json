@@ -1,0 +1,15 @@
+{
+  "showReleaseNotes": true,
+  "previousRelease": "1.0.40",
+  "enableFrontmatter": true,
+  "enableCustomCSS": true,
+  "defaultTextNodeWidth": 250,
+  "defaultTextNodeHeight": 60,
+  "defaultFileNodeWidth": 400,
+  "defaultFileNodeHeight": 400,
+  "autoResizeOnSplit": true,
+  "chooseHeadingLevelOnSplit": false,
+  "maxAutoResizeHeight": 1000,
+  "enableImageTextSearch": true,
+  "imageTextInCoreSearch": false
+}

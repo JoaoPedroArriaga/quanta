@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[QUANTA_MASTERLIST]]"
+toc-order: 6
+---
 # QUANTA MOD - ARMORS
 
 > **Document based on QUANTA_MASTERLIST v10.6**

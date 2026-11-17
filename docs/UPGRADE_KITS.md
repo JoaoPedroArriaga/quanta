@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 9
+---
 # QUANTA MOD - UPGRADE KITS
 
 > **Document based on QUANTA_MASTERLIST v10.6**
@@ -19,12 +25,14 @@
 
 ## 🔧 1. UPGRADE KIT TYPES
 
-| Kit                | Tier | How to obtain |
-| ------------------ | ---- | ---------- |
-| **Decoherent Kit** | T1   | Craft (T0) |
-| **Entangled Kit**  | T2   | Craft (T1) |
-| **Superposed Kit** | T3   | Craft (T2) |
-| **Singular Kit**   | T4   | Craft (T3) |
+<!-- AUTO-GENERATED: upgrade-kit-types START -->
+| Kit | Tier | How to obtain |
+| --- | --- | --- |
+| Decoherent Kit | T1 | Craft (T0) |
+| Entangled Kit | T2 | Craft (T1) |
+| Superposed Kit | T3 | Craft (T2) |
+| Singular Kit | T4 | Craft (T3) |
+<!-- AUTO-GENERATED: upgrade-kit-types END -->
 
 ---
 
@@ -149,12 +157,14 @@
 
 ## 📊 5. UPGRADE KIT SUMMARY
 
-| Kit            | Tier | Craft                                                            |
-| -------------- | ---- | ---------------------------------------------------------------- |
-| Decoherent Kit | T1   | Ferrum + Processing Core + Quantum Circuit + Aeternum            |
-| Entangled Kit  | T2   | Decoherent Kit + Computation Core + Entangled Essence + Aeternum |
-| Superposed Kit | T3   | Entangled Kit + Superposed Core + Superpositum                   |
-| Singular Kit   | T4   | Superposed Kit + Singular Core + Singular Alloy                  |
+<!-- AUTO-GENERATED: upgrade-kit-summary START -->
+| Kit | Tier | Craft |
+| --- | --- | --- |
+| Decoherent Kit | T1 | Ferrum + Processing Core + Quantum Circuit + Aeternum |
+| Entangled Kit | T2 | Decoherent Kit + Computation Core + Entangled Essence + Aeternum |
+| Superposed Kit | T3 | Entangled Kit + Superposed Core + Superpositum |
+| Singular Kit | T4 | Superposed Kit + Singular Core + Singular Alloy |
+<!-- AUTO-GENERATED: upgrade-kit-summary END -->
 
 ---
 

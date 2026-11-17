@@ -1,3 +1,11 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[SYSTEM_INTERACTIONS]]"
+toc-order: 2
+STRUCTURE:
+  - "[[SYSTEM_INTERACTIONS]]"
+---
 # QUANTA MOD - ENTANGLEMENT NETWORK
 
 > **Document based on QUANTA_MASTERLIST v10.6**

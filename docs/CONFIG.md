@@ -1,3 +1,11 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[SYSTEM_INTERACTIONS]]"
+toc-order: 3
+STRUCTURE:
+  - "[[SYSTEM_INTERACTIONS]]"
+---
 # QUANTA MOD - CONFIG
 
 > **Document based on QUANTA_MASTERLIST v10.6**

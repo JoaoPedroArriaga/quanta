@@ -1,18 +1,34 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+child:
+  - "[[LORE]]"
+  - "[[NOMENCLATURE]]"
+  - "[[MACHINES]]"
+  - "[[SYSTEM_INTERACTIONS]]"
+  - "[[IMPLANTS]]"
+  - "[[ARMOR]]"
+  - "[[EQUATIONS]]"
+  - "[[COMPATIBILITY]]"
+  - "[[VISUALS]]"
+  - "[[TOOLS]]"
+  - "[[METALLURGY]]"
+  - "[[ITEM_CATALOG]]"
+STRUCTURE:
+  - "[[NOMENCLATURE]]"
+---
 # QUANTA MOD - OFFICIAL MASTERLIST (v10.1)
 
 > **Consolidated Quanta mod document for Minecraft NeoForge 1.21.1**  
 > **Last updated:** 2026-11-13
 
-### Reference Documents
+### Reading paths
 
-* `LORE.md` — Lore and concepts
-* `ASSEMBLIES.md` — Assemblies (Emitter + Modifiers + Receptor)
-* `CABLES.md` — Multi-type cables
-* `NETWORK.md` — Entanglement network (Signatures, Qubits, Servers)
-* `STATIONS.md` — Circuit Etcher, Fabrication Rig, Black Board
-* `METALLURGY.md` — Alloys and stats
-* `MACHINES.md` — Machines, benchmarks, MVP
-* `MATERIALS_AND_CRAFTS.md` — Materials and recipes
+- **Start with the world and terms:** [[LORE]] → [[NOMENCLATURE]].
+- **Understand the systems:** [[MACHINES]] and [[SYSTEM_INTERACTIONS]], then [[CABLES]], [[NETWORK]], and [[CONFIG]].
+- **Follow machine progression:** [[RECIPES_TIER0]] → [[RECIPES_TIER1]] → [[RECIPES_TIER2]] → [[RECIPES_TIER3]] → [[RECIPES_TIER4]].
+- **Look up materials and objects:** [[ITEM_CATALOG]], [[METALLURGY]], and [[TOOLS]].
+- **Explore integrations and presentation:** [[COMPATIBILITY]] and [[VISUALS]].
 
 ---
 

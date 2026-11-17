@@ -1,3 +1,11 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[QUANTA_MASTERLIST]]"
+toc-order: 11
+STRUCTURE:
+  - "[[ITEM_CATALOG]]"
+---
 # QUANTA MOD - METALLURGY
 
 > **Document based on QUANTA_MASTERLIST v10.6**
@@ -25,16 +33,18 @@ All Quanta Mod alloys have **4 stats**: Conductivity, Resistance, Resonance, and
 
 ## 🔩 2. ALLOYS
 
-| Alloy                   | Composition                                      | Tier | Conduct. | Res. | Reson. | Stab. |
-| ---------------------- | ----------------------------------------------- | ---- | ----- | ---- | ----- | ---- |
-| **Ferrum Conducens**   | Iron + Quanta                                   | T1   | 3     | 3    | 3     | 3    |
-| **Adamas Resonans**    | Diamond + Quanta                                | T1   | 4     | 4    | 4     | 4    |
-| **Cuprum Transmissor** | Copper + Quanta                                 | T1   | 5     | 2    | 4     | 3    |
-| **Aurum Nobilis**      | Gold + Quanta                                   | T1   | 4     | 3    | 5     | 1    |
-| **Aeternum**           | Netherite + Quanta                              | T2   | 4     | 4    | 4     | 4    |
-| **Superpositum**       | Aeternum + Chaotic Steel (Black Hole Forge)     | T3   | 5     | 4    | 5     | 4    |
-| **Dechoerentium**      | Aeternum + Order Steel (Black Hole Forge)       | T3   | 4     | 5    | 3     | 6    |
-| **Singular Alloy**     | Superpositum + Dechoerentium (Black Hole Forge) | T4   | 6     | 6    | 6     | 6    |
+<!-- AUTO-GENERATED: alloy-catalog START -->
+| Alloy | Composition | Tier | Conduct. | Res. | Reson. | Stab. |
+| --- | --- | --- | --- | --- | --- | --- |
+| Ferrum Conducens | Iron + Quanta | T1 | 3 | 3 | 3 | 3 |
+| Adamas Resonans | Diamond + Quanta | T1 | 4 | 4 | 4 | 4 |
+| Cuprum Transmissor | Copper + Quanta | T1 | 5 | 2 | 4 | 3 |
+| Aurum Nobilis | Gold + Quanta | T1 | 4 | 3 | 5 | 1 |
+| Aeternum | Netherite + Quanta | T2 | 4 | 4 | 4 | 4 |
+| Superpositum | Aeternum + Chaotic Steel (Black Hole Forge) | T3 | 5 | 4 | 5 | 4 |
+| Dechoerentium | Aeternum + Order Steel (Black Hole Forge) | T3 | 4 | 5 | 3 | 6 |
+| Singular Alloy | Superpositum + Dechoerentium (Black Hole Forge) | T4 | 6 | 6 | 6 | 6 |
+<!-- AUTO-GENERATED: alloy-catalog END -->
 
 **Note:** *Ferrum Conducens* is the "workhorse" (T1). *Aeternum* is the "transition metal" (T2). *Singular Alloy* is the "all 6s" alloy (T4).
 
@@ -196,16 +206,18 @@ Stats are not linear. Some combinations are special:
 
 ## 📋 7. RECIPES (SUMMARY)
 
-| Alloy               | Where       | Input 1         | Input 2       |
-| ------------------ | ---------- | --------------- | ------------- |
-| Ferrum Conducens   | Infuser    | Iron Ingot      | Quanta        |
-| Adamas Resonans    | Infuser    | Diamond         | Quanta        |
-| Cuprum Transmissor | Infuser    | Copper Ingot    | Quanta        |
-| Aurum Nobilis      | Infuser    | Gold Ingot      | Quanta        |
-| Aeternum           | Infuser    | Netherite Ingot | Quanta        |
-| Superpositum       | Black Hole | Aeternum        | Chaotic Steel |
-| Dechoerentium      | Black Hole | Aeternum        | Order Steel   |
-| Singular Alloy     | Black Hole | Superpositum    | Dechoerentium |
+<!-- AUTO-GENERATED: alloy-recipes START -->
+| Alloy | Where | Input 1 | Input 2 |
+| --- | --- | --- | --- |
+| Ferrum Conducens | Infuser | Iron Ingot | Quanta |
+| Adamas Resonans | Infuser | Diamond | Quanta |
+| Cuprum Transmissor | Infuser | Copper Ingot | Quanta |
+| Aurum Nobilis | Infuser | Gold Ingot | Quanta |
+| Aeternum | Infuser | Netherite Ingot | Quanta |
+| Superpositum | Black Hole | Aeternum | Chaotic Steel |
+| Dechoerentium | Black Hole | Aeternum | Order Steel |
+| Singular Alloy | Black Hole | Superpositum | Dechoerentium |
+<!-- AUTO-GENERATED: alloy-recipes END -->
 
 ---
 

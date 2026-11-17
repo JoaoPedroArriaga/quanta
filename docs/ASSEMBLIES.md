@@ -1,3 +1,11 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 8
+STRUCTURE:
+  - "[[MACHINES]]"
+---
 # QUANTA MOD - QUANTUM ASSEMBLIES
 
 > **Document based on QUANTA_MASTERLIST v10.6**

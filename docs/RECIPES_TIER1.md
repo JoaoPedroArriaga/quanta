@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 2
+---
 # QUANTA MOD - TIER 1 (DECOHERENT) — FINAL SCOPE
 
 > **Document based on QUANTA_MASTERLIST v10.6**
@@ -23,8 +29,22 @@ Tier 1 (Decoherent) is the **first Quanta layer**:
 
 ---
 
+<!-- AUTO-GENERATED: recipe-index-t1 START -->
 ## 🏭 1. MACHINES (10)
 
+| # | Machine recipe |
+| --- | --- |
+| 1 | Quanta Infuser |
+| 2 | Thermal Infuser |
+| 3 | Quanta Densifier |
+| 4 | Quanta Collapser |
+| 5 | Energy Quantifier |
+| 6 | Quanta Separator |
+| 7 | Quanta Crusher |
+| 8 | Quanta Press |
+| 9 | Quanta Wire Drawer |
+| 10 | Quanta Mixer |
+<!-- AUTO-GENERATED: recipe-index-t1 END -->
 ### 1.1 Quanta Infuser
 
 **Function:** Infuses Q into a base item → Quanta material.
@@ -421,7 +441,6 @@ Tier 1 (Decoherent) is the **first Quanta layer**:
 **Note:** Aeternum (Netherite + Q) is Tier 2+.
 
 ---
-
 ## 📊 8. TIER 1 PROGRESSION
 
 Ender Pearl → Crusher (Tier 0) → Ender Dust

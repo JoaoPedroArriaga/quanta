@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 12
+---
 # QUANTA MOD - AUTOMATION
 
 > **Document based on QUANTA_MASTERLIST v10.6**

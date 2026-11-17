@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[QUANTA_MASTERLIST]]"
+toc-order: 7
+---
 # QUANTA MOD - EQUATIONS
 
 > **Document based on QUANTA_MASTERLIST v10.6**

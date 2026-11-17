@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 4
+---
 # QUANTA MOD - TIER 3 (SUPERPOSED) — FINAL SCOPE
 
 > **Document based on QUANTA_MASTERLIST v10.6**
@@ -21,8 +27,22 @@ Tier 3 (Superposed) is the **superposition layer**:
 
 ---
 
+<!-- AUTO-GENERATED: recipe-index-t3 START -->
 ## 🏭 1. MACHINES (10)
 
+| # | Machine recipe |
+| --- | --- |
+| 1 | Matter Rewriter |
+| 2 | Nexus Assembler |
+| 3 | Pattern Encoder |
+| 4 | Void Generator |
+| 5 | Quanta Engine |
+| 6 | Gas Burner |
+| 7 | Particle Collider |
+| 8 | Tunneling Teleporter |
+| 9 | Observator Scanner |
+| 10 | Quanta Weaver |
+<!-- AUTO-GENERATED: recipe-index-t3 END -->
 ### 1.1 Matter Rewriter
 
 **Function:** Duplicates Dust (2×-8× per tier).
@@ -321,7 +341,6 @@ Tier 3 (Superposed) is the **superposition layer**:
 | **Essence of Void** | Dragon's Breath + Essence of Chaos + Adamas Resonans | 1      |
 
 ---
-
 ## 📊 7. TIER 3 PROGRESSION
 
 Complete Tier 2 (liquids, gases, Essences)

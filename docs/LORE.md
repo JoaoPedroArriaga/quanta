@@ -1,3 +1,11 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[QUANTA_MASTERLIST]]"
+toc-order: 1
+STRUCTURE:
+  - "[[QUANTA_MASTERLIST]]"
+---
 # QUANTA MOD - LORE
 
 ^c79c30

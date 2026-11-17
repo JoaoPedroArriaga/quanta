@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 10
+---
 # QUANTA MOD - STATIONS
 
 > **Document based on QUANTA_MASTERLIST v10.6**

@@ -1,3 +1,11 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[SYSTEM_INTERACTIONS]]"
+toc-order: 1
+STRUCTURE:
+  - "[[SYSTEM_INTERACTIONS]]"
+---
 QUANTA MOD — CABLES.md (v10.6)
 markdown
 

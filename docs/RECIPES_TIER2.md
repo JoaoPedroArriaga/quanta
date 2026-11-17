@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[MACHINES]]"
+toc-order: 3
+---
 # QUANTA MOD - TIER 2 (ENTANGLED) — FINAL SCOPE
 
 > **Document based on QUANTA_MASTERLIST v10.6**
@@ -23,8 +29,19 @@ Tier 2 (Entangled) is the **entanglement layer**:
 
 ---
 
+<!-- AUTO-GENERATED: recipe-index-t2 START -->
 ## 🏭 1. MACHINES (7)
 
+| # | Machine recipe |
+| --- | --- |
+| 1 | Fluid Infuser |
+| 2 | Phase Evaporator |
+| 3 | Phase Condenser |
+| 4 | Fluid Mixer |
+| 5 | Gas Centrifuge |
+| 6 | Essence Collector |
+| 7 | Quanta Purifier |
+<!-- AUTO-GENERATED: recipe-index-t2 END -->
 ### 1.1 Fluid Infuser
 
 **Function:** Infuses an item with fluid → new fluid.
@@ -334,7 +351,6 @@ Tier 2 (Entangled) is the **entanglement layer**:
 | Liquid Singularity | +100% speed + 10% destruction     |
 
 ---
-
 ## 📊 9. TIER 2 PROGRESSION
 
 Complete Tier 1 (Q, Ferrum Conducens, cables, etc.)

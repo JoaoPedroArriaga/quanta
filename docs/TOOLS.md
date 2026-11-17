@@ -1,3 +1,9 @@
+---
+canvas:
+  - "[[STRUCTURE.canvas]]"
+parent: "[[QUANTA_MASTERLIST]]"
+toc-order: 10
+---
 # QUANTA MOD - TOOLS
 
 > **Document based on QUANTA_MASTERLIST v10.6**
@@ -232,36 +238,38 @@ The Quanta Mod has **3 tool categories**:
 
 ## 📊 4. TOOL SUMMARY
 
+<!-- AUTO-GENERATED: tool-summary START -->
 ### Crafting Tools
 
-| Tool         | Function      | Durability | Tier |
-| ------------ | ------------- | ---------- | ---- |
-| Iron Hammer  | Ingot → Sheet | 100        | T0   |
-| Iron File    | Ingot → Dust  | 100        | T0   |
-| Steel Hammer | Ingot → Sheet | 500        | T0   |
-| Steel File   | Ingot → Dust  | 500        | T0   |
+| Tool | Function | Durability | Tier |
+| --- | --- | --- | --- |
+| Iron Hammer | Ingot → Sheet | 100 | T0 |
+| Iron File | Ingot → Dust | 100 | T0 |
+| Steel Hammer | Ingot → Sheet | 500 | T0 |
+| Steel File | Ingot → Dust | 500 | T0 |
 
 ### Configuration Tools
 
-| Tool                | Function                              | Durability    | Tier |
-| ------------------- | ------------------------------------- | ------------- | ---- |
-| Quantum Wrench      | Machine configuration                 | Indestructible | T1+ |
-| Quantum Screwdriver | Component configuration              | Indestructible | T1+ |
-| Quantum Multitool   | Combines Wrench + Screwdriver + Tester | Indestructible | T2+ |
-| Quantum Tester      | Tests machines                        | Indestructible | T1+ |
-| Quantum Scanner     | Scans machines                        | Indestructible | T2+ |
+| Tool | Function | Durability | Tier |
+| --- | --- | --- | --- |
+| Quantum Wrench | Machine configuration | Indestructible | T1+ |
+| Quantum Screwdriver | Component configuration | Indestructible | T1+ |
+| Quantum Multitool | Combines Wrench + Screwdriver + Tester | Indestructible | T2+ |
+| Quantum Tester | Tests machines | Indestructible | T1+ |
+| Quantum Scanner | Scans machines | Indestructible | T2+ |
 
 ### Tool Components
 
-| Component              | Function              | Tier |
-| ---------------------- | -------------------- | ---- |
-| Tool Core (Decoherent) | Tool core             | T1   |
-| Tool Core (Entangled)  | Tool core             | T2   |
-| Tool Core (Superposed) | Tool core             | T3   |
-| Tool Core (Singular)   | Tool core             | T4   |
-| Tool Head              | Tool head             | T1+  |
-| Tool Blade             | Weapon blade          | T1+  |
-| Tool Handle            | Tool handle           | T1+  |
+| Component | Function | Tier |
+| --- | --- | --- |
+| Tool Core (Decoherent) | Tool core | T1 |
+| Tool Core (Entangled) | Tool core | T2 |
+| Tool Core (Superposed) | Tool core | T3 |
+| Tool Core (Singular) | Tool core | T4 |
+| Tool Head | Tool head | T1+ |
+| Tool Blade | Weapon blade | T1+ |
+| Tool Handle | Tool handle | T1+ |
+<!-- AUTO-GENERATED: tool-summary END -->
 
 ---
 
