@@ -2,7 +2,7 @@ package com.quanta.api.network;
 
 /**
  * Interface for blocks that provide entanglement capabilities.
- * Implemented by Entangler, Tunnel Relay, and Quantum Computers.
+ * Implemented by Entangler, Tunnel Relay, and Quantum Servers.
  */
 public interface IEntanglementProvider {
 

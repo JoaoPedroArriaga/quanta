@@ -38,7 +38,7 @@
   "block.quanta.quanta_infuser": "Infusor de Quanta",
   "block.quanta.quanta_collector": "Coletor de Quanta",
   "block.quanta.quanta_enhancer": "Aprimorador de Quanta",
-  "block.quanta.quantum_assembler": "Montador Quântico",
+  "block.quanta.quantum_assembler": "Auto-Fabricador Quântico",
   "block.quanta.quantum_evaporator": "Evaporador Quântico",
   "block.quanta.quantum_condenser": "Condensador Quântico",
   "block.quanta.quantum_press": "Prensa Quântica",
@@ -53,13 +53,13 @@
   
   "block.quanta.quantum_forge_controller": "Controlador da Forja Quântica",
   "block.quanta.black_hole_forge_controller": "Controlador da Forja de Buraco Negro",
-  "block.quanta.entanglement_reactor_core": "Núcleo do Reator de Entrelaçamento",
+  "block.quanta.entanglement_reactor_core": "Núcleo do Reator Superposto",
   "block.quanta.plasma_forge_controller": "Controlador da Forja de Plasma",
   "block.quanta.cyber_chamber_controller": "Controlador da Câmara Cibernética",
   
   "block.quanta.quantum_terminal": "Terminal Quântico",
-  "block.quanta.entanglement_switch": "Switch de Entrelaçamento",
-  "block.quanta.quantum_computer": "Computador Quântico",
+  "block.quanta.entanglement_switch": "Assinatura Quântica",
+  "block.quanta.quantum_computer": "Servidor Quântico",
   "block.quanta.quantum_mainframe": "Mainframe Quântico",
   "block.quanta.quantum_supercomputer": "Supercomputador Quântico",
   

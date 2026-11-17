@@ -38,7 +38,7 @@
   "block.quanta.quanta_infuser": "Quanta Infuser",
   "block.quanta.quanta_collector": "Quanta Collector",
   "block.quanta.quanta_enhancer": "Quanta Enhancer",
-  "block.quanta.quantum_assembler": "Quantum Assembler",
+  "block.quanta.quantum_assembler": "Quantum Auto-Fabricator",
   "block.quanta.quantum_evaporator": "Quantum Evaporator",
   "block.quanta.quantum_condenser": "Quantum Condenser",
   "block.quanta.quantum_press": "Quantum Press",
@@ -53,13 +53,13 @@
   
   "block.quanta.quantum_forge_controller": "Quantum Forge Controller",
   "block.quanta.black_hole_forge_controller": "Black Hole Forge Controller",
-  "block.quanta.entanglement_reactor_core": "Entanglement Reactor Core",
+  "block.quanta.entanglement_reactor_core": "Superposed Reactor Core",
   "block.quanta.plasma_forge_controller": "Plasma Forge Controller",
   "block.quanta.cyber_chamber_controller": "Cyber Chamber Controller",
   
   "block.quanta.quantum_terminal": "Quantum Terminal",
-  "block.quanta.entanglement_switch": "Entanglement Switch",
-  "block.quanta.quantum_computer": "Quantum Computer",
+  "block.quanta.entanglement_switch": "Quantum Signature",
+  "block.quanta.quantum_computer": "Quantum Server",
   "block.quanta.quantum_mainframe": "Quantum Mainframe",
   "block.quanta.quantum_supercomputer": "Quantum Supercomputer",
   

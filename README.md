@@ -19,7 +19,7 @@ Inspired by Mekanism, Oritech, Create, EnderIO, Ars Nouveau, Modular Powersuits,
 ### ⚡ Quantum Energy System
 - Unit: **Quanta (Q)** - 1 Q = 100 FE (configurable)
 - Passive generation with Void Generator (500-1,000 Q/t)
-- Entanglement Reactor for endgame (2,000-10,000+ Q/t)
+- Superposed Reactor for endgame (2,000-10,000+ Q/t)
 
 ### 🔧 Tiers of Progression
 
@@ -38,14 +38,14 @@ Inspired by Mekanism, Oritech, Create, EnderIO, Ars Nouveau, Modular Powersuits,
 | Tier | Machines |
 |------|----------|
 | Tier 0 | Industrial Crusher, Combustor |
-| Tier 1 | Quanta Infuser, Essence Collector, Quantum Assembler, Matter Rewriter |
+| Tier 1 | Quanta Infuser, Essence Collector, Quantum Auto-Fabricator, Matter Rewriter |
 | Tier 2 | Entangler, Void Generator, Quantum Liquid Mixer, Particle Collider |
-| Tier 3 | Quantum Forge (3x3x3), Entanglement Reactor, Wave Function Collapser |
+| Tier 3 | Quantum Forge (3x3x3), Superposed Reactor, Wave Function Collapser |
 | Ultimate | Black Hole Forge (5x5x5), Graviton Stabilizer (7x7x7), Quantum Supercomputer |
 
 ### 📖 Quantum Codex & Equations
 - Gain **Knowledge** by observing machines (1 per tick)
-- Discover **Calculations** through experiments
+- Discover **Equations** through experiments
 - Combine Form + Element + Effect on the **Black Board** (84 possible equations)
 - Cast spells that consume Quanta
 
@@ -59,12 +59,12 @@ Inspired by Mekanism, Oritech, Create, EnderIO, Ars Nouveau, Modular Powersuits,
 - Tools and armor with tiers: Decoherent → Entangled → Superposed → Singular
 - Consume Quanta actively
 - Modules: Tunnel, Vein Miner, Chaos Strike, Magnet, Speed, etc.
-- Upgrades via **Quantum Upgrade Table** (preserves modules)
+- Upgrades via the **Quantum Fabrication Rig** (preserves modules)
 
 ### 🔗 Entanglement Network
 - Wireless energy, items, fluid, gas, and data transfer
-- No physical cables - place Entanglers next to machines and link to a Switch
-- Components: Entangler, Entanglement Switch, Quantum Terminal, Quantum Computer/Mainframe/Supercomputer
+- No physical cables - place Entanglers next to machines and link to a Signature
+- Components: Entangler, Quantum Signature, Quantum Terminal, Quantum Server/Rack/Mainframe/Supercomputer
 - Required for advanced automation (can be replaced by AE2/RS)
 
 ### 💧 Quantum Fluids
@@ -91,6 +91,16 @@ Inspired by Mekanism, Oritech, Create, EnderIO, Ars Nouveau, Modular Powersuits,
 3. Place the `.jar` file in your `mods` folder
 4. Launch Minecraft
 
+## 🗺️ Roadmap
+
+| Fase | Nome | Conteúdo |
+|------|------|----------|
+| 1 | Fundação | Tier 0 + 3 máquinas Quanta + 4 cabos + Codex |
+| 2 | Processamento | Tier 1 + Assemblies + Fabrication Rig (3 ferramentas) |
+| 3 | Rede | Network + Circuit Etcher + Cyber Chamber + implantes |
+| 4 | Expansão | Tier 3 + Auto-crafting + Circuit Etcher completo |
+| 5 | Endgame | Tier 4 + Multiblocos + Superposed Reactor |
+
 ## 🔧 Building from Source
 
 ```bash
@@ -110,11 +120,11 @@ cd quanta
 ## 🎨 Visual Identity
 | Element | Color |
 |---------|-------|
-| Decoherent (Tier 1) | Purple (#9D4EDD)     |
-| Entangled (Tier 2)  | Purple + Cyan        |
-| Superposed (Tier 3) | Purple + Cyan + Gold |
-| Singular (Ultimate) | Cyan + Gold + White  |
-| Active Energy	      | Cyan (#00F5FF)       |
+| Decoherent (Tier 1) | `#3c7d7d`, `#09000c`, `#ac01e4`, `#720098`, `#410156` |
+| Entangled (Tier 2) | `#023436`, `#09000c`, `#c67cfc`, `#590199`, `#200136` |
+| Superposed (Tier 3) | `#011e1f`, `#09000c`, `#dd87fd`, `#3d0168`, `#150123` |
+| Singular (Ultimate) | `#b1fafa`, `#7df8f8`, `#ffffff`, `#e6a4ff`, `#c67cfc` |
+| Active Energy | `#00F5FF` |
 
 ## 🔌 Compatibility (Planned)
 - JEI/REI, The One Probe/Jade
